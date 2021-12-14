@@ -1,0 +1,28 @@
+.title{
+  position: absolute;
+  width: 100%;
+  top: 33rem;
+  z-index: 1;
+  margin-top: -195px;
+  text-align: center;
+}
+.heading{
+    font-size: 58px;
+    color: rgb(18, 168, 80);
+    
+}
+.sub{
+    font-size: 38px;
+    color:white;
+    background-color: rgb(9, 107, 66);
+}
+.headingmini{
+    font-size: 38px;
+    color: rgb(18, 168, 80);
+    
+}
+.submini{
+    font-size: 20px;
+    color:white;
+    background-color: rgb(9, 107, 66);
+}

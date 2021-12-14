@@ -1,0 +1,63 @@
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 1.5rem;
+}
+.divimg{
+    width: 100%;
+    height: 300;
+    border:2px solid black, 
+   }
+
+.icon{
+    height:200;
+    width:300;
+    display: block;
+   margin-left:auto;
+   margin-right: auto;
+  }
+.style{
+    height: 400px;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+background-position: center; 
+}
+.text{
+    text-align: center;
+    align-items: center;
+    color: rgb(12, 12, 12);
+    background-color: rgb(187, 221, 153);
+    opacity: .6;
+    padding-top: 5rem;
+    /* font-size: 32px; */
+}
+.inputcom {
+    width: 95%;
+    padding: 4px;
+    margin: 8px 0;
+    border: 1px solid black;
+    /* border-radius: 4px; */
+    cursor: pointer;
+  }
+  .progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+    position: fixed;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background: #0f5132;
+    width: 0%;}
+.backimgblog{
+
+height: 30%;
+}
+  
+  

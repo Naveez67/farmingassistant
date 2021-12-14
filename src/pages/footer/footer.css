@@ -1,0 +1,35 @@
+.maindiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   
+}
+.subdiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+.maintitle{
+    text-align: center;
+    font-weight: 400;
+    color: rgb(8, 8, 8);
+}
+.list{
+    list-style: none;
+    text-align: left;
+}
+.sociallinkli{
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer{
+    background-color: rgb(80, 133, 87);
+}
+.relink{
+    text-decoration: none;
+    color: black;
+}
+.relink:hover{
+    color: black;
+}

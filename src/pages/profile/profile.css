@@ -1,0 +1,70 @@
+
+.profile{
+  
+}
+/* .head{
+    height: 70px;
+    width: 100%;
+    background-color: rgb(139, 189, 90);
+} */
+.image{
+    height: 150px;
+    width: 150px;
+    background: cornflowerblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+.name{
+    text-align: left;
+    margin-left: 10%;
+}
+.btn{
+    background-color: rgb(65, 165, 81);
+    margin-top: 5rem;
+}
+.btn:hover{
+
+    border: 2px double black;
+    background-color: rgb(8, 168, 34);
+}
+.form{
+    
+}
+
+
+.profiledesktop{
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+    flex-wrap: wrap;
+    justify-content:flex-end;
+    width: 70%;
+}
+.deskmenu{
+    display: flex;
+    flex-direction: row;
+}
+.boxdesk{
+    margin: 1rem;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    background-color: green;
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+.logout{
+    margin: 1rem;
+    padding: 10px;
+    border: 1px solid black;
+    font-size: 20px;
+    color: rgb(7, 7, 7);
+    background-color: green;
+    cursor: pointer;
+}
+.logout:hover{
+    color:white
+}

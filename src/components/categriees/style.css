@@ -1,0 +1,13 @@
+.link{
+    text-decoration: none;
+    color: black;
+}
+.box{
+    font-size: 20px;
+    color: black;
+    padding: 8px;
+}
+.box:hover{
+    color: white;
+    background-color: green;
+}

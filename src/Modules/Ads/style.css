@@ -1,0 +1,15 @@
+.mainbody{
+    width: 350px;
+    border: 1px soild rgb(12, 12, 12);
+    padding: 2px;
+    height: 350px;
+    display: flex;
+}
+.cardshadow{
+    box-shadow: 0 4px 8px 0 rgba(29, 29, 29), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.adcard{
+    width: 350px;
+    background-color: rgb(6, 143, 36);
+    box-shadow:0 4px 8px 0 rgba(29, 29, 29), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ;
+}

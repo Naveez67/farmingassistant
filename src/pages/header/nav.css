@@ -1,0 +1,26 @@
+/* .navbar{
+    margin-top: 0rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    padding: .5rem;
+} */
+.allignleft{
+    margin-left: auto;
+}
+.multi{
+    background: linear-gradient(blue, pink);
+}
+.text{
+    color:rgb(18, 4, 80) !important;
+    font-size: 24px !important;
+}
+.text:hover{
+    background-color: green;
+    color: white !important;
+}
+.backimg{
+    
+}
+.sh{
+    box-shadow: 0 -5px 3px -3px black, 0 5px 3px -3px black;
+}

@@ -1,0 +1,24 @@
+import React from 'react';
+import MyCarousel from '../Carousel/Carousel';
+import Titletext from '../Carousel/titlemeassage';
+import Footer from '../footer/footer';
+import Missionstatement from '../mission/mission';
+import Card from './card'
+import Works from '../works/howitworks';
+const Home = () => {
+    return ( <div>
+        <MyCarousel />
+        <Titletext />
+        <br />
+        
+        <Works />
+        <hr />
+        <Missionstatement />
+        <hr />
+        <Card />
+        <hr />
+        <Footer />
+    </div> );
+}
+ 
+export default Home;

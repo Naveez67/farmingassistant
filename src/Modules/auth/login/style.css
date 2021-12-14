@@ -1,0 +1,45 @@
+.inputform {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.btn {
+  background-color: #055505;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.desgin{
+  background-color: rgb(243, 243, 243);
+  /* box-shadow: 10px 10px 5px rgb(29, 29, 29) inset */
+  box-shadow: 0 4px 8px 0 rgba(29, 29, 29), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.bgimg{
+  background-image:url("https://images.unsplash.com/photo-1557281279-7cb1d6d420dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}

@@ -1,0 +1,27 @@
+.conatiner{
+    display: block;
+    height: 450px;
+    width: 750px;
+    background-color: rgb(131, 170, 131);
+    margin: 2rem;
+}
+.conatiner:hover{
+    box-shadow: grey;
+}
+.subdiv{
+    height: 100%;
+    width: 67%;
+}
+.subdiv2{
+    height: 100%;
+    width: 33%;
+    background-color: lightcoral;
+}
+.formstyle{
+    margin: 1.5rem;
+}
+.imagediv{
+    height: 100px;
+    width: 150;
+    background-color: lemonchiffon;
+}
