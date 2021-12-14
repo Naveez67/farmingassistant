@@ -27,42 +27,42 @@ const MyNavbar = () => {
   };
   const getlist = () => {
     return (
-      <ul className={showoffcan ? "list-nav" : "list-can"}>
+      <ul className={showoffcan ? "list-nav" : "list-can"} style={{color:"white"}}>
         <li className="list-item">
-        <Link className="link" to="/">
+        <Link style={{textDecoration:"none",color:"white"}} to="/">
           Home
           </Link>
         </li>
         <li className="list-item">
-          <Link className="link" to="/showblog">
+          <Link style={{textDecoration:"none",color:"white"}} to="/showblog">
             Blog
           </Link>
         </li>
         <li className="list-item">
-          <Link className="link" to="/showrates">
+          <Link style={{textDecoration:"none",color:"white"}} to="/showrates">
           Market
           </Link>
         </li>
         <li className="list-item">
-          <Link className="link" to="/offices">
+          <Link style={{textDecoration:"none",color:"white"}} to="/offices">
           Offices
           </Link>
         </li>
         <li className="list-item">
-          <Link className="link" to="/news">
+          <Link style={{textDecoration:"none",color:"white"}} to="/news">
             News
           </Link>
          
         </li>
         <li className="list-item">
-          <Link className="link" to="/ads">
+          <Link style={{textDecoration:"none",color:"white"}} to="/ads">
             Ads
           </Link>
          
         </li>
         {userService.isFarmerorSupplier()?
         <li className="list-item">
-        <Link className="link" to="/postad">
+        <Link style={{textDecoration:"none",color:"white"}} to="/postad">
           post Ad
         </Link>
        
@@ -96,30 +96,30 @@ const MyNavbar = () => {
         </li>
         {notadmin?<>
         <li className="list-item">
-        <Link className="link" to="/showhelpposts">
+        <Link style={{textDecoration:"none",color:"white"}} to="/showhelpposts">
           Help
         </Link>  
         </li>
         <li className="list-item">
-        <Link className="link" to="/complain">
+        <Link style={{textDecoration:"none",color:"white"}} to="/complain">
           Complain
         </Link>  
         </li></>
         :<></>}
         <li className="list-item">
-          <Link className="link" to="/weather">
+          <Link style={{textDecoration:"none",color:"white"}} to="/weather">
           Weather
           </Link>
         </li>
         {isloggedin?
         <>
         <li className="list-item">
-          <Link className="link" to="/mycart">
+          <Link style={{textDecoration:"none",color:"white"}} to="/mycart">
            <BsFillCartFill />
           </Link>
         </li>
         <li className="list-item">
-          <Link className="link" to="/notification">
+          <Link style={{textDecoration:"none",color:"white"}} to="/notification">
            <MdNotificationsActive size="35px" />
           </Link>
         </li>
@@ -135,12 +135,12 @@ const MyNavbar = () => {
         </>
         :<>
         <li className="list-item">
-          <Link className="link" to="/register">
+          <Link style={{textDecoration:"none",color:"white"}} to="/register">
           Register
           </Link>
         </li>
         <li className="list-item">
-          <Link className="link" to="/login">
+          <Link style={{textDecoration:"none",color:"white"}} to="/login">
             Login
           </Link>
         </li>
@@ -150,10 +150,11 @@ const MyNavbar = () => {
   };
   const list = (anchor) => (
     <Box
-      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 350 }}
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 350,backgroundColor:"#38B000" }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+    
     >
       <div style={{background:"green",height:"70px"}}><img src={Logo} alt="logo" width="300px" height="60px" /></div>
       <br/>
@@ -194,9 +195,9 @@ const MyNavbar = () => {
 React.useEffect(handleResize,[])
   return (
     <div>
-      <div className="main">
+      <div className="main" style={{width:"100%",height:"100px",backgroundColor:"#2AA400"}}>
         <div className="brand">
-          {/* <img src={Logo} alt="logo" width="300px" height="60px" /> */}
+          <img src={Logo} alt="logo" width="300px" height="80px" />
         </div>
         <div className="list">{get()}</div>
       </div>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import marketrates from "../../../services/admin/marketrates";
 import { Table } from "react-bootstrap";
-const Showgraphs = () => {
+const Showgraphs = ({dis}) => {
   const [distincvalues, setdist] = useState([]);
+  const [dist, setdis] = useState(dis);
   const get = () => {
     marketrates
       .getdistinctval()
@@ -24,8 +25,8 @@ const Showgraphs = () => {
   React.useEffect(get, []);
   return (
     <div>
-      <h1>Last week average market rates </h1>
-      <Table striped bordered hover>
+      <h1 style={{backgroundColor:"green",color:"white",padding:"15px"}}>Last week average market rates </h1>
+      <Table striped bordered hover style={{backgroundColor:"#6DDD00",color:"white"}}>
       <thead>
         {addtableheader()}
         </thead>
@@ -36,7 +37,7 @@ const Showgraphs = () => {
             return (
                 <tr key={index}>
                    <td>{_id}</td>
-                   <td>{avgprice+" "} per kg</td>
+                   <td>{avgprice.toFixed(2)+" "} per kg</td>
                 </tr>
              )
               

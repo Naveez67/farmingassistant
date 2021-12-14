@@ -22,9 +22,11 @@ const Cropdetials = ({ detials }) => {
                 ) : (
                   <h4
                     style={{
-                      textAlign: "center",
+                      textAlign: "left",
                       border: "3px solid green",
                       padding: "1rem",
+                      background:"green",
+                      color:"white"
                     }}
                   >
                     {item}
@@ -36,7 +38,9 @@ const Cropdetials = ({ detials }) => {
                 ) : (
                   <>
                     {getval(item)}
+                    <div style={{marginRight:"auto"}}>
                     <Subcropdetials diseases={val} />
+                    </div>
                   </>
                 )}
               </div>

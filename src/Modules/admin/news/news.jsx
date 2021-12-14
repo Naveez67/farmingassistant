@@ -81,7 +81,7 @@ const News = () => {
       <div>
         <Form>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Label>Title</Form.Label>
+            <Form.Label style={{fontWeight:"bold"}}>Title</Form.Label>
             <Form.Control
               type="text"
               placeholder="title"
@@ -92,7 +92,7 @@ const News = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-            <Form.Label>Description</Form.Label>
+            <Form.Label style={{fontWeight:"bold"}}>Description</Form.Label>
             <Form.Control
               as="textarea"
               rows={3}
@@ -105,14 +105,16 @@ const News = () => {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label
               style={{
-                backgroundColor: "blue",
+                backgroundColor: "#70E000",
                 color: "white",
-                padding: ".5rem",
+                padding: "1rem",
+                cursor:"pointer",
+                fontSize:"22px"
               }}
               onClick={(e) => {
                 handleclick();
                 history.push("/news");
-                console.log(title, body, url);
+                // console.log(title, body, url);
                 // alert("you clicked")
               }}
             >

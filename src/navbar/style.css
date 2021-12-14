@@ -1,15 +1,15 @@
 .main{
-    height: 65px;
+    height: 100px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid  black;
-    background-color: rgb(7, 77, 38);
+    background-color: rgb(12 233 12 / 84%);
     /* position:fixed;
     z-index: 100;  */
 }
 .list{
-    margin-right: 3rem;
+    margin-right: 4rem;
 }
 .menuicon{
     margin: 1rem 0;
@@ -35,10 +35,10 @@
 
 }
 .list-item{
-    margin: 1.5rem 4px;
-    color: rgb(5, 5, 5);
+    margin: 2rem 4px;
+    color: white;
     font-size: 22px;
-    padding: 2px;
+    padding: 6px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* border: 1px solid green; */
 }
@@ -52,7 +52,7 @@
 }
 .link{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 .link:hover{
     background-color: green;

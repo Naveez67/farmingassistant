@@ -29,10 +29,10 @@ export default function MediaCard({ blog, onDelete }) {
           title={blog.title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h4" component="h2">
+          <Typography gutterBottom variant="h4" component="h2" style={{textAlign:"left"}}>
             {display(blog.title)}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="p" style={{textAlign:"left"}}>
             {display(blog.body)}...
           </Typography>
         </CardContent>

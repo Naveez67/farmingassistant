@@ -18,11 +18,6 @@ const Works = () => {
   return (
     <div
       className="mainsec"
-      style={{
-        backgroundImage: `url(${back2})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-      }}
     > <Spin >
       <h1 className="maintitle">How its works</h1>
        </Spin>
@@ -49,7 +44,7 @@ const Works = () => {
         ) : (
           <Rotate top left>
           <div>
-            <FaArrowRight size="50px" style={{ marginTop: "1.5rem" }} />
+            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"#54C800" }} />
           </div>
           </Rotate>
         )}
@@ -67,14 +62,14 @@ const Works = () => {
         ) : (
           <Rotate top left>
           <div>
-            <FaArrowRight size="50px" style={{ marginTop: "1.5rem" }} />
+            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"#54C800" }} />
           </div>
           </Rotate>
         )}
         <Rotate top left>
         <span>
           <div className="simplecard">
-            <GrSystem size="50px" className="imgpos" />
+            <GrSystem size="50px" className="imgpos" style={{backgroundColor:"#54C800"}} />
             <p style={{ textAlign: "center" }}>Dashbord</p>
           </div>
           <h1 className="subtitle">Step3</h1>

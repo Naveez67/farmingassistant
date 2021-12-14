@@ -26,14 +26,14 @@ const Showblog = () => {
       });
   };
   const show = () => {
-    <h4>Nothing to show </h4>;
+    <h4>No Blogs are there to show </h4>;
   };
   React.useEffect(getblogs, []);
   return (
-    <div >
-      <div className="style" style={{ marginTop: "3rem" }}>
-        <h3 className="text"><span style={{fontSize:"32px"}}>Blogs </span>  </h3>
-      </div>
+    <div style={{backgroundColor:"green",height:"100%"}}>
+      <div style={{marginRight:"10%",marginLeft:"10%",}}>
+           <h3 style={{textAlign:"center",paddingTop:"2rem",color:"white"}}>_____Latest blogs________</h3>
+           <br /> 
       {isloaded ? (
         <></>
       ) : (
@@ -73,7 +73,7 @@ const Showblog = () => {
 
       {userService.isAdmin() ? (
         <div style={{ marginLeft: "auto", marginRight: "auto" }}>
-          <button
+          <button style={{padding:"12px",fontSize:"32px",fontWeight:"bold"}}
             onClick={() => {
               history.push("/addblog");
             }}
@@ -84,6 +84,7 @@ const Showblog = () => {
       ) : (
         <></>
       )}
+      </div>
     </div>
   );
 };

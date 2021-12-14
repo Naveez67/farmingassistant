@@ -13,7 +13,7 @@ const Showmodel = ({val,obj}) => {
    const [dis,setdis]=useState("none")
     return ( <div>
 
-     <button id="myBtn" onClick={()=>{
+     <button id="myBtn"  style={{padding:"10px",background:"green",color:"white",fontSize:"22px" }}   onClick={()=>{
        setdis("block")
      }} >{val}</button>
      <div id="myModal" className="modal" style={{display:dis}} >

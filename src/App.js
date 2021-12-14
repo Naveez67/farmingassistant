@@ -57,13 +57,15 @@ import Adslandinpage from "./Modules/Ads/adssection/mainpage";
 import Displayads from "./Modules/Ads/adssection/displayads";
 import Mycart from './Modules/Ads/cart';
 import Orderform from "./Modules/Ads/ordersection/orderform";
+import Demo from "./navbar/demo/demo";
 function App() {
   return ( 
     <div className="App">  
       
       <BrowserRouter>
       <MyNavbar />
-      <br style={{marginTop:"2rem"}}/>
+      {/* <Demo /> */}
+      {/* <br style={{marginTop:"2rem"}}/> */}
         <ToastContainer />
         <CartProvider>
           <Switch>

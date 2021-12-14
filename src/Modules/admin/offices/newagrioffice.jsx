@@ -5,12 +5,14 @@ import agriofficeService from "../../../services/admin/Agrioffices";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify"; 
 import './style.css'
+import '../../../components/all/mangaement/style.css'
 const Newagrioffice = () => {
   const history = useHistory();
   const [name, setname] = React.useState("");
   const [phone, setphone] = React.useState("");
   const [address, setaddress] = React.useState("");
   const [city, setcity] = React.useState("");
+  const [dis,setdis]=React.useState("none")
   
   return (
     <div className="container">
@@ -25,6 +27,7 @@ const Newagrioffice = () => {
         />{" "}
         <TextField
           label="Phone"
+          type="number"
           fullWidth
           value={phone}
           onChange={(e) => {
@@ -54,18 +57,18 @@ const Newagrioffice = () => {
 
           <Button
           variant="contained"
-          color="primary"
-          style={{marginTop:"1.5rem"}}
+         
+          style={{marginTop:"1.5rem",background:"#6DDD00"}}
           onClick={(e) => {
             agriofficeService
               .Addoffice(name,address, phone,city)
               .then((data) => {
-                console.log(data);
-                console.log(history);
-                history.push("/offices")
+                // console.log(data);
+                setdis("block")
+                
               })
               .catch((err) => {
-                console.log(err.response.data);
+               // console.log(err.response.data);
                 toast.error(err.response.data, {
                   position: toast.POSITION.TOP_LEFT,
                 });
@@ -77,6 +80,35 @@ const Newagrioffice = () => {
         </Button>
         
       </div>
+
+
+      <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2 style={{padding:"15px"}}></h2>
+    <span className="close" onClick={()=>{setdis("none")
+  history.push("/offices")
+  }} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+    <h2>office successfully added</h2>
+  </div>
+  <div className="modal-footer">
+  <h2 style={{padding:"15px",marginRight:"50%",marginLeft:"50%",cursor:"pointer"}}
+  onClick={()=>{
+    setdis("none")
+    history.push("/offices")
+  }}
+  >Ok</h2>
+  </div>
+</div>
+
+</div>
+
+      
     </div>
  );
 }

@@ -123,9 +123,11 @@ const Updatenews = (props) => {
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label
               style={{
-                backgroundColor: "blue",
+                backgroundColor: "#70E000",
                 color: "white",
-                padding: ".5rem",
+                padding: "1rem",
+                cursor:"pointer",
+                fontSize:"22px"
               }}
               onClick={(e) => {
                 handleclick();

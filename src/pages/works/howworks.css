@@ -2,7 +2,7 @@
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    border: 2px solid rgb(10, 10, 10);
+    border: 4px solid #54C800;
     margin: 0rem 4rem;
 }
 .mainsec{
@@ -12,10 +12,11 @@
    margin-left: 1.7rem;
    margin-top: 1.7rem;
    margin-right: 1.7rem;
+   background-color: #54C800;
 }
 .maintitle{
     text-align: center;
-    color: black;
+    color: #54C800;
     font-size: 40px;
 }
 .subtitle{
@@ -24,7 +25,7 @@
 }
 .maintitle1{
    
-    background-color: rgb(48, 150, 48);
+    background-color: #54C800;
     font-size: 30px;
     text-align: center;
     border-radius: 15%;
@@ -35,7 +36,7 @@
     margin-top: 3rem;
 }
 .maintitle1:hover{
-   background-color: rgb(13, 14, 13);
+   background-color: green;
    color: white;
 }
 

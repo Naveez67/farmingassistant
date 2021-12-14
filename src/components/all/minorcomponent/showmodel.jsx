@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Table, Offcanvas } from "react-bootstrap";
+import { Table, } from "react-bootstrap";
+import { IoIosArrowDropright } from "react-icons/io";
 import '../mangaement/style.css'
 const Showmodel = ({ name, obj }) => {
   const [dis,setdis]=useState("none")
   return (
     <div> 
-      <div style={{ marginRight: "-6rem" }}>
-      <button id="myBtn" onClick={()=>{setdis("block")}}>{name}</button>
+      <div>
+       <p style={{padding:"5px",cursor:"pointer",textAlign:"left"}} onClick={()=>{setdis("block")}}><IoIosArrowDropright size="25px" style={{background:"green"}} /> {name}</p>
       </div>
 
       

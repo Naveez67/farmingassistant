@@ -5,8 +5,10 @@ import {AiFillPlusCircle,AiTwotoneDelete,AiFillEdit} from 'react-icons/ai'
 import { Table } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify"; 
+import '../../../components/all/mangaement/style.css'
 const Showoffices = () => {
     const [offices,setoffices]=React.useState([]);
+    const [dis,setdis]=React.useState("none")
     const getdata=()=>{
        agriofficeService
        .getoffice()
@@ -51,14 +53,15 @@ const Showoffices = () => {
                     agriofficeService
                             .deleteoffice(office._id)
                             .then((data)=>{
-                               // console.log(data);
+                               setdis("block")
+                               getdata()
                             })
                             .catch((err) => {
                                 console.log(err.response.data);
                                 toast.error(err.response.data, {
                                 position: toast.POSITION.TOP_LEFT,})
                             });
-                            window.location.reload();
+                            // window.location.reload();
                 }}/></td>
                   
                   </>:<></>}
@@ -70,10 +73,13 @@ const Showoffices = () => {
     React.useEffect(getdata,[]);
     
     return ( <>
+    <div >
+
+     <h1 style={{padding:"15px",color:"white",background:"green",textAlign:"center",marginBottom:"1rem"}}>District Offices</h1>   
     {offices.length>0?
     
-    <div>
-        <Table striped bordered hover>
+    <div  style={{marginLeft:"5%",marginRight:"5%"}}>
+        <Table striped bordered hover style={{backgroundColor:"#6DDD00",color:"white"}}>
         <thead>
         {drawheader()}
         </thead>
@@ -86,13 +92,41 @@ const Showoffices = () => {
     :<><h1>No office records founds</h1></>
     }
     {userService.isAdmin()?<>
-        <AiFillPlusCircle size="40px" style={{marginTop:"2rem"}} onClick={(e)=>{
-       // console.log("add new office")
-        history.push("/newagrioffice");
-    }} />
+        <button
+        style={{backgroundColor:"#6DDD00",color:"white",padding:"10px",fontWeight:"bold",fontSize:"28px"}}
+        onClick={() => {
+            history.push("/newagrioffice");
+        }}
+      >
+        Add office
+      </button>
     </>:<></>}
 
+    <div id="myModal" className="modal" style={{display:dis}} >
 
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2 style={{padding:"15px"}}></h2>
+    <span className="close" onClick={()=>{setdis("none")}} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+    <h2>Deleted</h2>
+  </div>
+  <div className="modal-footer">
+  <h2 style={{padding:"15px",marginRight:"50%",marginLeft:"50%",cursor:"pointer"}}
+  onClick={()=>{
+    setdis("none")
+  }}
+  >Ok</h2>
+  </div>
+</div>
+
+</div>
+
+
+    </div>
     </>);
 }
  

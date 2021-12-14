@@ -28,8 +28,11 @@ const Shownews = () => {
               });
     }
     React.useEffect(getNews, []);
-    return ( <div style={{marginTop:"4rem",marginRight:"10%",marginLeft:"10%"}}>
-        <h3>Showing News</h3>
+    return ( <div style={{background:"#70E000"}}>
+        <div >
+        <h3 style={{textAlign:"center",color:"white",padding:"15px"}}>___Showing News___</h3>
+        </div>
+        <div style={{marginRight:"10%",marginLeft:"10%"}}>
        {
          isloaded?<></>:
          <Grid container spacing={3}>
@@ -64,13 +67,16 @@ const Shownews = () => {
 
         {userService.isAdmin()?<>
         
-        <button onClick={()=>{
+        <button 
+          style={{backgroundColor:"green",color:"white",padding:"10px",fontWeight:"bold",fontSize:"28px",marginTop:"2rem"}}
+        onClick={()=>{
             history.push("/addnews")
         }}>
            Add news
         </button>
         
         </>:<></>}
+        </div>
     </div> );  
 }
 

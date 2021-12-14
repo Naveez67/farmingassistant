@@ -18,19 +18,22 @@ const Detials = () => {
   }
   let crop = res(data, name);
   return (
-    <div style={{ marginTop: "3rem",marginLeft:"1rem" }}>
+    <div style={{ marginLeft:"5%",marginRight:"5%" }}>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <div style={{ width: "30%", marginRight: "2rem"  }}>
-          <img src={crop[0].image} alt={name} width="150px" height="150px"  />
-          <h2>{name}</h2>
+        <div style={{ width: "100%", display:"flex",flexWrap:"wrap",}}>
+          <div style={{marginRight:"auto",marginLeft:"auto"}}>
+            <img src={crop[0].image} alt={name} width="200px" height="200px" style={{borderRadius:"50%"}} />
+            <h2>{name}</h2>
+            </div>
+          <diV>
+          
           <h4 style={{textAlign:"left"}}>Details</h4>
           <p style={{textAlign:"justify",textJustify:"interword"}}>
            {crop[0].detail}
            </p>
-          <h4 style={{textAlign:"left"}}>More</h4>
-          <More more={crop[0].more} />
+          </diV>
         </div>
-        <div style={{ width: "60%" }}>
+        <div style={{ width: "100%" }}>
           <div>
             <h4 style={{textAlign:"left",marginBottom:"1.5rem"}}>Management</h4>
             <Mangament mangament={crop[0].Managements} />
@@ -38,6 +41,10 @@ const Detials = () => {
           <div>
             <Cropdetials detials={crop[0].cropDetail} />
           </div>
+        </div>
+        <div style={{ width: "100%" }}>
+          <h4 style={{textAlign:"left",padding:"10px",background:"green",color:"white"}}>More</h4>
+          <More more={crop[0].more} />
         </div>
       </div>
     </div>

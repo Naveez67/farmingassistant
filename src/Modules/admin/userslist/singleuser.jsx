@@ -29,7 +29,7 @@ const Singleuser = ({ user, onDelete }) => {
     userService
       .deleteuser(user._id)
       .then((data) => {
-        alert("user deleted")
+        // alert("user deleted")
 
         //console.log(users.length);
       })
@@ -64,12 +64,12 @@ React.useEffect(getdata,[setuserdata]);
       ></CardContent>
       <CardContent
         sx={{
-          marginTop: "-2rem",
+          marginTop: "-3rem",
           display:"flex",
           justifyContent:"center"
         }}
       >
-            <Avatar alt="photo" src={img} sx={{ width: 70, height: 70 }}/>
+            <Avatar alt="photo" src={img} sx={{ width: 100, height: 100 }}/>
       </CardContent>
 
       <CardContent>

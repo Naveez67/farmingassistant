@@ -6,13 +6,16 @@ import { useHistory } from "react-router-dom";
 import { Table } from "react-bootstrap";
 import moment from 'moment';
 import Showgraphs from "./graph";
+import { FaEdit } from "react-icons/fa";
+import { AiFillDelete } from "react-icons/ai";
 //import { Input } from "@material-ui/core";
-
+import '../../../components/all/mangaement/style.css'
 //import SearchIcon from "@mui/icons-material/Search";
 const Showrates = () => {
   const [loading, setLoading] = useState(false);
   const [rates, setrates] = useState([]);
   const [searchTitle, setSearchTitle] = useState("");
+  const [dis,setdis]=useState("none")
   const history = useHistory();
   const addtableheader = () => {
     return (
@@ -47,31 +50,20 @@ const Showrates = () => {
  
 React.useEffect(get,[]);
   return (
-    <div className="App">
+    <div className="App" style={{marginLeft:"5%",marginRight:"5%"}}>
       <div style={{display:"flex",justifyContent:"flex-end",marginRight:"2rem"}}>
-      {userService.isAdmin()?<>
-        <button
-        style={{backgroundColor:"green",color:"white"}}
-        onClick={() => {
-          history.push("/addrates");
-        }}
-      >
-        Add rates
-      </button>
-      </>:
-      <>
-      </>}
+      
       </div>
       {rates.length>0?<>
       <div>
       <h3>Search</h3>
       <input
-        style={{ width: "30%", height: "25px" }}
+        style={{ width: "80%", height: "45px"}}
         type="text"
         placeholder="Search..."
         onChange={(e) => setSearchTitle(e.target.value)}
       />
-      <Table striped bordered hover>
+      <Table striped bordered hover style={{backgroundColor:"#6DDD00",color:"white"}}>
       <thead>
         {addtableheader()}
         </thead>
@@ -110,16 +102,18 @@ React.useEffect(get,[]);
                    <td>{city}</td>
                    <td>{distric}</td>
                    {userService.isAdmin()?<>
-                    <button
+                    <FaEdit
+                    size="35px"
                     onClick={()=>{
                       history.push("/updaterate/"+item._id)
                     }}
                     
-                    >Edit</button>
-                    <button
+                    />
+                    <AiFillDelete
+                    size="35px"
                     onClick={()=>{
                       marketrates.deleterate(item._id).then((data)=>{
-                        alert("deleted")
+                        setdis("block")
                       })
                       .catch((err)=>{
                         console.log(err)
@@ -127,7 +121,7 @@ React.useEffect(get,[]);
 
                       get();
                     }}
-                    >Delete</button>
+                    />
                    </>:<></>}
 
                 </tr>
@@ -139,12 +133,56 @@ React.useEffect(get,[]);
             </Table>
       
       <hr />
-      <Showgraphs />
+      <Showgraphs dis={dis}/>
       </div>
       
       </>:<>
       <h3>No rates available</h3>
       </>}
+      {userService.isAdmin()?<>
+        <button
+        style={{backgroundColor:"#6DDD00",color:"white",padding:"10px",fontWeight:"bold",fontSize:"28px"}}
+        onClick={() => {
+          history.push("/addrates");
+        }}
+      >
+        Add rates
+      </button>
+      </>:
+      <>
+      </>}
+
+      <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2 style={{padding:"15px"}}></h2>
+    <span className="close" onClick={()=>{setdis("none")}} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+    <h2>Deleted</h2>
+  </div>
+  <div className="modal-footer">
+  <h2 style={{padding:"15px",marginRight:"50%",marginLeft:"50%",cursor:"pointer"}}
+  onClick={()=>{
+    setdis("none")
+  }}
+  >Ok</h2>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
     </div>
   );
 };
