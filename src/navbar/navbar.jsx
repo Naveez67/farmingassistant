@@ -195,7 +195,7 @@ const MyNavbar = () => {
 React.useEffect(handleResize,[])
   return (
     <div>
-      <div className="main" >
+      <div className="main" style={{width:"100%",height:"100px",backgroundColor:"#2AA400"}}>
         <div className="brand">
           <img src={Logo} alt="logo" width="300px" height="80px" />
         </div>
