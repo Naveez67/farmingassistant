@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 const Adcard = ({ad}) => {
     return ( 
-    <div style={{display:"flex",flexDirection:"column",width:"50%",marginRight:"auto",marginLeft:"auto"}}>
+    <div style={{display:"flex",flexDirection:"column",width:"100%"}}>
        <div>
           <img src={ad.photo} alt={ad.title} style={{ width: "100%", height: 300 }} />
        </div>

@@ -43,7 +43,7 @@ const Detials = () => {
           </div>
         </div>
         <div style={{ width: "100%" }}>
-          <h4 style={{textAlign:"left",padding:"10px",background:"green",color:"white"}}>More</h4>
+          <h4 style={{textAlign:"left",padding:"15px",background:"green",color:"white"}}>More</h4>
           <More more={crop[0].more} />
         </div>
       </div>

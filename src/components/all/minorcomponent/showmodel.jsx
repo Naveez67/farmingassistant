@@ -7,7 +7,7 @@ const Showmodel = ({ name, obj }) => {
   return (
     <div> 
       <div>
-       <p style={{padding:"5px",cursor:"pointer",textAlign:"left"}} onClick={()=>{setdis("block")}}><IoIosArrowDropright size="25px" style={{background:"green"}} /> {name}</p>
+       <p style={{padding:"5px",cursor:"pointer",textAlign:"left"}} onClick={()=>{setdis("block")}}><IoIosArrowDropright size="25px" style={{background:"green",color:"white"}} /> {name}</p>
       </div>
 
       
@@ -19,7 +19,7 @@ const Showmodel = ({ name, obj }) => {
   <div class="modal-content">
     <div class="modal-header">
     <h2>{name}</h2>
-      <span class="close" onClick={()=>{setdis("none")}}>&times;</span>
+      <span class="close" style={{fontSize:"30px"}} onClick={()=>{setdis("none")}}>&times;</span>
       
     </div>
     <div class="modal-body">

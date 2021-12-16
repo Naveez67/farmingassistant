@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
-import Modal from "../model/model"
+import {useForm} from 'react-hook-form'
 import './register.css';
 import '../../Ads/model/model.css'
 import { useHistory } from 'react-router';
@@ -10,6 +10,7 @@ import farmerService from '../../../services/farmerservice';
 import { toast } from 'react-toastify';
 const Register = () => {
   const history=useHistory();
+  const {register,handleSubmit,erros}=useForm();
     const [size,setsize]=useState("20%");
     const [modalOpen, setModalOpen] = useState(false);
    const[name,setname]=useState("");

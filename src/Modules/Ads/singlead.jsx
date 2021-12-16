@@ -9,6 +9,7 @@ import Card from "./flidcard/card";
 import { Grid } from "@mui/material";
 const Singlead = ({ ad }) => {
   const { addItem } = useCart();
+  console.log(ad)
  const history=useHistory();
  const islogin=userService.isLoggedIn();
  const [pid, setpid] = useState("123");
@@ -28,7 +29,7 @@ const Singlead = ({ ad }) => {
   // const [cal, setcal] = useState(false);
   // const [value, setValue] = React.useState(0);
   // const [open, setOpen] = React.useState(false);
-  const item={id:ad._id+pid,title:ad.title,price:ad.price,body:ad.body,image:ad.photo,userid:pid,adid:ad._id}
+  const item={id:ad._id+pid,title:ad.title,price:ad.price,body:ad.body,image:ad.photo,userid:pid,adid:ad._id,ad:ad}
   const getuserphoto = () => {
     userService.getuserdata(ad.postedby).then((data) => {
       console.log(data);
@@ -44,8 +45,8 @@ const Singlead = ({ ad }) => {
       setrole(data.role);
     });
   };
-  React.useEffect(getuserphoto, []);
-  React.useEffect(getusername, []);
+  // React.useEffect(getuserphoto, []);
+  // React.useEffect(getusername, []);
   React.useEffect(get, []);
   return (
     <Grid item xs={12} sm={4}>
@@ -60,8 +61,8 @@ const Singlead = ({ ad }) => {
             <div style={{display:"flex",width:"350px",marginTop:"2rem",}} >
            <button style={{width:"100%",backgroundColor:"green",padding:"1rem",fontWeight:"bold",color:"white",fontSize:"24px"}}
            onClick={()=>{
-             addItem(item);
-             history.push("/mycart")
+            //  addItem(item);
+             history.push("/placeorder/"+ad._id+"/"+1)
            }}
            >Order Now</button>
            <button style={{width:"100%",backgroundColor:"yellowgreen",padding:"1rem",fontWeight:"bold",color:"white",fontSize:"24px"}}

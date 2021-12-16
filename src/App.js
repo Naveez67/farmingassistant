@@ -58,6 +58,7 @@ import Displayads from "./Modules/Ads/adssection/displayads";
 import Mycart from './Modules/Ads/cart';
 import Orderform from "./Modules/Ads/ordersection/orderform";
 import Demo from "./navbar/demo/demo";
+import Multiorder from "./Modules/Ads/ordersection/multiorder";
 function App() {
   return ( 
     <div className="App">  
@@ -148,6 +149,9 @@ function App() {
           </Route>
           <Route path="/placeorder/:id/:q">
             <Orderform />
+          </Route>
+          <Route path="/order">
+            <Multiorder />
           </Route>
           <Route path="/ad/:id">
             <Fullad />

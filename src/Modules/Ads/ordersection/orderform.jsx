@@ -45,7 +45,7 @@ const Orderform = () => {
       setdis("block")
     }).catch((err)=>{
       toast.error(err.response.data, {
-        position: toast.POSITION.TOP_RIGHT,})
+        position: toast.POSITION.TOP_CENTER,})
     })
   }
 

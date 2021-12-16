@@ -30,30 +30,27 @@ const Mycart = () => {
    }
 
     return ( <div>
-         {myoder.length==0?<><h1>No item to show </h1></>:
+         {myoder.length==0?<><h1>You have not added any item yet </h1></>:
         <div>
-          <div style={{display:"flex",flexWrap:"wrap",justifyContent:"flex-end",marginRight:"10%"}}>
-              <h1><span style={{backgroundColor:"greenyellow",color:"white"}}>Total items</span>={totalItems}</h1>
-              <h1 style={{marginLeft:"2rem"}}> <span style={{backgroundColor:"greenyellow",color:"white"}}>Total price</span>:{cartTotal}</h1>
-            </div>
+          
         <Grid
             container
             spacing={3}
             // sx={{ marginLeft: "auto", marginRight: "auto" }}
           >
-          {items.map((item) => (
+          {myoder.map((item,index) => (
             <Grid item xs={12} sm={12}>
             <div key={item.id}
              style={{
                width:"300",
-               height:"400",
+               height:"300",
                backgroundColor:"yellowgreen",
                display:"flex",flexWrap:"wrap",justifyContent:"space-around",
                marginLeft:"10%",
                marginRight:"10%",
                }}>
               <div>
-              <img src={item.image} width="300" height="300" />
+              <img src={item.image} width="300" height="300" style={{borderRadius:"50%"}}/>
               </div> 
                <div style={{textAlign:"left"}}>
                   <h3>Name:{get(item.title)}</h3>
@@ -75,11 +72,6 @@ const Mycart = () => {
                   <br />
                   <button  onClick={() => removeItem(item.id)}style={{width:"100%",padding:"10px",backgroundColor:"red",fontSize:"30px",color:"white"}}>Remove Item</button>
                   <br />
-                  <button 
-                  onClick={()=>{
-                    history.push("/placeorder/"+item.adid+"/"+item.quantity)
-                  }}
-                  style={{width:"100%",padding:"10px",backgroundColor:"green",color:"white",fontSize:"30px"}}>Order now</button>
               </div>
               
               
@@ -89,6 +81,27 @@ const Mycart = () => {
             </Grid>
           ))}
         </Grid>
+
+        <div style={{
+          display:"flex",
+          flexWrap:"wrap",
+          justifyContent:"center",
+          flexDirection:"column",
+          width:"80%",
+          background:"yellowgreen",
+          // position:"fixed",
+          // bottom:"0",
+          marginLeft:"10%",
+          marginRight:"10%",
+          marginTop:"2rem"
+          }}>
+              <h1 style={{marginLeft:"2rem",color:"white"}}>Total price:{cartTotal}</h1>
+              <button style={{padding:"10px",fontSize:"30px",background:"green"}}
+              onClick={()=>{
+                history.push("/order")
+              }}
+              >Check out</button> 
+          </div>
             
       </div>
        }

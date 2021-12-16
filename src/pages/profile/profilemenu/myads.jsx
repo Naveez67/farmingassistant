@@ -12,13 +12,13 @@ const Myads = () => {
         })
     }
     React.useEffect(get,[])
-    return ( <div>
-        <h1>My ads</h1>
+    return ( <div style={{marginLeft:"auto",marginRight:"auto"}}>
         {ads.length>0?<>
-        <h4>Showing your ads</h4>
+        {/* <h4>Showing your ads</h4> */}
         {ads.map((ad, index) => (
               <Adcard key={index} ad={ad} />
             ))}
+            <hr />
         </>:<><h4>You have not posted any ads yet</h4></>}
     </div> );
 }

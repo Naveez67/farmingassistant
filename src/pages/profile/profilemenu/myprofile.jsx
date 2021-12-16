@@ -1,4 +1,3 @@
-import { Grid } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import userService from "../../../services/UserService";
 import adsService from '../../../services/adsservice';
@@ -7,6 +6,8 @@ import helpService from "../../../services/helpservice";
 import complain from '../../../services/admin/complain'
 import "../profile.css";
 import moment from "moment";
+import Myposts from "./mypost";
+import Myads from "./myads";
 const Myprofile = () => {
   const [data, setdata] = useState(userService.getLoggedInUser());
   const [userdata, setuserdata] = useState([]);
@@ -15,6 +16,10 @@ const Myprofile = () => {
   const [username, setusername] = useState("");
   const [address, setaddress] = useState("");
   const [photo, setphoto] = useState("");
+  const [myorder, setmyorder] = useState(false);
+  const [mycom, setmycom] = useState(false);
+  const [post, setmypost] = useState(false);
+  const [myads, setmyads] = useState(false);
   const [phone, setphone] = useState("");
   const [ads,setads]=useState([]);
   const [orders,setorders]=useState([]);
@@ -24,7 +29,7 @@ const Myprofile = () => {
     helpService
       .getmyposts()
       .then((data) => {
-         // console.log(data);
+        //  console.log(data);
         setpost(data);
       })
       .catch((err) => {
@@ -52,7 +57,8 @@ const Myprofile = () => {
     }
     const getorders=()=>{
         orderService.myorders(data._id).then((data)=>{
-            setorders(data)
+            // console.log(data)
+          setorders(data)
         })
         .catch((err)=>{
             console.log(err)
@@ -107,22 +113,75 @@ const Myprofile = () => {
       </div>
       {/* profile section end */}
       <div style={{display:"flex",flexWrap:"wrap",marginRight:"20%",marginLeft:"20%",marginTop:"2rem",justifyContent:"space-between"}} >
-          <div>
+          
+          {userService.isFarmerorSupplier()?<>
+            <div style={{cursor:"pointer"}}
+            onClick={()=>{
+               setmyorder(true)
+               setmycom(false)
+               setmypost(false)
+               setmyads(false)
+               
+            }}
+            >
                 <h3> orders</h3> 
                 {orders.length}
           </div>
-          <div>
-                <h3> my complains</h3>
-                {mycomplains.length}
-          </div>
-          <div>
+          <div style={{cursor:"pointer"}}
+          onClick={()=>{
+            setmyorder(false)
+            setmycom(false)
+            setmypost(false)
+            setmyads(true)
+            
+         }}
+          
+          >
                <h3>  my ads</h3>
                {ads.length}
           </div>
-          <div>
+          </>:<></>}
+          {
+            userService.isFarmer()?<>
+             <div style={{cursor:"pointer"}}
+             onClick={()=>{
+              setmyorder(false)
+              setmycom(false)
+              setmypost(true)
+              setmyads(false)
+              
+           }}
+             >
                <h3>  my posts</h3>
                {mypost.length}
           </div>
+            </>:<></>
+          }
+          <div style={{cursor:"pointer"}}
+          onClick={()=>{
+            setmyorder(false)
+            setmycom(true)
+            setmypost(false)
+            setmyads(false)
+            
+         }}
+          >
+                <h3> my complains</h3>
+                {mycomplains.length}
+          </div>
+         
+         
+      </div>
+      <div style={{display:"flex",flexWrap:"wrap",marginRight:"20%",marginLeft:"20%",marginTop:"2rem",justifyContent:"space-between"}}>
+
+      {myorder?<></>:<></>}
+      {mycom?<></>:<></>}
+      {post?<>
+      <Myposts />
+      </>:<></>}
+      {myads?<><Myads /></>:<></>}
+
+
       </div>
      
     </div>
