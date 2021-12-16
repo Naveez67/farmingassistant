@@ -8,18 +8,18 @@ const Showcard = ({ today, Forecast }) => {
   newdate.setTime(weekday);
   const dayname = moment(newdate).format("dddd");
   return (
-    <div style={{ width: "70%", marginLeft: "auto", marginRight: "auto" }}>
+    <div style={{ width: "70%", marginLeft: "auto", marginRight: "auto",background:"#6DDD00",color:"white" }}>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex" ,marginTop:"1rem"}}>
           <img
             src={`https://openweathermap.org/img/wn/${today.weather[0].icon}@2x.png`}
             alt={today.weather[0].description}
           />
-          <h1>{Math.round(today.main.temp) - 273}</h1>
-          <sup>&deg;C|F</sup>
+          <h1 >{Math.round(today.main.temp) - 273}</h1>
+          <sup style={{marginTop:"1rem",fontSize:"20px",fontWeight:"bold"}}>&deg;C|F</sup>
         </div>
         <div>
-          <ul style={{ listStyle: "none" }}>
+          <ul style={{ listStyle: "none",marginTop:"1rem" }}>
             <li>Humidity:{today.main.humidity}%</li>
             <li>Wind:{today.wind.speed}Km/h</li>
           </ul>

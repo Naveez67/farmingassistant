@@ -45,6 +45,7 @@ const Multiorder=()=>{
     }
    const order=(adposter,quantity,totalamount,adid)=>{
         orderService.placeorder(buyername,address,adposter,adid,totalamount,phone,quantity).then((data)=>{
+          console.log(data)
       }).catch((err)=>{
         toast.error(err.response.data, {
           position: toast.POSITION.TOP_CENTER,})

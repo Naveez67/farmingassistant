@@ -34,16 +34,17 @@ const Todayweather = () => {
     }
     useEffect(get,[nam]);
     return ( <div>
-        <div style={{display:"flex",justifyContent:"center",marginTop:"2rem",marginBottom:".5rem"}}>
+        <div style={{display:"flex",justifyContent:"center",marginTop:"2rem",marginBottom:".5rem",marginRight:"auto"}}>
             <input
             placeholder="Enter city name"
-            width="70%"
-            height="40px"
+            style={{width:"40%",borderColor:"green"}}
             onChange={(e)=>{
               setcity(e.target.value);
             }}
             />
-            <button onClick={()=>{
+            <button 
+            style={{padding:"10px",background:"green",color:"white"}}
+            onClick={()=>{
                 to(city);
                 fo(city);
             }}>
@@ -55,7 +56,7 @@ const Todayweather = () => {
 
         </div>
 
-        <h1 style={{textAlign:"center"}}>Weather Forecast</h1>
+        <h1 style={{textAlign:"center",background:"green",color:"white",marginLeft:"15%",marginRight:"15%"}}>Weather Forecast</h1>
         
         {Object.keys(today).length>0?
            <>

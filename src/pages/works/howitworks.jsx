@@ -18,9 +18,8 @@ const Works = () => {
   return (
     <div
       className="mainsec"
-    > <Spin >
+    > 
       <h1 className="maintitle">How its works</h1>
-       </Spin>
       <div
         style={{
           display: "flex",
@@ -44,7 +43,7 @@ const Works = () => {
         ) : (
           <Rotate top left>
           <div>
-            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"#54C800" }} />
+            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"white" }} />
           </div>
           </Rotate>
         )}
@@ -62,14 +61,14 @@ const Works = () => {
         ) : (
           <Rotate top left>
           <div>
-            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"#54C800" }} />
+            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"white" }} />
           </div>
           </Rotate>
         )}
         <Rotate top left>
         <span>
           <div className="simplecard">
-            <GrSystem size="50px" className="imgpos" style={{backgroundColor:"#54C800"}} />
+            <GrSystem size="50px" className="imgpos" style={{backgroundColor:"#1deb38"}} />
             <p style={{ textAlign: "center" }}>Dashbord</p>
           </div>
           <h1 className="subtitle">Step3</h1>

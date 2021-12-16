@@ -14,7 +14,7 @@ const Mincard = ({ day }) => {
         style={{
           width: "150px",
           textAlign: "center",
-          backgroundColor: "wheat",
+          backgroundColor: "green",
         }}
       >
         <h4>{dayname}</h4>

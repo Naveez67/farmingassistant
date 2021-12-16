@@ -2,22 +2,24 @@
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    border: 4px solid #54C800;
+    border: 4px solid #f1f3f0;
     margin: 0rem 4rem;
 }
 .mainsec{
- 
+ background-color: #1deb38;
 }
 .imgpos{
    margin-left: 1.7rem;
    margin-top: 1.7rem;
    margin-right: 1.7rem;
-   background-color: #54C800;
+   background-color: #1deb38;
 }
 .maintitle{
     text-align: center;
-    color: #54C800;
+    color: #fdfdfd;
     font-size: 40px;
+    background-color: rgba(59, 180, 59, 0.842);
+    width: 100%;
 }
 .subtitle{
     text-align: center;
@@ -25,20 +27,20 @@
 }
 .maintitle1{
    
-    background-color: #54C800;
+    background-color: rgba(59, 180, 59, 0.842);
     font-size: 30px;
+    color: white;
     text-align: center;
-    border-radius: 15%;
-    width: 250px;
+    cursor: pointer;
+    /* border-radius: 15%; */
+    width: 100%;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 3rem;
+    padding: 10px;
 }
-.maintitle1:hover{
-   background-color: green;
-   color: white;
-}
+
 
 .box {
     border: 1px solid black;

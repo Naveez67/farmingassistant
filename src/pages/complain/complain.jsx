@@ -5,47 +5,97 @@ import { toast } from 'react-toastify';
 const Complain = () => {
     const history=useHistory();
     const [title,settitle]=useState("");
+    const [titleerr,settitleerr]=useState("");
     const [body,setbody]=useState("");
+    const [bodyerr,setbodyerr]=useState("");
+    const [wid,setwid]=useState("15%");
+
+
+
+   const check=()=>{
+       if(title.length===0){
+           settitleerr("please fill the field first")
+       }
+       if(body.length===0){
+           setbodyerr("please fill the field first")
+       }
+       else if(body.length<=20){
+           setbodyerr("description must be 20 characters or more")
+       }
+       else if(title.length<10){
+           settitleerr("title must be 10 characters or more")
+       }
+       else{
+           settitleerr("");
+           setbodyerr("")
+           handlesubmit()
+       }
+   }
+
+
+
+
+
+
+
+
 
     const handlesubmit=()=>{
         console.log(title,body);
         complain.Addcomplain({title,body}).then((data)=>{
            // console.log(data)
-           alert("complain submitted");
-           history.push("/")
+        //    alert("complain submitted");
+           settitle("")
+           setbody("")
+        //    history.push("/")
         })
         .catch((err)=>{
             toast.error(err.response.data, {
                 position: toast.POSITION.TOP_LEFT,})
         })
     }
-    return ( <div>
-        <h1>Complain </h1>
-        <h3>Have complain then submit the complain</h3>
 
-        complaint title(e.g about users or anything realted to app)
-        <br />
+    const getwidth=()=>{
+      if(window.innerWidth>700){
+          setwid("15%")
+      }
+      else{
+          setwid("auto")
+      }
+    }
+    window.addEventListener("resize",getwidth)
+    React.useEffect(getwidth,[])
+    return ( <div>
+        <h3
+        style={{background:"green",padding:"10px"}}
+        >Have complain then submit the complain</h3>
+        <div style={{backgroundColor:"#6DDD00",color:"white",width:"60%",marginRight:"auto",marginLeft:"auto",padding:"20px"}}>
+        <h3 style={{textAlign:"left"}}>Title</h3>
         <input 
+        style={{width:"100%",padding:"10px"}}
          value={title}
          onChange={(e)=>{
              settitle(e.target.value);
          }}
         />
-        <br />
-        complaint description(explain the problem)
-        <br />
-        <input 
+        {titleerr===""?<></>:<><p style={{textAlign:"left",color:"red"}}>{titleerr}</p></>}
+       <h3 style={{textAlign:"left"}}>Describe</h3>
+        <textarea  rows="6" 
+        style={{width:"100%",padding:"10px"}}
          value={body}
          onChange={(e)=>{
              setbody(e.target.value);
          }}
         />
-        <br />
-        <button onClick={()=>{
-            handlesubmit();
+        {bodyerr===""?<></>:<><p style={{textAlign:"left",color:"red"}}>{bodyerr}</p></>}
+        <p 
+        style={{textAlign:"left",padding:"5px",cursor:"pointer",background:"green",fontSize:"25px",width:wid}}
+        onClick={()=>{
+            check()
         }}>
-            Submit complain
-        </button>
+            Submit 
+        </p>
+        </div>
     </div> );
 }
  

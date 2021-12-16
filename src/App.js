@@ -36,41 +36,67 @@ import Accounts from "./pages/notification/accounts";
 import Acountdata from "./pages/notification/accountdata";
 import Complain from "./pages/complain/complain";
 import Notification from "./pages/notification/notification";
-import Profile from "./pages/profile/profile";
-import Profileupdate from "./pages/profile/updateprofile";
+// import Profile from "./pages/profile/profile";
+// import Profileupdate from "./pages/profile/updateprofile";
 import Marketrates from "./Modules/admin/rates/marketrates";
 import Showrates from "./Modules/admin/rates/showrates";
 import Newagrioffice from "./Modules/admin/offices/newagrioffice";
 import Showoffices from "./Modules/admin/offices/showoffices";
 import Editagrioffice from "./Modules/admin/offices/editoffice";
-import Myads from "./pages/profile/profilemenu/myads";
-import Myposts from "./pages/profile/profilemenu/mypost";
+// import Myads from "./pages/profile/profilemenu/myads";
+// import Myposts from "./pages/profile/profilemenu/mypost";
 import Myprofile from "./pages/profile/profilemenu/myprofile";
 import Home from "./pages/homepage/home";
 import UpdateMarketrates from "./Modules/admin/rates/updaterates";
-import Showads from "./Modules/Ads/showads";
+// import Showads from "./Modules/Ads/showads";
 import Postad from "./Modules/Ads/postad";
 import Fullad from "./Modules/Ads/fulldetials";
 import Login from "./Modules/auth/login/login";
 import Register from "./Modules/auth/register/register";
-import Adslandinpage from "./Modules/Ads/adssection/mainpage";
+// import Adslandinpage from "./Modules/Ads/adssection/mainpage";
 import Displayads from "./Modules/Ads/adssection/displayads";
 import Mycart from './Modules/Ads/cart';
 import Orderform from "./Modules/Ads/ordersection/orderform";
-import Demo from "./navbar/demo/demo";
+// import Demo from "./navbar/demo/demo";
 import Multiorder from "./Modules/Ads/ordersection/multiorder";
 function App() {
   return ( 
     <div className="App">  
       
       <BrowserRouter>
-      <MyNavbar />
-      {/* <Demo /> */}
-      {/* <br style={{marginTop:"2rem"}}/> */}
         <ToastContainer />
         <CartProvider>
-          <Switch>
-            <Route path="/crops">
+
+        <Switch>
+                   <Route exact path="/login" component={LoginContainer}/>
+                   <Route exact path="/showprofile">
+                            <Myprofile />
+                   </Route>
+                   <Route path="/register">
+                       <Register  />
+                    </Route>
+                    <Route component={DefaultContainer}/>
+
+         </Switch>
+        </CartProvider>
+      </BrowserRouter>
+    </div>
+  );
+}
+
+export default App;
+const LoginContainer = () => (
+  <div >
+    <Route path="/login">
+            <Login />
+     </Route>
+  </div>
+);
+const DefaultContainer = () => (
+<div>
+     {window.location.pathname === '/login'  ? null : <MyNavbar />}
+     <Switch>
+     <Route path="/crops">
               <Crops />
             </Route>
             <Route exact path="/">
@@ -105,12 +131,6 @@ function App() {
           </Route>
           <Route path="/updateblog/:id">
             <Updateblog />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/register">
-            <Register  />
           </Route>
           <Route exact path="/news">
             <Shownews />
@@ -209,27 +229,10 @@ function App() {
       <br />
         <Acountdata />
       </Route>
-      <Route exact path="/showprofile">
-            <Profile />
+      {/* <Route exact path="/showprofile">
             <Myprofile />
-      </Route>
-      <Route exact path="/showprofile/myads">
-               <Profile />
-                <Myads />
-          </Route>
-          <Route exact path="/showprofile/myposts">
-          <Profile />
-                <Myposts />
-          </Route>
-      <Route exact path="/showprofile/editprofile">
-      <Profile />
-            <Profileupdate />
-      </Route>
-          </Switch>
-        </CartProvider>
-      </BrowserRouter>
-    </div>
-  );
-}
+      </Route> */}
+     </Switch>
+</div>
 
-export default App;
+)

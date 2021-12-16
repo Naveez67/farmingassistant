@@ -41,7 +41,7 @@ const Orderform = () => {
       });
   };
   const handleclick=()=>{
-    orderService.placeorder(buyername,address,adpostedby,adid,totalamount,phone,quantity).then((data)=>{
+    orderService.placeorder(buyername,address,adpostedby,adid,totalamount*quantity,phone,quantity).then((data)=>{
       setdis("block")
     }).catch((err)=>{
       toast.error(err.response.data, {
@@ -106,6 +106,7 @@ const Orderform = () => {
               value={quantity}
               onChange={(e) => {
                 setquantity(e.target.value);
+                // settotalamount(quantity.totalamount)
               }}
             />
           </div>
