@@ -59,6 +59,7 @@ import Mycart from './Modules/Ads/cart';
 import Orderform from "./Modules/Ads/ordersection/orderform";
 // import Demo from "./navbar/demo/demo";
 import Multiorder from "./Modules/Ads/ordersection/multiorder";
+import Aboutus from "./AboutUs/about";
 function App() {
   return ( 
     <div className="App">  
@@ -69,9 +70,9 @@ function App() {
 
         <Switch>
                    <Route exact path="/login" component={LoginContainer}/>
-                   <Route exact path="/showprofile">
+                   {/* <Route exact path="/showprofile">
                             <Myprofile />
-                   </Route>
+                   </Route> */}
                    <Route path="/register">
                        <Register  />
                     </Route>
@@ -229,9 +230,12 @@ const DefaultContainer = () => (
       <br />
         <Acountdata />
       </Route>
-      {/* <Route exact path="/showprofile">
+      <Route exact path="/showprofile">
             <Myprofile />
-      </Route> */}
+      </Route>
+      <Route exact path="/aboutus">
+            <Aboutus />
+      </Route>
      </Switch>
 </div>
 

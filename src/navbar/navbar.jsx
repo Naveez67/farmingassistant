@@ -33,11 +33,16 @@ const MyNavbar = () => {
           Home
           </Link>
         </li>
+        {userService.isLoggedIn()?<>
+          
+        </>:<>
         <li className="list-item">
           <Link style={{textDecoration:"none",color:"white"}} to="/showblog">
             Blog
           </Link>
-        </li>
+        </li> 
+        </>}
+        
         <li className="list-item">
           <Link style={{textDecoration:"none",color:"white"}} to="/showrates">
           Market
@@ -60,15 +65,6 @@ const MyNavbar = () => {
           </Link>
          
         </li>
-        {userService.isFarmerorSupplier()?
-        <li className="list-item">
-        <Link style={{textDecoration:"none",color:"white"}} to="/postad">
-          post Ad
-        </Link>
-       
-      </li>:<></>
-      
-      }
         {isloggedin?
         <li className="list-item">
         <div className="dropdown">
@@ -118,11 +114,14 @@ const MyNavbar = () => {
            <BsFillCartFill />
           </Link>
         </li>
-        <li className="list-item">
+        {isadmin?<>
+          <li className="list-item">
           <Link style={{textDecoration:"none",color:"white"}} to="/notification">
            <MdNotificationsActive size="35px" />
           </Link>
         </li>
+        </>:<></>}
+        
         <li className="list-item">
         <div className="dropdown">
         <MdAccountCircle size="35px" />
@@ -135,7 +134,9 @@ const MyNavbar = () => {
         </>
         :<>
         <li className="list-item">
-          <Link style={{textDecoration:"none",color:"white"}} to="/register">
+          <Link 
+          style={{textDecoration:"none",color:"white"
+          }} to="/register">
           Register
           </Link>
         </li>

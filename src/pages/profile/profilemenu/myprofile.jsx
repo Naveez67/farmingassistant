@@ -116,6 +116,7 @@ const Myprofile = () => {
           marginRight: "20%",
           marginLeft: "20%",
           justifyContent: "flex-end",
+          marginTop:"2rem"
         }}
       >
         <div
@@ -242,7 +243,7 @@ const Myprofile = () => {
       >
         {myorder ? (
           <>
-            <Myorders orders={orders} />
+            <Myorders id={data._id} />
           </>
         ) : (
           <></>

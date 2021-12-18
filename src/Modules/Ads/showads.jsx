@@ -18,12 +18,12 @@ const Showads = ({type}) => {
   };
   React.useEffect(getads, []);
   return (
-    <div style={{marginLeft:"15%",marginRight:"15%"}}>
+    <div style={{marginLeft:"5%"}}>
       {data.length > 0 ? (
         <>
           <Grid
             container
-            spacing={3}
+            spacing={2}
             // sx={{ marginLeft: "auto", marginRight: "auto" }}
           >
             {data.map((ad, index) => (

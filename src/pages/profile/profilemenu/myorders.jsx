@@ -1,9 +1,21 @@
 import moment from 'moment';
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import { Table } from 'react-bootstrap';
-
-const Myorders = ({orders}) => {
-  console.log(orders)
+import orderService from "../../../services/orderservice";
+const Myorders = ({id}) => {
+  const [orders, setorders] = useState([]);
+  const getorders = () => {
+    orderService
+      .myorders(id)
+      .then((data) => {
+        // console.log(data)
+        setorders(data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  useEffect(getorders, []); 
     return ( <div style={{width:"100%"}}>
   <h2>orders</h2>
   {orders.length>0?<>

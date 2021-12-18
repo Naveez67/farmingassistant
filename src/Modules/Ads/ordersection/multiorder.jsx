@@ -30,7 +30,7 @@ const Multiorder=()=>{
         for (let i = 0; i < myoder.length; i++) {
             
                postorder(
-                  myoder[i].quantity,myoder[i].itemTotal,myoder[i].adid,myoder[i].ad.postedby
+                  myoder[i].quantity,myoder[i].itemTotal,myoder[i].adid,myoder[i].postedby
 
                )
                 removeItem(myoder[i].id)

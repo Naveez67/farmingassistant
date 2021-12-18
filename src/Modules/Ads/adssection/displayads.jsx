@@ -1,13 +1,27 @@
 import React from 'react';
-import Shownews from '../../admin/news/shownews';
 import Showads from '../showads';
-import fruit from './imeges/fruit.png';
-import Adslandinpage from './mainpage';
+import userService from '../../../services/UserService';
+import {Button} from "@mui/material";
+import { useHistory } from 'react-router-dom';
 const Displayads = () => {
     const [type,setype]=React.useState("");
+     const history=useHistory();
     return ( 
     <div>
-            <Adslandinpage  settype={setype}/>
+           <div style={{width:"100%",padding:"15px",background:"green",marginBottom:"1rem"}}>
+               <h1 style={{textAlign:"center",color:"white"}}>Ads</h1>
+           </div>
+           {userService.isFarmerorSupplier()?<>
+            <div style={{marginBottom:"1rem",marginTop:"1rem",display:"flex"}}>
+           <Button size="large" variant="contained" color="success" sx={{marginLeft:"auto",marginRight:"5%"}}
+        onClick={()=>{
+           history.push("/postad")
+         }}
+        >Post ad</Button>
+        </div>
+           </>:<></>}
+          
+           
            <Showads type={type}/>
            
     </div> 

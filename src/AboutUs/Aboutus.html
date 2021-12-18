@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+
+      .column {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 16px;
+        padding: 0 8px;
+      }
+
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        margin: 8px;
+      }
+
+      .about-section {
+        padding: 50px;
+        text-align: center;
+        background-color: #474e5d;
+        color: white;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: gray;
+      }
+
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: #555;
+      }
+      img {
+        height: 33rem;
+      }
+
+      @media screen and (max-width: 650px) {
+        .column {
+          width: 100%;
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="about-section">
+      <h1 style="text-decoration: orchid">About Us Page</h1>
+      <p style="color: mintcream" ,>
+        We are team of three people. Leader is Mr Naveez Ahmed and member of
+        this team is Inzamam Ashraf and Ali Hassan. We are working on a project
+        of Farming Assistant Web service which we can deal the three main users
+        Farmer,Supplier and Customer. The Farming system is basically for the
+        help of farmer and customer and the main purpose is to remove middle
+        men.
+      </p>
+    </div>
+
+    <h2 style="text-align: center">Our Team</h2>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img
+            src="./images/Inzamam Ashraf.jpg"
+            alt="Inzamam"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h2>Inzamam</h2>
+            <p class="title">Developer</p>
+            <p>
+              My Name is Inzamam Ashraf and i am student of comsats university
+              Lahore campus and i am from Muridke.
+            </p>
+            <p>SP18-BSE-162@cuilahore.edu.pk</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img
+            src="./images/Naveez Ahmad.jpg"
+            alt="Naveez"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h2>Naveez</h2>
+            <p class="title">Developer</p>
+            <p>
+              My Name is Naveez Ahmad and i am student of comsats university
+              Lahore campus and i am from lahore.
+            </p>
+            <p>SP18-BSE-123@cuilahore.edu.pk</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <img
+            src="./images/Ali Hassan.jpg"
+            alt="Ali Hassan"
+            style="width: 100%"
+          />
+          <div class="container">
+            <h2>Ali Hassan</h2>
+            <p class="title">Developer</p>
+            <p>
+              My Name is Ali Hassan and i am student of comsats university
+              Lahore campus and i am from sialkot.
+            </p>
+            <p>SP18-BSE-141@cuilahore.edu.pk</p>
+            <p><button class="button">Contact</button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -6,6 +6,7 @@ import { useHistory } from "react-router";
 import Typeofad from './typeofad';
 import Categoryofad from './category';
 import adsService from '../../services/adsservice';
+import { CircularProgress } from '@mui/material';
 const Postad = () => {
     const [{ alt, src }, setImg] = useState({
         src: "",
@@ -13,12 +14,54 @@ const Postad = () => {
       });
       const history=useHistory();
       const [photo, setphoto] = useState("");
+      const [photoerr, setphotoerr] = useState("");
       const [title, settitle] = useState("");
+      const [titleerr, settitleerr] = useState("");
       const [body, setbody] = useState("");
+      const [bodyerr, setbodyerr] = useState("");
       const [type, settype] = useState("");
-      const [price, setprice] = useState();
+      const [price, setprice] = useState(0);
+      const [priceerr, setpriceerr] = useState();
       const [category, setcategory] = useState("");
       const [imege, setImege] = useState("");
+      const[imgupload,setimgupload]=useState(false);
+      const[showanimation,setshowanimation]=useState(false);
+      const[showbtn,setshowbtn]=useState(false);
+
+      const check=()=>{
+        if(photo.length===0){
+          setphotoerr("upload photo")
+        }
+        if(title.length===0){
+          settitleerr("please enter the ad the title ")
+        }
+        if(price==0){
+          setpriceerr("please enter the price ")
+        }
+        if(body.length===0){
+          setbodyerr("please enter ad detials ")
+        }
+         if(photo.length<3){
+          setphotoerr("upload photo")
+        }
+         if(title.length<3){
+          settitleerr("title length must be grater then 3 ")
+        }
+         if(price<=0){
+          setpriceerr("price can not be neagtive or 0 ")
+        }
+         if(body.length<10){
+          setbodyerr("detials length must be greate then 10 ")
+        }
+        else {
+          setphotoerr("");
+          settitleerr("");
+          setpriceerr("");
+          setbodyerr("");
+          handleclick()
+          
+        }
+      }
       const handleclick = () => {
         adsService
           .postad({title, body, photo,type,category,price})
@@ -36,6 +79,7 @@ const Postad = () => {
       };
       const handleImg = (e) => {
         setImege(e.target.files[0]);
+        setshowbtn(true)
         if (e.target.files[0]) {
           setImg({
             src: URL.createObjectURL(e.target.files[0]),
@@ -55,33 +99,49 @@ const Postad = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data.url);
+            // console.log(data.url);
+            setimgupload(true)
+            setshowanimation(false)
             setphoto(data.url);
           })
           .catch((err) => {
             console.log(err);
           });
       };
-      console.log(category,type);
+      // console.log(category,type);
       return (
-        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+        <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",marginTop:"2rem"}}>
           <div>
             {src === "" ? (
               <div className="divimg">
                 <p>Upload Photo</p>
               </div>
             ) : (
-              <img src={src} alt={alt} style={{ width: "100%", height: 300 }} />
+               <img src={src} alt={alt} style={{ width: "100%", height: 250 }} />
+               
             )}
           </div>
           <div>
-            <input
-              type="file"
-              accept=".png, .jpg, .jpeg"
-              id="photo"
-              onChange={handleImg}
-            />
-            <button onClick={() => postdetials()}>upload</button>
+          {showanimation?<><CircularProgress />uploading....</>:<></>}
+                    {imgupload?<><h4 style={{color:"green"}}>Uploaded</h4></>:<>
+                    {showbtn?<><button  style={{fontWeight:"bolder",fontSize:"20px",border:"1px solid black"}} 
+                    onClick={()=>{
+                        setshowanimation(true);
+                        postdetials()
+                    }}
+                    >
+                        Upload photo
+                        </button></>:
+                    <>
+                     <input type="file" className="inputform"
+                     required
+                      onChange={handleImg}
+                    />
+                    {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>}
+                    </>}
+                    
+                    </>
+                    }
           </div>
           <div>
             <TextField
@@ -93,7 +153,9 @@ const Postad = () => {
               onChange={(e) => {
                 settitle(e.target.value);
               }}
-            />{" "}
+            />
+            {titleerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{titleerr}</p>}
+            {" "}
              <div style={{display:"flex",marginTop:"1rem"}}>
             <Typeofad setype={settype}/>
             <Categoryofad secat={setcategory}/>
@@ -108,11 +170,12 @@ const Postad = () => {
                 setprice(e.target.value);
               }}
             />
+            {priceerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{priceerr}</p>}
             </div>
             {""}
             <TextareaAutosize
               aria-label="Enter Ad detials"
-              minRows={8}
+              minRows={4}
               style={{ width: "100%", marginTop: "1rem" }}
               placeholder="Enter Ad detials"
               value={body}
@@ -120,15 +183,17 @@ const Postad = () => {
                 setbody(e.target.value);
               }}
             />
+            {bodyerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{bodyerr}</p>}
             {""}
            
 
             <Button
               variant="contained"
-              color="secondary"
+              style={{backgroundColor:"green"}}
               onClick={(e) => {
-                handleclick();
-                console.log(title, body);
+                check()
+                // handleclick();
+                // console.log(title, body);
               }}
             >
               Post ad
