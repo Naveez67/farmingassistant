@@ -3,6 +3,7 @@ import notification from '../../services/notification';
 import userService from '../../services/UserService';
 import complain from '../../services/admin/complain';
 import { Table } from 'react-bootstrap';
+import {MdDoubleArrow } from 'react-icons/md'
 //import Cardnotification from './complaintcard';
 import { useHistory } from 'react-router';
 import './style.css'
@@ -50,24 +51,46 @@ const Notification = () => {
     return ( <div> 
            {userService.isAdmin()?
                <div>
-                     <div className="main">
+
+                   <div style={{width:"100%",color:'white'}}>
+                     <h1 style={{background:"green",padding:"10px"}}>Click to see</h1>
+                   </div>
+                   <div style={{background:"#6DDD00",display:"flex",flexDirection:'column',textAlign:"left"}}>
+                       <h1 style={{cursor:"pointer",color:'white'}}
+                        onClick={()=>{
+                             history.push("/complaints")
+                         }}
+                        >
+                           <MdDoubleArrow />
+                           Complains 
+                       </h1>
+                       <h1 style={{cursor:"pointer",color:'white'}}
+                       onClick={()=>{
+                         history.push("/accounts")
+                        }}
+                       >
+                       <MdDoubleArrow />
+                           Unverfied accounts 
+                       </h1>
+                   </div>
+                     {/* <div className="main">
                      <h1>Showing notification</h1>
                      </div>
                      <div className="show">
                          <div className="complain" onClick={()=>{
-                             console.log("complaints");
+                            //  console.log("complaints");
                              history.push("/complaints")
                          }}>
                                 <span className="text"> Complaints</span>
                          </div>
                          <div className="complain" onClick={()=>{
-                             console.log("Accounts")
+                            //  console.log("Accounts")
                              history.push("/accounts")
                             }}
                              >
                                 <span className="text"> Accounts</span>
                          </div>
-                     </div>
+                     </div> */}
                      
                        
                    

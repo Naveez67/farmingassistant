@@ -10,9 +10,10 @@ import farmerService from '../../../services/farmerservice';
 import { toast } from 'react-toastify';
 const Register = () => {
   const history=useHistory();
-  const {register,handleSubmit,erros}=useForm();
+  // const {register,handleSubmit,erros}=useForm();
     const [size,setsize]=useState("20%");
-    const [modalOpen, setModalOpen] = useState(false);
+   const[fname,setfname]=useState("");
+   const[lname,setlname]=useState("");
    const[name,setname]=useState("");
    const[username,setusername]=useState("");
    const[password,setpassword]=useState("");
@@ -25,7 +26,105 @@ const Register = () => {
    const[showanimation,setshowanimation]=useState(false);
    const[showbtn,setshowbtn]=useState(false);
    const[isempty,setisempty]=useState(false);
+   const[fnerr,setfnerr]=useState("");
+   const[lnerr,setlnerr]=useState("");
+   const[unerr,setunerr]=useState("");
+   const[pherr,setpherr]=useState("");
+   const[pterr,setpterr]=useState("");
+   const[pserr,setpserr]=useState("");
+   const[regnoerr,setregnoerr]=useState("");
 
+   const check=()=>{
+     if(fname.length==0){
+         setfnerr("first name is required")
+     }
+     else if(fname.length<3){
+          setfnerr("First name length must be greater or equal to 3")
+     }
+     else 
+     {
+       setfnerr("")
+       checklname()
+     }
+   }
+   const checklname=()=>{
+      if(lname.length==0){
+         setlnerr("lastname is required")
+     }
+     else if(lname.length<3){
+          setlnerr("lastname length must be greater or equal to 3")
+     }
+     else 
+     {
+       setlnerr("")
+       checkuname()
+     }
+   }
+   const checkuname=()=>{
+      if(username.length==0){
+         setunerr("username is required")
+     }
+     else if(username.length<3){
+          setunerr("username length must be greater or equal to 3")
+     }
+     else 
+     {
+       setunerr("")
+       checkphone()
+     }
+   }
+   const checkphone=()=>{
+      if(phone.length==0){
+         setpherr("phone number is required")
+     }
+     else if(phone.length<11){
+        setpherr("phone number must be 11 digit ")
+     }
+     else if(phone.length>11){
+        setpherr("phone number must be 11 digit ")
+     }
+     else 
+     {
+       setpherr("")
+       checkphoto()
+     }
+   }
+   const checkphoto=()=>{
+      if(photo.length==0){
+         setpterr("please upload photo")
+     }
+     else 
+     {
+       setpterr("")
+       if(role==="supplier"){
+         checkregno()
+       }
+       else
+       checkpassword()
+     }
+   }
+   const checkregno=()=>{
+     if(regno.length==0){
+       setregnoerr("required")
+     }
+     else{
+       setregnoerr("")
+       checkpassword();
+     }
+   }
+   const checkpassword=()=>{
+      if(password.length==0){
+         setpserr("password is required")
+     }
+     else if(password.length<6){
+          setpserr("password lenght must be greater then 6")
+     }
+     else 
+     {
+       setpserr("")
+       reg()
+     }
+   }
    const [imege,setImege]=useState("");
     const handleImg = (e) => {
         setImege(e.target.files[0]) 
@@ -110,42 +209,60 @@ const reg = () => {
          <div className="form">
                    <div style={{display:"flex"}}>
                    <div style={{width:"50%",marginRight:"6px"}}>
-                    <p className="label">Name*</p>
+                    <p className="label">First Name*</p>
                     <input type="text" className="inputform"
                     required
-                    value={name}
+                    value={fname}
                     onChange={(e)=>{
                       let value = e.target.value;
 
-                      value = value.replace(/[^A-Za-z]/gi, "");
-                        setname(value)
+                      // value = value.replace(/[^A-Za-z]/gi, "");
+                        setfname(value)
                        
                     }}
                     />
-                    {/* {isempty?<p color='red'>please fill the name field</p>:<></>} */}
+                    {fnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{fnerr}</p>:<></>}
                     </div> 
                     <div style={{width:"50%"}}>
-                    <p className="label">Username*</p>
+                    <p className="label">Last name*</p>
                     <input type="text" className="inputform"
                     required
+                    value={lname}
                     onChange={(e)=>{
-                        setusername(e.target.value)
+                        setlname(e.target.value)
+                        setname( fname.concat(" "+lname))
                     }}
                     />
+                     {lnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{lnerr}</p>:<></>}
                     </div> 
-                    {/* {isempty?<p color='red'>please fill the username field</p>:<></>} */}
+                   
                    </div>
                     
                     <div>
-                    <p className="label">Phone*</p>
-                    <input type="number" className="inputform" 
+                    <p className="label">Username*</p>
+                    <input type="text" className="inputform" 
                     required
+                     value={username}
                       onChange={(e)=>{
-                          setphone(e.target.value)
+                          setusername(e.target.value)
                       }}
                     />
                     </div> 
-                    {/* {isempty?<p color='red'>please enter the 11 digit number</p>:<></>} */}
+                    {unerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
+                    <div>
+                    <p className="label">Phone*</p>
+                    <input type="text" className="inputform" 
+                    required
+                    value={phone}
+                      onChange={(e)=>{
+                        let value = e.target.value;
+
+                      value = value.replace(/[^0-9]/gi, "");
+                          setphone(value)
+                      }}
+                    />
+                    </div> 
+                    {pherr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pherr}</p>:<></>}
                     <div>
                     <p className="label">Upload photo*</p>
                     {showanimation?<><CircularProgress />uploading....</>:<></>}
@@ -163,7 +280,7 @@ const reg = () => {
                      required
                       onChange={handleImg}
                     />
-                    {/* {isempty?<p color='red'>please upload photo</p>:<></>} */}
+                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
                     </>}
                     
                     </>
@@ -171,7 +288,7 @@ const reg = () => {
                     </div> 
                     <div>
                     <p className="label">Select*</p>
-                    <select id="country" name="country" className="select" 
+                    <select id="role" name="role" className="select" 
                        value={role}
                        onChange={(e)=>{
                         //    console.log(e.target.value);
@@ -193,7 +310,7 @@ const reg = () => {
                         setregno(e.target.value)
                     }}
                     />
-                    {/* {isempty?<p color='red'>please fill the  field</p>:<></>} */}
+                    {regnoerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{regnoerr}</p>:<></>}
                     </div> :<></>}
                     <div>
                     <p className="label">Password*</p>
@@ -203,7 +320,7 @@ const reg = () => {
                           setpassword(e.target.value)
                       }}
                     />
-                    {/* {isempty?<p color='red'>please enter the password</p>:<></>} */}
+                    {pserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
                   
                     </div> 
                     <div>
@@ -213,7 +330,8 @@ const reg = () => {
                     className="btn" style={{backgroundColor:"green",fontWeight:"bolder",fontSize:"28px",color:"white"}}
                     onClick={() => {
                         // setModalOpen(true);
-                        reg();
+                        // reg();
+                        check()
                       }}
                     >Sign Up</button>
                     <p style={{cursor:"pointer",color:"blue",textDecoration:"underline"}}
@@ -243,7 +361,7 @@ const reg = () => {
     
   </div>
   <div className="modal-body">
-      <h1>Successfulll account created</h1>
+      <h1>Successfully signed up</h1>
   </div>
   <div className="modal-footer">
     <h1  onClick={()=>

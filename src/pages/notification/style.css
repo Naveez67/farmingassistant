@@ -42,3 +42,11 @@
     background-color: green;
     font-size: larger;
 }
+.custombtn{
+    margin: 5px;
+    padding:6px;
+    font-size: 22px;
+    font-weight: 500;
+    background-color:green;
+    color: white;
+}

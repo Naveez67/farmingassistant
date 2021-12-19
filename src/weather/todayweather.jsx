@@ -1,4 +1,5 @@
 import React,{useState,useEffect} from 'react';
+import { AiOutlineSearch } from 'react-icons/ai';
 import weather from '../services/admin/weather';
 import Showcard from './card';
 const Todayweather = () => {
@@ -42,21 +43,21 @@ const Todayweather = () => {
               setcity(e.target.value);
             }}
             />
-            <button 
+            <AiOutlineSearch  size="40px"
             style={{padding:"10px",background:"green",color:"white"}}
             onClick={()=>{
                 to(city);
                 fo(city);
-            }}>
-                Search
-            </button>
+            }} />
+                
+            
 
 
                 
 
         </div>
 
-        <h1 style={{textAlign:"center",background:"green",color:"white",marginLeft:"15%",marginRight:"15%"}}>Weather Forecast</h1>
+        <h1 style={{textAlign:"center",background:"green",color:"white",marginLeft:"15%",marginRight:"15%"}}>Wheather Forecast</h1>
         
         {Object.keys(today).length>0?
            <>

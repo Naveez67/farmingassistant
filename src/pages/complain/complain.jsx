@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import complain from '../../services/admin/complain';
 import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
+import "../../components/all/mangaement/style.css"
 const Complain = () => {
     const history=useHistory();
     const [title,settitle]=useState("");
@@ -9,6 +10,7 @@ const Complain = () => {
     const [body,setbody]=useState("");
     const [bodyerr,setbodyerr]=useState("");
     const [wid,setwid]=useState("15%");
+    const [dis,setdis]=useState("15%");
 
 
 
@@ -43,11 +45,7 @@ const Complain = () => {
     const handlesubmit=()=>{
         console.log(title,body);
         complain.Addcomplain({title,body}).then((data)=>{
-           // console.log(data)
-        //    alert("complain submitted");
-           settitle("")
-           setbody("")
-        //    history.push("/")
+           setdis("block")
         })
         .catch((err)=>{
             toast.error(err.response.data, {
@@ -67,7 +65,7 @@ const Complain = () => {
     React.useEffect(getwidth,[])
     return ( <div>
         <h3
-        style={{background:"green",padding:"10px"}}
+        style={{background:"green",padding:"10px",color:"white"}}
         >Have complain then submit the complain</h3>
         <div style={{backgroundColor:"#6DDD00",color:"white",width:"60%",marginRight:"auto",marginLeft:"auto",padding:"20px"}}>
         <h3 style={{textAlign:"left"}}>Title</h3>
@@ -96,6 +94,29 @@ const Complain = () => {
             Submit 
         </p>
         </div>
+<div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setdis("none")
+   settitle("");
+   setbody("");
+}} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+  <h1>complaint submitted successfully </h1>
+  </div>
+  <div className="modal-footer">
+    <h3></h3>
+  </div>
+</div>
+
+</div>
+
+        
     </div> );
 }
  

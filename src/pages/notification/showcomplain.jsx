@@ -31,26 +31,30 @@ const Showcomplains = ({com}) => {
    }
     React.useEffect(getuser,[]);
     return ( 
-    <div style={{marginRight:"auto"}}>
-        <div>
-                   <h3>Title</h3>
-                   {title}
-                   <h5>Complain body</h5>
-                   {body} 
-                   <h6>Complaint By</h6>
-                   {role}
-                   <h6>Status</h6>
-                   {Status}
-                   <h6>Username</h6>
-                   {name}
-                   <br/>
-                   <button onClick={()=>{ hnadlestus("reject",com._id);}}>Reject</button>
-                   <button onClick={()=>{ hnadlestus("solved",com._id)}}>Solve</button>
-                   <button onClick={()=>{ hnadlestus("hold",com._id)}}>Hold</button>
-                   
-
-                   </div>
-    </div> );
+    <div style={{display:"flex",flexDirection:"column",background:"#6DDD00",color:"white"}}>
+       
+       <div style={{textAlign:"left",marginLeft:"3%",marginTop:"1rem",marginBottom:"1rem"}}>
+       <h3>Title</h3>
+       <p>{title}</p>
+       <h5>Complain body</h5>
+       <p style={{textAlign:"justify",textJustify:"interword",width:"70%"}}>{body}</p>
+       <h5>Complaint By</h5>
+       <p>{role}</p>
+       <h5>Complainer name</h5>
+       <p>{name}</p>
+       <h5>Status</h5>
+       <p>{Status}</p>
+       <div style={{display:"flex"}}>
+       <button className='custombtn' onClick={()=>{ hnadlestus("reject",com._id);}}>Reject</button>
+       <button className='custombtn' onClick={()=>{ hnadlestus("solved",com._id)}}>Solve</button>
+       <button className='custombtn' onClick={()=>{ hnadlestus("hold",com._id)}}>Hold</button>
+       </div>
+     
+       </div>
+        
+    <hr style={{color:"black",padding:"4px"}}    />        
+    </div>
+     );
 }
  
 export default Showcomplains;

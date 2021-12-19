@@ -13,6 +13,7 @@ const Orderform = () => {
   const [address, setaddress] = useState("");
   const [quantity, setquantity] = useState(param.q);
   const [phone, setphone] = useState("");
+  const [err, seterr] = useState("");
   const [adid, setadid] = useState(param.id);
   const [adpostedby, setadpostedby] = useState("");
   const [totalamount, settotalamount] = useState();
@@ -40,6 +41,18 @@ const Orderform = () => {
         console.log(err);
       });
   };
+  const check=()=>{
+    if(address.length===0){
+        seterr("please enter address")
+    }
+    else if(address.length<4){
+     seterr("address length must be greater then 4")
+    }
+    else if(address.length>4){
+        seterr("")
+        handleclick()
+    }
+ }
   const handleclick=()=>{
     orderService.placeorder(buyername,address,adpostedby,adid,totalamount*quantity,phone,quantity).then((data)=>{
       setdis("block")
@@ -92,6 +105,7 @@ const Orderform = () => {
                 setaddress(e.target.value);
               }}
             />
+            {err===""?<></>:<><p style={{color:"red",textAlign:"left"}}>{err}</p></>}
           </div>
           <div>
             <p className="label">Product ID*</p>
@@ -133,7 +147,7 @@ const Orderform = () => {
                 color: "white",
               }}
               onClick={() => {
-                  handleclick()
+                  check()
               }}
             >
               Place order

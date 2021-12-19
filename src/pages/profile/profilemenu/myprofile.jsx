@@ -70,7 +70,7 @@ const Myprofile = () => {
     orderService
       .myorders()
       .then((data) => {
-        // console.log(data)
+        console.log(data)
         setorders(data);
       })
       .catch((err) => {
@@ -143,6 +143,8 @@ const Myprofile = () => {
           flexWrap: "wrap",
           marginRight: "20%",
           marginLeft: "20%",
+          background:"#6DDD00",
+          color:"white"
         }}
       >
         <div>
@@ -171,7 +173,7 @@ const Myprofile = () => {
           <h1>{username}</h1>
           <h2>{phone}</h2>
           <h3>Joined:{moment(userdata.accountcreated).format("MMM Do YY")}</h3>
-          <p style={{color:"blue",textDecoration:"underline"}}>Edit profile</p>
+          {/* <p style={{color:"blue",textDecoration:"underline"}}>Edit profile</p> */}
         </div>
       </div>
       {/* profile section end */}
@@ -182,7 +184,10 @@ const Myprofile = () => {
           marginRight: "20%",
           marginLeft: "20%",
           marginTop: "2rem",
+          marginTop:"0",
           justifyContent: "space-between",
+          background:"green",
+          color:"white"
         }}
       >
         {userService.isFarmerorSupplier() ? (

@@ -199,27 +199,27 @@ const DefaultContainer = () => (
             <Editagrioffice />
           </Route>
           <Route path="/weather">
-            <br />
+            
            <Todayweather />
          </Route>
          <Route path="/help">
-            <br />
+            
             <Helppost />
           </Route>
           <Route path="/showhelpposts">
-            <br />
+            
             <Showallpost />
           </Route>
           <Route path="/complain">
-          <br />
+          
         <Complain />
       </Route>
       <Route path="/notification">
-      <br />
+      
         <Notification />
       </Route>
       <Route exact path="/complaints">
-      <br />
+      
         <Cardnotification />
       </Route>
       <Route exact path="/accounts">
@@ -227,7 +227,7 @@ const DefaultContainer = () => (
         <Accounts />
       </Route>
       <Route exact path="/account/:id">
-      <br />
+      
         <Acountdata />
       </Route>
       <Route exact path="/showprofile">
