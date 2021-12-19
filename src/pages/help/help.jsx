@@ -21,7 +21,7 @@ const Helppost = () => {
       .then((data) => {
         //console.log(data);
         //console.log(history);
-        alert("complain submitted")
+        // alert("complain submitted")
         history.push("/showhelpposts");
       })
       .catch((err) => {
@@ -79,6 +79,7 @@ const Helppost = () => {
           accept=".png, .jpg, .jpeg"
           id="photo"
           onChange={handleImg}
+          
         />
         <button onClick={() => postdetials()}>upload</button>
       </div>

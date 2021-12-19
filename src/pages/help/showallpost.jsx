@@ -29,6 +29,7 @@ const Showallpost = () => {
       {userService.isFarmer()?
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <button
+           style={{padding:"10px",background:"green",marginRight:"5%",color:"white",fontSize:"24px",fontWeight:"bold"}}
           onClick={() => {
             history.push("/help");
           }}

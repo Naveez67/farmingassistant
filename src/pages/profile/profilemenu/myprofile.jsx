@@ -4,6 +4,8 @@ import adsService from "../../../services/adsservice";
 import orderService from "../../../services/orderservice";
 import helpService from "../../../services/helpservice";
 import complain from "../../../services/admin/complain";
+import admin from './photo/admin.png'
+import { useHistory } from "react-router-dom";
 import "../profile.css";
 import moment from "moment";
 import Myposts from "./mypost";
@@ -12,6 +14,7 @@ import Myorders from "./myorders";
 import Mycomplains from "./Mycomplains";
 import { IoIosLogOut } from "react-icons/io";
 const Myprofile = () => {
+  const history=useHistory()
   const [data, setdata] = useState(userService.getLoggedInUser());
   const [userdata, setuserdata] = useState([]);
   const [user, setuser] = useState([]);
@@ -22,6 +25,7 @@ const Myprofile = () => {
   const [photo, setphoto] = useState("");
   const [myorder, setmyorder] = useState(false);
   const [mycom, setmycom] = useState(false);
+  const [complains, setcomplains] = useState(false);
   const [post, setmypost] = useState(false);
   const [myads, setmyads] = useState(false);
   const [phone, setphone] = useState("");
@@ -42,7 +46,7 @@ const Myprofile = () => {
   };
   const getcomplains = () => {
     complain
-      .getcomplain()
+      .getmycomplains()
       .then((data) => {
         console.log(data);
         setcomplain(data);
@@ -64,7 +68,7 @@ const Myprofile = () => {
   };
   const getorders = () => {
     orderService
-      .myorders(data._id)
+      .myorders()
       .then((data) => {
         // console.log(data)
         setorders(data);
@@ -142,6 +146,15 @@ const Myprofile = () => {
         }}
       >
         <div>
+          {userService.isAdmin()?<>
+            <img
+            src={admin}
+            width="250px"
+            height="250px"
+            alt={name}
+            style={{ borderRadius: "50%" }}
+          />
+          </>:<>
           <img
             src={photo}
             width="250px"
@@ -149,6 +162,8 @@ const Myprofile = () => {
             alt={name}
             style={{ borderRadius: "50%" }}
           />
+          </>}
+          
         </div>
         <div
           style={{ textAlign: "left", marginLeft: "2rem", marginTop: "2rem" }}
@@ -218,7 +233,8 @@ const Myprofile = () => {
         ) : (
           <></>
         )}
-        <div
+        {userService.isnotadmin()?<>
+          <div
           style={{ cursor: "pointer" }}
           onClick={() => {
             setmyorder(false);
@@ -230,6 +246,42 @@ const Myprofile = () => {
           <h3> my complains</h3>
           {mycomplains.length}
         </div>
+        </>:<></>}
+        {userService.isAdmin()?<>
+          <div
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            history.push("/addblog")
+          }}
+        >
+          <h3>Add blog</h3>
+        </div>
+          <div
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            history.push("/addnews")
+          }}
+        >
+          <h3>Add news</h3>
+        </div>
+          <div
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            history.push("/addrates")
+          }}
+        >
+          <h3>Add rates</h3>
+        </div>
+          <div
+          style={{ cursor: "pointer" }}
+          onClick={() => {
+            history.push("/newagrioffice")
+          }}
+        >
+          <h3>Add office</h3>
+        </div>
+        </>:<></>}
+        
       </div>
       <div
         style={{
@@ -243,7 +295,7 @@ const Myprofile = () => {
       >
         {myorder ? (
           <>
-            <Myorders id={data._id} />
+            <Myorders orders={orders} />
           </>
         ) : (
           <></>
@@ -269,6 +321,7 @@ const Myprofile = () => {
         ) : (
           <></>
         )}
+        {complains?<>Complains </>:<></>}
       </div>
     </div>
   );

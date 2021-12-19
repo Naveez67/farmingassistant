@@ -109,11 +109,14 @@ const MyNavbar = () => {
         </li>
         {isloggedin?
         <>
-        <li className="list-item">
+        {userService.isnotadmin()?<>
+          <li className="list-item">
           <Link style={{textDecoration:"none",color:"white"}} to="/mycart">
            <BsFillCartFill />
           </Link>
         </li>
+        </>:<></>}
+        
         {isadmin?<>
           <li className="list-item">
           <Link style={{textDecoration:"none",color:"white"}} to="/notification">

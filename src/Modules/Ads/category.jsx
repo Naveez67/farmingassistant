@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export default function Categoryofad({secat}) {
-  const [category, setcategory] = React.useState('');
+  const [category, setcategory] = React.useState('Seed');
 
   const handleChange = (event) => {
     setcategory(event.target.value);
@@ -25,12 +25,9 @@ export default function Categoryofad({secat}) {
           autoWidth
           label="category"
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
           <MenuItem value={"Seed"}>Seed</MenuItem>
           <MenuItem value={"Fruit"}>Fruit</MenuItem>
-          <MenuItem value={"Vegitable"}>Vegitables</MenuItem>
+          <MenuItem value={"Vegitable"}>Vegitable</MenuItem>
           <MenuItem value={"Wheat"}>Wheat</MenuItem>
           <MenuItem value={"Rice"}>Rice</MenuItem>
           <MenuItem value={"Spray"}>Spray</MenuItem>

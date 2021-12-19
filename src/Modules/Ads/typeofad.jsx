@@ -5,7 +5,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 export default function Typeofad({setype}) {
-  const [type, settype] = React.useState('');
+  const [type, settype] = React.useState('for all');
 
   const handleChange = (event) => {
     settype(event.target.value);
@@ -24,9 +24,6 @@ export default function Typeofad({setype}) {
           autoWidth
           label="Type"
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
           <MenuItem value={"for all"}>For all</MenuItem>
           <MenuItem value={"for farmers"}>For Farmers</MenuItem>
           <MenuItem value={"for suppliers"}>For Suppliers</MenuItem>

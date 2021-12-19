@@ -30,7 +30,7 @@ const Showcomments = ({ comments }) => {
               id={comments[len].postedBy}
               time={comments[len].comdate}
             />
-            <p style={{ textAlign: "left", marginTop: "-1.8rem" }}>
+            <p style={{ textAlign: "left", marginTop: "-1rem" }}>
               {comments[len].text}
             </p>
           </div>

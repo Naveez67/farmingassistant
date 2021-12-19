@@ -6,7 +6,9 @@ import { useHistory } from "react-router";
 import Typeofad from './typeofad';
 import Categoryofad from './category';
 import adsService from '../../services/adsservice';
+import { useForm } from 'react-hook-form';
 import { CircularProgress } from '@mui/material';
+import { toast } from 'react-toastify';
 const Postad = () => {
     const [{ alt, src }, setImg] = useState({
         src: "",
@@ -14,67 +16,34 @@ const Postad = () => {
       });
       const history=useHistory();
       const [photo, setphoto] = useState("");
-      const [photoerr, setphotoerr] = useState("");
       const [title, settitle] = useState("");
-      const [titleerr, settitleerr] = useState("");
       const [body, setbody] = useState("");
-      const [bodyerr, setbodyerr] = useState("");
-      const [type, settype] = useState("");
+      const [type, settype] = useState("for all");
       const [price, setprice] = useState(0);
-      const [priceerr, setpriceerr] = useState();
-      const [category, setcategory] = useState("");
+      const [category, setcategory] = useState("Seed");
       const [imege, setImege] = useState("");
       const[imgupload,setimgupload]=useState(false);
       const[showanimation,setshowanimation]=useState(false);
       const[showbtn,setshowbtn]=useState(false);
-
-      const check=()=>{
-        if(photo.length===0){
-          setphotoerr("upload photo")
-        }
-        if(title.length===0){
-          settitleerr("please enter the ad the title ")
-        }
-        if(price==0){
-          setpriceerr("please enter the price ")
-        }
-        if(body.length===0){
-          setbodyerr("please enter ad detials ")
-        }
-         if(photo.length<3){
-          setphotoerr("upload photo")
-        }
-         if(title.length<3){
-          settitleerr("title length must be grater then 3 ")
-        }
-         if(price<=0){
-          setpriceerr("price can not be neagtive or 0 ")
-        }
-         if(body.length<10){
-          setbodyerr("detials length must be greate then 10 ")
-        }
-        else {
-          setphotoerr("");
-          settitleerr("");
-          setpriceerr("");
-          setbodyerr("");
-          handleclick()
-          
-        }
-      }
+      const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm();
+      const onSubmit = (data) => console.log(data);
       const handleclick = () => {
         adsService
           .postad({title, body, photo,type,category,price})
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             //console.log(history);
             history.push("/ads")
           })
           .catch((err) => {
             console.log(err.response.data);
-            // toast.error(err.response.data, {
-            //   position: toast.POSITION.TOP_LEFT,
-            // });
+            toast.error(err.response.data, {
+              position: toast.POSITION.TOP_CENTER,
+            });
           });
       };
       const handleImg = (e) => {
@@ -114,14 +83,14 @@ const Postad = () => {
           <div>
             {src === "" ? (
               <div className="divimg">
-                <p>Upload Photo</p>
+                <p style={{padding:"8rem"}}>Upload Photo</p>
               </div>
             ) : (
                <img src={src} alt={alt} style={{ width: "100%", height: 250 }} />
                
             )}
           </div>
-          <div>
+          <div style={{marginTop:"1.5rem"}}>
           {showanimation?<><CircularProgress />uploading....</>:<></>}
                     {imgupload?<><h4 style={{color:"green"}}>Uploaded</h4></>:<>
                     {showbtn?<><button  style={{fontWeight:"bolder",fontSize:"20px",border:"1px solid black"}} 
@@ -137,7 +106,7 @@ const Postad = () => {
                      required
                       onChange={handleImg}
                     />
-                    {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>}
+                    {/* {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>} */}
                     </>}
                     
                     </>
@@ -154,7 +123,7 @@ const Postad = () => {
                 settitle(e.target.value);
               }}
             />
-            {titleerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{titleerr}</p>}
+            {/* {titleerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{titleerr}</p>} */}
             {" "}
              <div style={{display:"flex",marginTop:"1rem"}}>
             <Typeofad setype={settype}/>
@@ -170,7 +139,7 @@ const Postad = () => {
                 setprice(e.target.value);
               }}
             />
-            {priceerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{priceerr}</p>}
+            {/* {priceerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{priceerr}</p>} */}
             </div>
             {""}
             <TextareaAutosize
@@ -183,7 +152,7 @@ const Postad = () => {
                 setbody(e.target.value);
               }}
             />
-            {bodyerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{bodyerr}</p>}
+            {/* {bodyerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{bodyerr}</p>} */}
             {""}
            
 
@@ -191,8 +160,8 @@ const Postad = () => {
               variant="contained"
               style={{backgroundColor:"green"}}
               onClick={(e) => {
-                check()
-                // handleclick();
+                // check()
+                handleclick();
                 // console.log(title, body);
               }}
             >

@@ -19,7 +19,7 @@ const Showcomplains = ({com}) => {
         })
     }
     const hnadlestus=(status, comid)=>{
-        console.log("status"+status);
+       // console.log("status"+status);
         complain.updatecomplain(comid,{status}).then((data)=>{
           console.log(data);
           history.push("/notification")
@@ -30,8 +30,9 @@ const Showcomplains = ({com}) => {
         
    }
     React.useEffect(getuser,[]);
-    return ( <div>
-        <div className="cardbd">
+    return ( 
+    <div style={{marginRight:"auto"}}>
+        <div>
                    <h3>Title</h3>
                    {title}
                    <h5>Complain body</h5>
@@ -43,9 +44,9 @@ const Showcomplains = ({com}) => {
                    <h6>Username</h6>
                    {name}
                    <br/>
-                   <button className="button"onClick={()=>{ hnadlestus("reject",com._id);}}>Reject</button>
-                   <button className="button"onClick={()=>{ hnadlestus("solved",com._id)}}>Solve</button>
-                   <button className="button"onClick={()=>{ hnadlestus("hold",com._id)}}>Hold</button>
+                   <button onClick={()=>{ hnadlestus("reject",com._id);}}>Reject</button>
+                   <button onClick={()=>{ hnadlestus("solved",com._id)}}>Solve</button>
+                   <button onClick={()=>{ hnadlestus("hold",com._id)}}>Hold</button>
                    
 
                    </div>

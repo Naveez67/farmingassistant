@@ -55,7 +55,7 @@ const Showpost = ({ helpost, getposts }) => {
           <img
             src={helpost.photo}
             alt={helpost.title}
-            height="30%"
+            height="20%"
             width="100%"
           />
         )}
@@ -64,9 +64,9 @@ const Showpost = ({ helpost, getposts }) => {
       </div>
       {userService.isLoggedIn()?
       <>
-       <div style={{ display: "flex" }}>
+       <div style={{ display: "flex",marginBottom:"1rem" }}>
         <input
-          width="200px"
+          style={{width:"90%"}}
           value={text}
           onChange={(e) => {
             settext(e.target.value);
@@ -74,6 +74,7 @@ const Showpost = ({ helpost, getposts }) => {
           placeholder="comment "
         />
         <RiSendPlane2Fill
+        style={{background:"green",color:"white"}}
           size="40px"
           onClick={() => {
             addcomment();
@@ -95,7 +96,7 @@ const Showpost = ({ helpost, getposts }) => {
         )}
       </div>
 
-      <hr />
+      <hr style={{padding:"4px",background:"green"}}/>
     </div>
   );
 };

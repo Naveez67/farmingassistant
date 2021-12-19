@@ -52,23 +52,25 @@ const Mycart = () => {
               <div>
               <img src={item.image} width="300" height="300" style={{borderRadius:"50%"}}/>
               </div> 
-               <div style={{textAlign:"left"}}>
+               <div style={{textAlign:"left",color:"white"}}>
                   <h3>Name:{get(item.title)}</h3>
                   <h3>Description:{(get(item.body))}</h3>
-                  <h3>Price:(for one):{item.price}</h3>
+                  <h3>Price:(for one){item.price}</h3>
                   <h3>Item Quantity :{item.quantity}</h3>
                   <h3>Total price={item.itemTotal}</h3>
               </div>
               <div>
                   <IoIosAddCircle size="50px"
+                  style={{background:"green",color:"white",}}
                   onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
                     />
-                  <b>Quantity</b>  
+                  <b style={{background:"green",color:"white",paddingTop:".8rem",paddingBottom:"1.2rem"}}>Quantity</b>  
                   <br />
                     <IoMdRemoveCircle size="50px"
+                     style={{background:"green",color:"white",}}
                      onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
                     />
-                    <b>Quantity</b> 
+                    <b style={{background:"green",color:"white",paddingTop:".8rem",paddingBottom:"1.2rem"}}>Quantity</b> 
                   <br />
                   <button  onClick={() => removeItem(item.id)}style={{width:"100%",padding:"10px",backgroundColor:"red",fontSize:"30px",color:"white"}}>Remove Item</button>
                   <br />
@@ -96,7 +98,7 @@ const Mycart = () => {
           marginTop:"2rem"
           }}>
               <h1 style={{marginLeft:"2rem",color:"white"}}>Total price:{cartTotal}</h1>
-              <button style={{padding:"10px",fontSize:"30px",background:"green"}}
+              <button style={{padding:"10px",fontSize:"30px",background:"green",color:"white"}}
               onClick={()=>{
                 history.push("/order")
               }}

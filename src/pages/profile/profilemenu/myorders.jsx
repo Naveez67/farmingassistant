@@ -1,21 +1,36 @@
 import moment from 'moment';
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import { Table } from 'react-bootstrap';
-import orderService from "../../../services/orderservice";
-const Myorders = ({id}) => {
-  const [orders, setorders] = useState([]);
-  const getorders = () => {
-    orderService
-      .myorders(id)
-      .then((data) => {
-        // console.log(data)
-        setorders(data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-  useEffect(getorders, []); 
+import adsService from "../../../services/adsservice";
+import "../../../components/all/mangaement/style.css"
+const Myorders = ({orders}) => {
+  const [adid, setadid] = useState(""); 
+  const [img, setimg] = useState(""); 
+  const [title, settitle] = useState(""); 
+  const [dis, setdis] = useState(""); 
+  const getorders=(item,index)=>{
+     if(item._id===adid){
+       return <div key={index} style={{textAlign:"left"}}>
+            {singleads(item.adid)}
+            <img src={img} alt="img" width="200px" height="200px" />
+            <h2>Product name:{" "+title}</h2>
+           <h2>Buyer Name:{" "+item.buyername}</h2>
+           <h2>Delivery address:{" "+item.address}</h2>
+           <h2>Buyer Phone:{" "+item.phone}</h2>
+           <h2>Total amount:{" "+item.totalamount}</h2>
+       </div>
+
+     }
+  }
+  const singleads=(adid)=>{
+        adsService.getsingleads(adid).then((data)=>{
+           setimg(data.photo)
+           settitle(data.title)
+        })
+  }
+
+
+
     return ( <div style={{width:"100%"}}>
   <h2>orders</h2>
   {orders.length>0?<>
@@ -43,7 +58,10 @@ const Myorders = ({id}) => {
                    <td>{totalamount}</td>
                    <td>{address}</td>
                    <td>{moment(dateoforder).format("MMM Do YY")}</td>
-                   <td><p style={{cursor:"pointer"}}>View</p></td>
+                   <td><p style={{cursor:"pointer"}} onClick={()=>{
+                     setadid(item._id)
+                     setdis("block")
+                     }}>View</p></td>
                 </tr>
              )
             })}
@@ -53,6 +71,38 @@ const Myorders = ({id}) => {
                   <>
                   <h1>You have not recived any order yet</h1>
                   </>} 
+                  <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setdis("none")}} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+         <div > 
+        {orders.length>0?<>
+        {orders.map((item,index) => {
+               return (
+
+                getorders(item,index)
+             )
+              
+              
+            })}
+     </>:
+     <>
+     
+     </>}
+     </div>
+  </div>
+  <div className="modal-footer">
+    <h3></h3>
+  </div>
+</div>
+
+</div>
     </div> );
 }
  
