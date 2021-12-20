@@ -55,10 +55,10 @@ const Multiorder=()=>{
        if(address.length===0){
            seterr("please enter address")
        }
-       else if(address.length<4){
-        seterr("address length must be greater then 4")
+       else if(address.length<6){
+        seterr("address length must be greater then 6")
        }
-       else if(address.length>4){
+       else if(address.length>6){
            seterr("")
            checkandcal()
        }

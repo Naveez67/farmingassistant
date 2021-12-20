@@ -7,6 +7,7 @@ import blogService from "../../../services/admin/blog";
 import "./style.css";
 import { useHistory } from "react-router";
 import { Form } from "react-bootstrap";
+import { CircularProgress } from "@mui/material";
 //import { useHistory } from "react-router-dom";
 const Blog = () => {
   const [{ alt, src }, setImg] = useState({
@@ -18,11 +19,50 @@ const Blog = () => {
   const [title, settitle] = useState("");
   const [body, setbody] = useState("");
   const [imege, setImege] = useState("");
+  const[imgupload,setimgupload]=useState(false);
+  const[showanimation,setshowanimation]=useState(false);
+  const[showbtn,setshowbtn]=useState(false);
+  const[pterr,setpterr]=useState("");
+  const[tterr,settterr]=useState("");
+  const[bderr,setbderr]=useState("");
+  const check=()=>{
+      if(url.length==0){
+        setpterr("please upload photo")
+      }
+      else {
+        setpterr("")
+        checktitle()
+      }
+  }
+  const checktitle=()=>{
+    if(title.length==0){
+      settterr("required")
+    }
+    else if(title.length<4){
+      settterr("title length must be greater then 4 ")
+    }
+    else{
+      settterr("")
+      checkbody()
+    }
+  }
+  const checkbody=()=>{
+    if(body.length==0){
+      setbderr("required")
+    }
+    else if(body.length<10){
+      setbderr("Description length must be greater then 10")
+    }
+    else {
+      setbderr("")
+      handleclick()
+    }
+  }
   const handleclick = () => {
     blogService
       .Addblog(title, body, url)
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         //console.log(history);
         history.push("/showblog");
       })
@@ -35,6 +75,7 @@ const Blog = () => {
   };
   const handleImg = (e) => {
     setImege(e.target.files[0]);
+    setshowbtn(true)
     if (e.target.files[0]) {
       setImg({
         src: URL.createObjectURL(e.target.files[0]),
@@ -54,9 +95,11 @@ const Blog = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.url);
+        // console.log(data.url);
+        setimgupload(true)
+        setshowanimation(false)
         setUrl(data.url);
-        console.log(url);
+        // console.log(url);
       })
       .catch((err) => {
         console.log(err);
@@ -74,13 +117,28 @@ const Blog = () => {
         )}
       </div>
       <div>
-        <input
-          type="file"
-          accept=".png, .jpg, .jpeg"
-          id="photo"
-          onChange={handleImg}
-        />
-        <button onClick={() => postdetials()}>upload</button>
+      {showanimation?<><CircularProgress />uploading....</>:<></>}
+                    {imgupload?<><h4 style={{color:"green"}}>Uploaded</h4></>:<>
+                    {showbtn?<><button  style={{fontWeight:"bolder",fontSize:"20px",border:"1px solid black"}} 
+                    onClick={()=>{
+                        setshowanimation(true);
+                        postdetials()
+                    }}
+                    >
+                        Upload photo
+                        </button></>:
+                    <>
+                     <input
+                       type="file"
+                       accept=".png, .jpg, .jpeg"
+                       id="photo"
+                       onChange={handleImg}
+                      />
+                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
+                    </>}
+                    
+                    </>
+                    }
       </div>
       <div>
         <Form>
@@ -94,6 +152,7 @@ const Blog = () => {
                 settitle(e.target.value);
               }}
             />
+            {tterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Description</Form.Label>
@@ -105,18 +164,23 @@ const Blog = () => {
                 setbody(e.target.value);
               }}
             />
+            {bderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label
               style={{
-                backgroundColor: "blue",
+                backgroundColor: "green",
                 color: "white",
-                padding: ".5rem",
+                padding: "10px",
+                fontSize:"26px",
+                fontWeight:"bold",
+                cursor:"pointer"
               }}
               onClick={(e) => {
-                handleclick();
-                history.push("/showblog");
-                console.log(title, body, url);
+                // handleclick();
+                check()
+                // history.push("/showblog");
+                // console.log(title, body, url);
                 // alert("you clicked")
               }}
             >

@@ -4,6 +4,7 @@ import news from "../../../services/admin/news";
 import { Form } from "react-bootstrap";
 import { toast } from "react-toastify";
 import './style.css'
+import { CircularProgress } from "@mui/material";
 const Updatenews = (props) => {
   const [{ alt, src }, setImg] = useState({
     src: "",
@@ -15,7 +16,45 @@ const Updatenews = (props) => {
   const [title, settitle] = useState("");
   const [body, setbody] = useState("");
   const [imege, setImege] = useState("");
-  const [imegechanged, setImegechanged] = useState(false);
+  const[imgupload,setimgupload]=useState(false);
+  const[showanimation,setshowanimation]=useState(false);
+  const[showbtn,setshowbtn]=useState(false);
+  const[pterr,setpterr]=useState("");
+  const[tterr,settterr]=useState("");
+  const[bderr,setbderr]=useState("");
+  const check=()=>{
+    if(url.length==0){
+      setpterr("please upload photo")
+    }
+    else {
+      setpterr("")
+      checktitle()
+    }
+}
+const checktitle=()=>{
+  if(title.length==0){
+    settterr("required")
+  }
+  else if(title.length<4){
+    settterr("title length must be greater then 4 ")
+  }
+  else{
+    settterr("")
+    checkbody()
+  }
+}
+const checkbody=()=>{
+  if(body.length==0){
+    setbderr("required")
+  }
+  else if(body.length<10){
+    setbderr("Description length must be greater then 10")
+  }
+  else {
+    setbderr("")
+    handleclick()
+  }
+}
   const id = param.id;
   React.useEffect(() => {
     news.getSinglenews(id).then((data) => {
@@ -34,9 +73,9 @@ const Updatenews = (props) => {
       .updatenews(id, { title, body, url })
       .then((data) => {
        // console.log(data);
-       alert("updated")
-        //console.log(history);
-        //history.push("/")
+        alert("updated")
+        // console.log(history);
+        history.push("/news")
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -47,7 +86,7 @@ const Updatenews = (props) => {
   };
   const handleImg = (e) => {
     setImege(e.target.files[0]);
-    setImegechanged(true);
+    setshowbtn(true)
     if (e.target.files[0]) {
       setImg({
         src: URL.createObjectURL(e.target.files[0]),
@@ -55,28 +94,27 @@ const Updatenews = (props) => {
       });
     }
   };
-  const data = new FormData();
+
   const postdetials = () => {
-    if (imegechanged) {
-      data.append("file", imege);
-      data.append("upload_preset", "testapp");
-      data.append("cloud_name", "van12");
-      fetch("https://api.cloudinary.com/v1_1/van12/image/upload", {
-        method: "post",
-        body: data,
+    const data = new FormData();
+    data.append("file", imege);
+    data.append("upload_preset", "testapp");
+    data.append("cloud_name", "van12");
+    fetch("https://api.cloudinary.com/v1_1/van12/image/upload", {
+      method: "post",
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data.url);
+        setimgupload(true)
+        setshowanimation(false)
+        setUrl(data.url);
+        // console.log(url);
       })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data.url);
-          setUrl(data.url);
-          //console.log(url);
-        })
-        .catch((err) => {
-          toast.error(err.response.data, {
-            position: toast.POSITION.TOP_LEFT,
-          });
-        });
-    } else alert("please first choose a file ");
+      .catch((err) => {
+        console.log(err);
+      });
   };
   return (
     <div style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto"}}>
@@ -88,13 +126,28 @@ const Updatenews = (props) => {
         )}
       </div>
       <div>
-        <input
-          type="file"
-          accept=".png, .jpg, .jpeg"
-          id="photo"
-          onChange={handleImg}
-        />
-        <button onClick={() => postdetials()}>upload</button>
+      {showanimation?<><CircularProgress />uploading....</>:<></>}
+                    {imgupload?<><h4 style={{color:"green"}}>Uploaded</h4></>:<>
+                    {showbtn?<><button  style={{fontWeight:"bolder",fontSize:"20px",border:"1px solid black"}} 
+                    onClick={()=>{
+                        setshowanimation(true);
+                        postdetials()
+                    }}
+                    >
+                        Upload photo
+                        </button></>:
+                    <>
+                     <input
+                       type="file"
+                       accept=".png, .jpg, .jpeg"
+                       id="photo"
+                       onChange={handleImg}
+                      />
+                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
+                    </>}
+                    
+                    </>
+                    }
       </div>
       <div>
         <Form>
@@ -108,6 +161,7 @@ const Updatenews = (props) => {
                 settitle(e.target.value);
               }}
             />
+            {tterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Description</Form.Label>
@@ -119,20 +173,23 @@ const Updatenews = (props) => {
                 setbody(e.target.value);
               }}
             />
+            {bderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label
               style={{
-                backgroundColor: "#70E000",
+                backgroundColor: "green",
                 color: "white",
-                padding: "1rem",
-                cursor:"pointer",
-                fontSize:"22px"
+                padding: "10px",
+                fontSize:"26px",
+                fontWeight:"bold",
+                cursor:"pointer"
               }}
               onClick={(e) => {
-                handleclick();
-                history.push("/news");
-               // console.log(title, body, url);
+                // handleclick();
+                check()
+                // history.push("/showblog");
+                // console.log(title, body, url);
                 // alert("you clicked")
               }}
             >

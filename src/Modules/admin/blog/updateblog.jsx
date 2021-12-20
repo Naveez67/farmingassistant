@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import blogService from "../../../services/admin/blog";
-//import Button from '@mui/material/Button';
-// import TextField from '@mui/material/TextField';
-// import TextareaAutosize from '@mui/material/TextareaAutosize';
 import { Form } from "react-bootstrap";
-//import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import { toast } from "react-toastify";
+import { CircularProgress } from "@mui/material";
 const Updateblog = (props) => {
   const [{ alt, src }, setImg] = useState({
     src: "",
@@ -20,7 +17,45 @@ const Updateblog = (props) => {
   const [imege, setImege] = useState("");
   const [imegechanged, setImegechanged] = useState(false);
   const id = param.id;
-  //console.log(id);
+  const[imgupload,setimgupload]=useState(false);
+  const[showanimation,setshowanimation]=useState(false);
+  const[showbtn,setshowbtn]=useState(false);
+  const[pterr,setpterr]=useState("");
+  const[tterr,settterr]=useState("");
+  const[bderr,setbderr]=useState("");
+  const check=()=>{
+      if(url.length==0){
+        setpterr("please upload photo")
+      }
+      else {
+        setpterr("")
+        checktitle()
+      }
+  }
+  const checktitle=()=>{
+    if(title.length==0){
+      settterr("required")
+    }
+    else if(title.length<4){
+      settterr("title length must be greater then 4 ")
+    }
+    else{
+      settterr("")
+      checkbody()
+    }
+  }
+  const checkbody=()=>{
+    if(body.length==0){
+      setbderr("required")
+    }
+    else if(body.length<10){
+      setbderr("Description length must be greater then 10")
+    }
+    else {
+      setbderr("")
+      handleclick()
+    }
+  }
   React.useEffect(() => {
     blogService.getSingleblog(id).then((data) => {
       setImg({
@@ -37,9 +72,9 @@ const Updateblog = (props) => {
     blogService
       .updateblog(id, { title, body, url })
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         //console.log(history);
-        //history.push("/")
+        history.push("/showblog")
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -50,7 +85,7 @@ const Updateblog = (props) => {
   };
   const handleImg = (e) => {
     setImege(e.target.files[0]);
-    //setImegechanged(true);
+    setshowbtn(true)
     if (e.target.files[0]) {
       setImg({
         src: URL.createObjectURL(e.target.files[0]),
@@ -58,32 +93,28 @@ const Updateblog = (props) => {
       });
     }
   };
-  const data = new FormData();
-  const postdetials = () => {
-    if (imegechanged) {
-      data.append("file", imege);
-      data.append("upload_preset", "testapp");
-      data.append("cloud_name", "van12");
-      fetch("https://api.cloudinary.com/v1_1/van12/image/upload", {
-        method: "post",
-        body: data,
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data.url);
-          setUrl(data.url);
-          console.log(url);
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    } else alert("please first choose a file ");
-  };
-  // const upoad=()=>{
-  //   {imegechanged?postdetials():console.log("not chnaged")}
-  // }
 
-  // React.useEffect(upoad,[])
+  const postdetials = () => {
+    const data = new FormData();
+    data.append("file", imege);
+    data.append("upload_preset", "testapp");
+    data.append("cloud_name", "van12");
+    fetch("https://api.cloudinary.com/v1_1/van12/image/upload", {
+      method: "post",
+      body: data,
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        // console.log(data.url);
+        setimgupload(true)
+        setshowanimation(false)
+        setUrl(data.url);
+        // console.log(url);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto"}}>
       <div>
@@ -96,13 +127,28 @@ const Updateblog = (props) => {
         )}
       </div>
       <div>
-        <input
-          type="file"
-          accept=".png, .jpg, .jpeg"
-          id="photo"
-          onChange={handleImg}
-        />
-        <button onClick={() => postdetials()}>upload</button>
+      {showanimation?<><CircularProgress />uploading....</>:<></>}
+                    {imgupload?<><h4 style={{color:"green"}}>Uploaded</h4></>:<>
+                    {showbtn?<><button  style={{fontWeight:"bolder",fontSize:"20px",border:"1px solid black"}} 
+                    onClick={()=>{
+                        setshowanimation(true);
+                        postdetials()
+                    }}
+                    >
+                        Upload photo
+                        </button></>:
+                    <>
+                     <input
+                       type="file"
+                       accept=".png, .jpg, .jpeg"
+                       id="photo"
+                       onChange={handleImg}
+                      />
+                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
+                    </>}
+                    
+                    </>
+                    }
       </div>
       <div>
         <Form>
@@ -116,6 +162,7 @@ const Updateblog = (props) => {
                 settitle(e.target.value);
               }}
             />
+            {tterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Description</Form.Label>
@@ -127,18 +174,23 @@ const Updateblog = (props) => {
                 setbody(e.target.value);
               }}
             />
+            {bderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label
               style={{
-                backgroundColor: "blue",
+                backgroundColor: "green",
                 color: "white",
-                padding: ".5rem",
+                padding: "10px",
+                fontSize:"26px",
+                fontWeight:"bold",
+                cursor:"pointer"
               }}
               onClick={(e) => {
-                handleclick();
-                history.push("/showblog");
-                //console.log(title, body, url);
+                // handleclick();
+                check()
+                // history.push("/showblog");
+                // console.log(title, body, url);
                 // alert("you clicked")
               }}
             >

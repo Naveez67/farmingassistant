@@ -21,16 +21,62 @@ const Postad = () => {
       const [type, settype] = useState("for all");
       const [price, setprice] = useState(0);
       const [category, setcategory] = useState("Seed");
+      const [photoerr, setphotoerr] = useState("");
+      const [titleerr, settitleerr] = useState("");
+      const [bodyerr, setbodyerr] = useState("");
+      const [priceerr, setpriceerr] = useState("");
       const [imege, setImege] = useState("");
       const[imgupload,setimgupload]=useState(false);
       const[showanimation,setshowanimation]=useState(false);
+
+      const check=()=>{
+        if(photo.length==0){
+          setphotoerr("please upload photo")
+        }
+        else{
+          setphotoerr("");
+          checktitle()
+        }
+      }
+      const checktitle=()=>{
+        if(title.length==0){
+          settitleerr("title is required")
+        }
+        else if(title.length<3){
+          settitleerr("title length must be greater then 3 ")
+        }
+        else{
+          settitleerr("")
+          checkprice()
+          
+        }
+      }
+      const checkprice=()=>{
+        if(price==0){
+          setpriceerr("required")
+        }
+        else if(price<0){
+          setpriceerr("price can not be neagtive")
+        }
+        else {
+          setpriceerr("")
+          checkbody()
+        }
+      }
+      const checkbody=()=>{
+        if(body.length==0){
+          setbodyerr("required")
+        }
+        else if(body.length<15){
+          setbodyerr("ad detial length must be greater then 15")
+        }
+        else {
+          setbodyerr("")
+          handleclick();
+        }
+      }
+
       const[showbtn,setshowbtn]=useState(false);
-      const {
-        register,
-        handleSubmit,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => console.log(data);
       const handleclick = () => {
         adsService
           .postad({title, body, photo,type,category,price})
@@ -106,7 +152,7 @@ const Postad = () => {
                      required
                       onChange={handleImg}
                     />
-                    {/* {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>} */}
+                    {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>}
                     </>}
                     
                     </>
@@ -123,7 +169,7 @@ const Postad = () => {
                 settitle(e.target.value);
               }}
             />
-            {/* {titleerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{titleerr}</p>} */}
+            {titleerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{titleerr}</p>}
             {" "}
              <div style={{display:"flex",marginTop:"1rem"}}>
             <Typeofad setype={settype}/>
@@ -139,7 +185,7 @@ const Postad = () => {
                 setprice(e.target.value);
               }}
             />
-            {/* {priceerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{priceerr}</p>} */}
+            {priceerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{priceerr}</p>}
             </div>
             {""}
             <TextareaAutosize
@@ -152,7 +198,7 @@ const Postad = () => {
                 setbody(e.target.value);
               }}
             />
-            {/* {bodyerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{bodyerr}</p>} */}
+            {bodyerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{bodyerr}</p>}
             {""}
            
 
@@ -160,8 +206,8 @@ const Postad = () => {
               variant="contained"
               style={{backgroundColor:"green"}}
               onClick={(e) => {
-                // check()
-                handleclick();
+                check()
+                // handleclick();
                 // console.log(title, body);
               }}
             >

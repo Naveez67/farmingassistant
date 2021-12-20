@@ -61,7 +61,7 @@ const Cardd = ({ad}) => {
           {gettitle(ad.title)}
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{textAlign:"left"}}>
-          {get(ad.body)}
+          {get(ad.body)}...
         </Typography>
       </CardContent>
       {userService.isnotadmin()?<>

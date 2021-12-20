@@ -2,13 +2,15 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import {IoIosAddCircle, IoMdRemoveCircle} from 'react-icons/io'
 import { useHistory } from 'react-router-dom';
-import { CartProvider, useCart } from "react-use-cart";
+import { useCart } from "react-use-cart";
 import userService from '../../services/UserService';
 const Mycart = () => {
     const { isEmpty, totalUniqueItems, items, updateItemQuantity, removeItem,cartTotal ,totalItems} =
     useCart();
+    const test=useCart();
+   const [sum,setsum]=React.useState(0)
    const history=useHistory()
-   // console.log(items)
+   console.log(test)
     const [show,setshow]=React.useState(false);
     const id=userService.getLoggedInUser()._id;
     function filterItems(arr, query) {

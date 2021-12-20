@@ -18,17 +18,20 @@ const Complain = () => {
        if(title.length===0){
            settitleerr("please fill the field first")
        }
-       if(body.length===0){
+       else if(title.length<10){
+        settitleerr("title must be 10 characters or more")
+       }
+       else if(body.length===0){
+            settitleerr("");
            setbodyerr("please fill the field first")
        }
+       
        else if(body.length<=20){
            setbodyerr("description must be 20 characters or more")
        }
-       else if(title.length<10){
-           settitleerr("title must be 10 characters or more")
-       }
+       
        else{
-           settitleerr("");
+           
            setbodyerr("")
            handlesubmit()
        }

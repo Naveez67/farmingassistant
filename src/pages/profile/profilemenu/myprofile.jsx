@@ -9,6 +9,7 @@ import { useHistory } from "react-router-dom";
 import "../profile.css";
 import moment from "moment";
 import Myposts from "./mypost";
+import { useCart } from "react-use-cart";
 import Myads from "./myads";
 import Myorders from "./myorders";
 import Mycomplains from "./Mycomplains";
@@ -18,7 +19,7 @@ const Myprofile = () => {
   const [data, setdata] = useState(userService.getLoggedInUser());
   const [userdata, setuserdata] = useState([]);
   const [user, setuser] = useState([]);
-
+  const cart=useCart()
   const [name, setname] = useState("");
   const [username, setusername] = useState("");
   const [address, setaddress] = useState("");
@@ -127,6 +128,7 @@ const Myprofile = () => {
           style={{ cursor: "pointer" }}
           onClick={() => {
             userService.logout();
+            cart.emptyCart();
             window.location.href = "/";
           }}
         >

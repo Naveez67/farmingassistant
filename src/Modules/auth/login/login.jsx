@@ -9,6 +9,8 @@ const Login = () => {
   const [size,setsize]=useState("20%");
   const [username,setusername]=useState("");
   const [password,setpassword]=useState("");
+  const [pserr,setpserr]=useState("");
+  const [unerr,setunerr]=useState("");
   const getsize=()=>{
       if(window.innerWidth>600&&window.innerWidth<800){
           setsize("50%")
@@ -19,6 +21,32 @@ const Login = () => {
       else if(window.innerWidth<600){
           setsize("60%")
       }
+  }
+  // const check=()=>{
+  //   if(username.length==0){
+  //     setunerr("required")
+  //   }
+  //   else if(pserr.length==0){
+  //     setunerr("")
+  //     setpserr("required")
+  //   }
+  //   else {
+  //     setpserr("")
+  //     handlelogin()
+  //   }
+  // }
+  const handlelogin=()=>{
+    userService
+    .login(username, password)
+    .then((data) => {
+      // console.log(data);
+       window.location.href = "/";
+    })
+    .catch((err) => {
+      // console.log(err.response.data);
+      toast.error(err.response.data, {
+        position: toast.POSITION.TOP_RIGHT,})
+    });
   }
   window.addEventListener('resize',getsize);
   React.useEffect(getsize,[])
@@ -61,6 +89,7 @@ const Login = () => {
               setusername(e.target.value)
             }}
             /> 
+            {unerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
             <p style={{textAlign:"left",fontSize:"20px",fontWeight:"bold"}}>Password</p>
             <input
             className="inputform"
@@ -71,22 +100,13 @@ const Login = () => {
               setpassword(e.target.value)
             }}
             /> 
+            {pserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
           </div>
           <div style={{display:"flex",justifyContent:"center"}}>
               <button 
                 style={{width:"100%",backgroundColor:"green",color:"white",padding:"10px",marginTop:"1rem",fontSize:"24px",fontWeight:"bold"}}
-                onClick={(e) => {
-                  userService
-                    .login(username, password)
-                    .then((data) => {
-                      console.log(data);
-                       window.location.href = "/";
-                    })
-                    .catch((err) => {
-                      // console.log(err.response.data);
-                      toast.error(err.response.data, {
-                        position: toast.POSITION.TOP_RIGHT,})
-                    });
+                onClick={() => {
+                  handlelogin()
                 }}
               
               >Login</button>
