@@ -48,7 +48,7 @@ const Acountdata = () => {
         </Grid>
         <Grid item xs={6} sm={6} >
             <div className="image" >
-                <img src={photo} alt={name} />
+                <img src={photo} alt={name}  height="250" width="250"/>
             </div>
         </Grid>  
         <Grid item xs={12} >

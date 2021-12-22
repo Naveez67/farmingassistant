@@ -20,7 +20,7 @@ const Accounts = () => {
     return ( <div>
 
          <div className="main">
-              <h1>Shwoing Unverfied Accounts</h1>
+              <h1>Showing Unverfied Accounts</h1>
          </div>
 
          {noti.length!=0?<>

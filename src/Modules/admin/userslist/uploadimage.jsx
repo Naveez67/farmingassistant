@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 //import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 const Uploadphoto = ({ photo, name, setphoto }) => {
+  console.log(photo)
   const [{ alt, src }, setImg] = useState({
     src: {photo},
     alt: "Upload an Image",
   });
+  console.log(src)
   const [imege, setImege] = useState("");
   const [imegechanged, setImegechanged] = useState(false);
   //console.log(id);
   const handleImg = (e) => {
     setImege(e.target.files[0]);
     setImegechanged(true);
+    setphoto("")
     if (e.target.files[0]) {
       setImg({
         src: URL.createObjectURL(e.target.files[0]),
@@ -30,7 +33,7 @@ const Uploadphoto = ({ photo, name, setphoto }) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data.url);
+          // console.log(data.url);
           setphoto(data.url);
         })
         .catch((err) => {
@@ -46,9 +49,9 @@ const Uploadphoto = ({ photo, name, setphoto }) => {
   return (
     <div>
       <div>
-        {src === "" ? (
+        {photo != "" ? (
           <div className="divimg">
-            <p>Upload Photo</p>
+            <img src={photo} alt={alt} style={{ width: "50%", height: 200 }} />
           </div>
         ) : (
           <img src={src} alt={alt} style={{ width: "50%", height: 200 }} />

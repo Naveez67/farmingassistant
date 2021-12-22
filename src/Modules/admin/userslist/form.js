@@ -20,7 +20,7 @@ const farmer=()=>{
   farmerService.updatefarmer(user.userid,{name,username,phone,photo,address})
   .then((data)=>{
     alert("updated")
-    history.push("/showusers")
+    history.push("/showfarmers")
   }).catch((err)=>{
     toast.error(err.response.data, {
       position: toast.POSITION.TOP_LEFT,})
@@ -30,7 +30,7 @@ const customer=()=>{
   customerService.updatecustomer(user.userid,{name,username,phone,photo,address})
   .then((data)=>{
     alert("updated");
-    history.push("/showusers")
+    history.push("/showcustomers")
   }).catch((err)=>{
     toast.error(err.response.data, {
       position: toast.POSITION.TOP_LEFT,})
@@ -40,7 +40,7 @@ const supplier=()=>{
   supplierService.updatesupplier(user.userid,{name,username,phone,photo,address})
   .then((data)=>{
     alert("updated");
-    history.push("/showusers")
+    history.push("/showsuppliers")
   })
   .catch((err)=>{
     toast.error(err.response.data, {

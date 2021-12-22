@@ -21,13 +21,13 @@
 {
   "PlantNutrition":
 {
-     "Fertilizer":""
+     "Title":"Fertilizer"
 },
 "CropManagement":
 {
-  "Land_Preparation":"",
+  "Land_Prparation":"",
    "Sowing_Method":"",
-   "Sowing_Time":"Summer: Detail: Mar - July",
+   "SowingTime":"Summer:Detail: Mar - July",
    "Plant-Plant-Distance":"",
    "Row-Row-Distance":"",
    "Distance":
@@ -38,11 +38,11 @@
 },
 "OthersMangaement":
 {
-  "Climate":"",
-  "Storage":"",
-  "Marketing":"",
-  "Roughing":"",
-  "InterCropping":""
+  "Title1":"Climate",
+  "Title2":"Storage",
+  "Title3":"Marketing",
+  "Title4":"Roughing",
+  "Title5":"InterCropping"
 }
 }, 
 "cropDetail": {
@@ -114,28 +114,30 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":"Urea: Detail: 50 kg per acre"
+       "Title":"Fertilizer",
+       "Urea":"Detail: 50 kg per acre" 
     },
     "CropManagement":
     {
-  "Land Prparation":
-  "how to add soil: this is the procedure",
-  "Sowing Method":"",
+  "Title1":"Land Prparation",
+  "howtoaddsoil":
+   "Detail: this is the procedure",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
    "SowingTime":"Detail: jan-feb",
-   "Plant-Plant-Distance":"",
-   "Irrigation":
-   "Apply firstirrigation at crown root initiation i.e25 to30 days after sowing At panicle emergen cestage appliesecondrrigation",
-   "Harvesting":"",
-   "Thrasing":""
+   "Title4":"Plant-Plant-Distance",
+   "Title5":"Irrigation",
+   "Applyfirstirrigationatcrownrootinitiationi.e25to30daysaftersowingAtpanicleemergencestageappliesecondrrigation":"Detail.",
+   "Title6":"Harvesting",
+   "Title7":"Thrasing"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
-  
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -204,38 +206,38 @@
     {
       "PlantNutrition":
     {
-      "Fertilizer":"",
-       "DAP":" If FYM not available use 2 bags DAP at sowingtime.",
-       "FMY_compost":" 5-6 trolly/acre before one month of sowing",
-       "UREA":" After each cutting"
+      "Title":"Fertilizer",
+       "DAP":"Detail: If FYM not available use 2 bags DAP at sowingtime.",
+       "FMY_compost":"Detail: 5-6 trolly/acre before one month of sowing",
+       "UREA":"Detail: After each cutting"
       
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-       "SowingTime":
-       "From September to November",
-      "Row-Row Distance":"",
-       "Plant-Plant-Distance":"",
-       "Irrigation":"",
-       "According to Environmental condition": " Detail: Need 10-15 times Irrigation",
-       "Harvesting":"",
-       "Mid-December to mid-May":"Detail: Mid-December to mid-May",
-      "Thrasing":"",
-       "Cutting":
-       "Detail: 5-6 cuttings",
-       "For seed sproduction":"Detail: Stop cutting after 20th march"
+      "Title1":"Land Prparation",
+       "Title2":"Sowing Method",
+       "Title3":"SowingTime",
+       "FromSeptember_November":"Detail: From September to November",
+       "Title4":"Row-Row Distance",
+       "Title5":"Plant-Plant-Distance",
+       "Title6":"Irrigation",
+       "AccordingtoEnvironmentalcondition": " Detail: Need 10-15 times Irrigation",
+       "Title7":"Harvesting",
+       "Mid-Decembertomid-May":"Detail: Mid-December to mid-May",
+       "Title8":"Thrasing",
+       "Title9":"Cutting",
+       "Cuttings":"Detail: 5-6 cuttings",
+       "Forseedsproduction":"Detail: Stop cutting after 20th march"
        
     },
   "OthersMangaement":
   {
-     "Climate":"",
-      "Storage":"",
-     "Marketing":"",
-      "Roughing":"",
-      "InterCropping":
-      "Barseem + oat : Detail: Barseem 8kg/acre+oat 15kg/acre"
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping",
+      "Barseem+oat":"Detail: Barseem 8kg/acre+oat 15kg/acre"
   }
    },
    "cropDetail": {
@@ -287,7 +289,7 @@
   
    "ClusterBeansCropSeedVarieties":{},
       "title1":"name",
-     "seedrate":"",
+      "title2": "seedrate",
       "cropDetail": {
         "Name": "pests, weeds, diseases,disorderd"
       }
@@ -316,47 +318,50 @@
     {
       "PlantNutrition":
     {
-     "Fertilizer":"",
-      "Boron Deficiency":
+      "Title":"Fertilizer",
+      "BoronDeficiency":
       "Detail: Boron deficiency can be treated by spraying 100gm of Boron per acre before flowering or by using 400gm of Boron per acre during sowing.",
       "DAP":
       "Detail: 2 bags for Bt cotton, while 1.5 bag for non Bt cotton",
-    "For Early sowing":
+    "ForEarlysowing":
       "Detail: Nitrogen should be applied in 6 splits. First, with sowing, 2nd after 30-35 days of sowing and later nitrogen dose should be given at the gap an irrigation each.",
-    "For sowing in May":
+    "ForsowinginMay":
       "Detail: Split nitrogen in 4 doses. First dose with sowing, 2nd after 30-35 days of sowing, 3rd at the formation of floral buds, and 4th at boll formation. Phosphatic fertilizer should be used mixed with farm yard manure (FYM). Green manuring should be done to increase the organic matter contents of the field which will be helpful to increase effectiveness of the fertilizerapplication. It has been found that fertilizerapplication during evening is more beneficial. In case of viral attack, half bag of urea should be given with initial four irrigations.",
-      "Nitrophos and SOP":
+      "NitrophosandSOP":
       "Detail: Nitrophos 3.5 bags, 2 bags urea ans SOP 1.25 bags for Bt cotton and 1 bag for non Bt cotton.",
      "Urea":
       "Detail: 3 bags for Bt cotton, while 2 bags for non-Bt cotton",
-    "Use Green manure or FYM to overcome the deficiency of organic matter in soil":
+    "UseGreenmanureorFYMtoovercomethedeficiencyoforganicmatterinsoil":
       "Detail: Quantity on the basis of soil fertility.",
-   "ZINC AND BORON DEFICIENCY OF COTTON":
+   "ZINCANDBORONDEFICIENCYOFCOTTON":
       "Detail: Zinc and boron can also be sprayed in the field if symptoms of deficiency are visible. In this case, spraying should be done at about 45, 60 and 90th day of seed sowing. The formulation can be easily made as follows; Boric acid - 300 gram Zinc sulfate (33%) - 250 gram Sodium bicarbonate (ordinary caustic soda) - 50 gram Water - 100 litres Mix them in a tank and spray in the field. Pesticides should not be mixed in this solution for spraying. Spray the field in the morning or evening only because spraying in mid day can cause burning of leaves." 
     },
     "CropManagement":
     {
-     "Land Prparation":"Detail Laser land leveler",
-       "Sowing Method":
-     "Detail: 8-12 kg/acre",
-      "Line sowing": "Detail: 6-8 kg/acre",
-      "Sowing Time": "sowingtime: Detail: 1st April to 31th May",
-      "Row-Row-Distance":"",
-       "Plant-Plant-Distance":"",
-       "Irrigation":"",
-       "Harvesting":"",
-       "Harvesting of bolls should be done when boll sarefully mature":
+      "Title1":"Land Prparation",
+      "Landpreparation":
+      "Detail Laser land leveler",
+       "Title2":"Sowing Method",
+       "Drillsowing":"Detail: 8-12 kg/acre",
+      "Linesowing": "Detail: 6-8 kg/acre",
+       "Title3":"SowingTime",
+       "sowingtime":
+       "Detail: 1st April to 31th May",
+       "Title4":"Plant-Plant-Distance",
+       "Title5":"Plant-Plant-Distance",
+       "Title6":"Irrigation",
+       "Title7":"Harvesting",
+       "Harvestingofbollsshouldbedonewhenbollsarefullymature":
       "Detail: The first and last picking are usually of low quality and should not be mixed with rest of the produce, Pick bolls should be clean and dry to get good price, Do picking when there is no Dew, Delay in picking should lead to falling of cotton bolls on ground which results in effecting of quality, Harvest American cotton at the interval of 15-20 days and Desi cotton at 8-10 days interval.",
-       "Thrasing":""
+       "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
-  
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
 
   }
    },
@@ -447,31 +452,35 @@
     {
       "PlantNutrition":
     {
-      "Fertilizer": "fertilizerapp:Detail: sowingtime urea 2 to 3 App"
+      "Title":"Fertilizer",
+       "fertilizerapp":"Detail: sowingtime urea 2 to 3 App"
        
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-       "Sowing Method":"Summer: Mar - July",
-      "Sowing Time":"",
+      "Title1":"Land Prparation",
+       "Title2":"Sowing Method",
+       "Summer":"Detail: Mar - July",
+       "Title3":"SowingTime",
        "Janury-February":
       "Detail: Peshawar, mardan, swabi, charssada",
        "June-July":"Detail: parachinar",
-       "Plant-Plant-Distance":"",
-      "Irrigation":"",
-       "Harvesting":"",
-       "Harvesting time":
+       "Title4":"Plant-Plant-Distance",
+       "Title5":"Irrigation",
+       "Title6":"Harvesting",
+       "Harvestingtime":
       "Detail: after sowing 80to 85",
-       "Thrasing":""
+       "Title7":"Thrasing"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":"Maize:  can be intercropped keeping the row to row distance of maize wider than normal cropping"
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping",
+      "Maize":
+      "Detail: can be intercropped keeping the row to row distance of maize wider than normal cropping"
   }
    },
    "cropDetail": {
@@ -509,34 +518,34 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
+         "Title":"Fertilizer",
          "CAN":
       "Detail: At initial stage when basal dose isn't applied",
-      "DAP + Urea + SOP":
+      "DAP+Urea+SOP":
       "Detail: 1 + 1.5 + 1 Bags respectively",
        "Fertilizers":
       "Detail: As per Crop stage",
-     "Naya NPK":
+     "NayaNPK":
       "Detail: When crop is stressed due to herbicide/pesticide application",
-    "Nitrophos +Urea":
+    "Nitrophos+Urea":
       "Detail: 1bag+1/2 bag per acre",
-    "Organic Fertilizer":
+    "OrganicFertilizer":
       "Detail: 10 Ton / Acre",
-    "SSP + Urea + SOP":
+    "SSP+Urea+SOP":
       "Detail: 2+2.5+1 Bags respectively"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
+      "Title1":"Land Prparation",
      "Cultivator":
       "Detail: At Water",
-     "Deep Plough":
+     "DeepPlough":
       "Detail: After Harvesting of previous crop",
-     "FYM+ GYPSUM":
+     "FYM+GYPSUM":
       "Detail: To enhance soil condition for maize sowing.",
       "Rotavator":
       "Detail: After Cultivator",
-      "Sowing Method":"",
+      "Title2":"Sowing Method",
        "Kera":
       "Detail: line sowing through bulls",
     "MaizePlanter":
@@ -545,60 +554,60 @@
       "Detail: Broadcast",
     "Tapa":
       "Detail: Seed sowing manually by hand (Ridges and plane soil)",
-      "Sowing time":"", 
+      "Title3":"Sowingtime", 
       "Bannu&D.IKhanDivision":
       "Detail: 1st to 30th July",
-    "Hybrid varieties sowingtime in Malakand division":
+    "HybridvarietiessowingtimeinMalakanddivision":
       "Detail: 1st June-30th June",
-    "Peshawar & KohatDivision":
+    "Peshawar&KohatDivision":
       "Detail: 20th June to 20th July",
-     "spring maize sowing time":
+     "springmaizesowingtime":
       "Detail: Feb to March",
-        "Swat &Hazara Division":
+        "Swat&HazaraDivision":
       "Detail: 1st April to 30th June",
-      "Plant-Plant-Distance":"",
-     "Full Season(100-120 Days)":
+      "Title4":"Plant-Plant-Distance",
+     "FullSeason(100-120 Days)":
       "Detail: 25 cm",
-      "Medium Duration(85-100 days crop)":
+      "MediumDuration(85-100 days crop)":
       "Detail: 20 cm",
-      "Short Duration":
+      "ShortDuration":
       "Detail: 15 cm",
-       "Row-Row Distance":"",
+       "Title5":"Row-Row Distance",
        "Row-Row":
       "Detail: 75 cm",
-       "Irrigation":"",
-       "First Irrigation":
+       "Title6":"Irrigation",
+       "FirstIrrigation":
       "Detail: After 10-15 days of germination",
-"Irrigation at Flowering":
+"IrrigationatFlowering":
       "Detail: Due care should be taken for timely irrigation (half/low level irrigation twice in a week) in flowering stage",
-"Irrigation Interval":
+"IrrigationInterval":
      "Detail: 10-15 Days (keeping in view Environmental conditions)",
-       "Harvesting":"",
+       "Title7":"Harvesting",
        "CobHusk":
        "Detail: When husk on cob fully dried",
-    "Maize Grain":
+    "MaizeGrain":
        "Detail: Maize grain fully dried, formation of dent on grain, black layer on underside of grain and breaking of grain after pressing in teeth",
 "Storage":
        "Detail: Cobs should be stored in clean and semi covered area having good aeration for drying",
-       "Thrasing":"",
-       "Storage of Grains":
+       "Title8":"Thrasing",
+       "StorageofGrains":
       "Detail: Dried grains should be stored in bags.Two Agtoxin tablets should be placed an empty match stick pack covered with muslin cloth and place them in the grain bags.",
-   "Store Condition":
+   "StoreCondition":
       "Detail: Bags should be kept in a closed and air tight room",
     "Threshing":
       "Detail: Threshing of well dried cobs"
     },
   "OthersMangaement":
   {
-      "Climate":"",
+      "Title1":"Climate",
       "waterstress":
       "Detail: Quantus spray according to lable",
-      "Storage":"",
+      "Title2":"Storage",
       "Grainstorage":
       "Detail: Stored in bags with 2 phostoxin tablets in each bag",
-     "Marketing":"",
-      "Roughing":"",
-      "InterCropping":""
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }
    },
    "cropDetail": {
@@ -665,30 +674,30 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":""
+         "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-       "SowingTime":"",
+      "Title1":"Land Prparation",
+       "Title2":"Sowing Method",
+       "Title3":"SowingTime",
        "June-July":
       "Detail: -",
       "March April":
       "Detail: -",
-       "Plant-Plant-Distance":"",
-       "Row-Row Distance":"",
-       "Irrigation":"",
-       "Harvesting":"",
-       "Thrasing":""
+       "Title4":"Plant-Plant-Distance",
+       "Title5":"Row-Row Distance",
+       "Title6":"Irrigation",
+       "Title7":"Harvesting",
+       "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-      "Climate":"",
-     "Storage":"",
-     "Marketing":"",
-      "Roughing":"",
-     "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }
    },
    "cropDetail": {
@@ -718,7 +727,7 @@
     {
       "PlantNutrition":
     {
-     "Fertilizer":"",
+      "Title":"Fertilizer",
       "Nitrogen":
       "Detail: 45 kg/acre",
       "Phosphorus":
@@ -729,62 +738,65 @@
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Seed Bed preparation":
+      "Title1":"Land Prparation",
+      "SeedBedpreparation":
       "Detail: 2 – 3 ploughings + 1-2 planking",
-       "Sowing Method":"",
+       "Title2":"Sowing Method",
        "BroadcastMethod":
       "Detail: 2-3 Kg/acre",
     "LinesSowing":
       "Detail: 1.5 -2 kg/acre",
-       "SowingTime":"",
+       "Title3":"SowingTime",
        "Balochistan":
       "Detail: Mid October to Mid November",
      "KP":
       "Detail: Mid September-Mid October",
-     "North Punjab":
+     "NorthPunjab":
       "Detail: 1st October to 31st October",
     "Sindh":
       "Detail: Mid October -Mid November",
-    "South Punjab":
+    "SouthPunjab":
       "Detail: 15th October to 15th November",
-      "Row-Row Distance":"",
+      "Title4":"Row-Row Distance",
       "R-Rdistance":
       "Detail: 30-45 cm",
-      "Plant-Plant-Distance":"",
+      "Title5":"Plant-Plant-Distance",
       "P-Pdistance":
       "Detail: 4-5 cm",
-       "Irrigation":"",
-       "1st irrigation":
+       "Title6":"Irrigation",
+       "1stirrigation":
       "Detail: 30-45 Days after germination",
-      "2nd irrigation":
+      "2ndirrigation":
       "Detail: At the time of bud formation",
-      "3-4irrigation depending upon rains":
+      "3-4irrigationdependinguponrains":
       "Detail: 3-4 irrigation required for whole duration of the crop",
-      "3rd irrigation":
+      "3rdirrigation":
       "Detail: At the time of flowering",
-      "4th irrigation":
+      "4thirrigation":
      "Detail: At he time of seed filling stage",
+       "Title7":"Harvesting",
        "Harvesting":
-       
       "Detail: Matures in 160-190 days, harvest when 30-40% seeds matures and turn brown /yellow,",
-       "Thrasing":
+       "Title8":"Thrasing",
+       "Threshing":
       "Detail: Sundry for 8-10 days and then thresh"
     },
   "OthersMangaement":
   {
+      "Title1":"Climate",
       "Climate":
-      
       "Detail: Grow well in cooler climatic conditions.",
+      "Title2":"Storage",
       "Storage":
       "Detail: Dry seed upto 8-10% moisture level and store at dry places",
-     "Marketing":"",
-      "oil extaction":
+      "Title3":"Marketing",
+      "oilextaction":
       "Detail: local Pressing mills for oil extractions",
-      "Oil seed cake":
+      "Oilseedcake":
       "Detail: Oil seed cakes are used to feed animals which is nutritious meal for the animals",
-      "InterCropping":
-     "Detail: Wheat can also be used as inter crop"
+      "Title5":"InterCropping",
+      "Intercropping":
+      "Detail: Wheat can also be used as inter crop"
   }
    },
    "cropDetail": {
@@ -849,10 +861,10 @@
     {
       "PlantNutrition":
     {
-      "Fertilizer":"",
+      "Title":"Fertilizer",
       "Boron":
       "Detail: 3 kg/acre",
-     "DAP + Urea+ SOP":
+     "DAP+Urea+SOP":
       "Detail: 50kg/area : 100kg/acre : 50kg/acre",
      "N:P:K":
       "Detail: 1 bag",
@@ -864,31 +876,32 @@
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-       "Sowing Method":"",
-       "Direct Seeded Rice(DSR)":
+      "Title1":"Land Prparation",
+       "Title2":"Sowing Method",
+       "DirectSeededRice(DSR)":
       "Detail: Through specified drill or broadcast",
-      "SowingTime":"",
+      "Title3":"SowingTime",
      "Nursery":
       "Detail: In plains whole month of May and in Mountainous areas third week of May",
      "Sowingtime":
       "Detail: med of May to first week of Jun for Nursery Raising",
-      "Row-Row Distance":"",
+      "Title4":"Row-Row Distance",
      
-      "Plant-Plant-Distance":"",
-       "Irrigation":"",
-       "Irrigationsystem":" Detail: Irrigation must given nursery plants",
-       "Harvesting":"",
-      "Thrasing":""
-        },
+      "Title5":"Plant-Plant-Distance",
+       "Title6":"Irrigation",
+       "Irrigationsystem":
+     " Detail: Irrigation must given nursery plants",
+       "Title7":"Harvesting",
+       "Title8":"Thrasing"
+    },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
-  
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
+      
   }
    },
    "cropDetail": {
@@ -950,31 +963,34 @@
       "PlantNutrition":
     {
       
-      "Fertilizer":"",
-      "Asked About Fertizer Application During fowerstage":
+       "Title":"Fertilizer",
+      "AskedAboutFertizerApplicationDuringfowerstage":
       "Detail: Stop Excess fertilizerapplication during flower stage"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
    "Sowingtime":
       "Detail: Dec to Jan",
-   "Row-Row Distance":"",
-  "Plant-Plant-Distance":"",
-   "Irrigation":"",
-   "Asked About Water appliction during flower stage":
-    "Detail: Stop excess water application if the flowers are in good condition",
-   "Harvesting":"",
-   "Thrasing":""
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "AskedAboutWaterapplictionduringflowerstage":
+      "Detail: Stop excess water application if the flowers are in good condition",
+   "Title7":"Harvesting",
+   "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-      "Climate":"Temprate:Detail: For successful production of Almond needs chilling temperature requirement",
-      "Storage":"",
-      "Marketing":"",
-     "Roughing":"",
-     "InterCropping":""
+      "Title1":"Climate",
+      "Temprate":
+      "Detail: For successful production of Almond needs chilling temperature requirement",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1040,8 +1056,8 @@
       "PlantNutrition":
     {
       
-      "Fertilizer":"",
-       "Dormant Spray":
+       "Title":"Fertilizer",
+       "DormantSpray":
       "Detail: To enhance plant growth under stress condition.",
       "NPK":
       "Detail: as per plant requirement"
@@ -1049,25 +1065,26 @@
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-  "Sowing Method":"",
-  "SowingTime":
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Sowingtime":
    "Detail: March and April",
-  "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
-   "Irrigation":"",
-  "Harvesting":"",
-   "Thrasing":""
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting",
+   "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-      "Climate":"",
-      "Apple orchard":
+      "Title1":"Climate",
+      "Appleorchard":
       "Detail: warmer climates are not favorable for apple orchards,",
-     "Storage":"",
-      "Marketing":"",
-      "Roughing":"",
-      "InterCropping":""
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1134,38 +1151,38 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":"",
+       "Title":"Fertilizer",
        "FYM_compost":
        "Detail: December-January",
        "Porus":
        "Detail: 1-1.5kg per plant.",
        "Urea":
        "Detail: 150gm/plant (Two years old plant)",
-       "Vegetative and floral budinitiation":
+       "Vegetativeandfloralbudinitiation":
        "Detail: No fertilizers and chemical spray."
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
-   "SowingTime":"",
-  "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
-  "Irrigation":"",
-  "vegetative and floral bud initiation":
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+  "vegetativeandfloralbudinitiation":
       "Detail: No need of water.",
-   "Harvesting":"",
-   "Thrasing":""
+   "Title7":"Harvesting",
+   "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-      "Climate":"",
-      "Storage":"",
-      "Marketing":
-    
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+     "Marketing":
       "Detail: Veriety identification",
-      "Roughing":"",
-      "InterCropping":""
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1228,26 +1245,26 @@
       "PlantNutrition":
     {
       
-      "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
-  "SowingTime":"",
-   "Row-Row Distance":"",
-  "Plant-Plant-Distance":"",
-  "Irrigation":"",
-  "Harvesting":"",
-   "Thrasing":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting",
+   "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1319,28 +1336,29 @@
       "PlantNutrition":
     {
       
-      "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
    "Sowingtime":
       "Detail: 1",
-   "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
-   "Irrigation":"",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
   
-   "Harvesting":"",
-   "Thrasing":""
+   "Title7":"Harvesting",
+   "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1409,34 +1427,39 @@
       "PlantNutrition":
     {
       
-      "Fertilizer":"fertilizerapp:   Detail: NPK use this time",
-   "Flowring time":
+       "Title":"Fertilizer",
+       "fertilizerapp":
+      "Detail: NPK use this time",
+   "Flowringtime":
       "Detail: DAP and NPK already use aviod fertilizerapplication this time",
-   "Magnesium sulphate":
+   "Magnesiumsulphate":
       "Detail: 1 tea spoon/ Two liter of water",
-    "magnisium + zinc + phy to  fex(50g+accor. to label+50ml)":
+    "magnisium+zinc+phytofex(50g+accor. to label+50ml)":
       "Detail: After last picking for healthy plants and bumper crop in next year",
    "Megaplus":
       "Detail: According to lable instruction"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-  "Sowing Method":"",
-   "SowingTime":"",
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
    "Feb-March":
       "Detail: Optmum time",
    "Sowingtime":
       "Detail: 1",
-   "Row-Row Distance":"",
-   "Plant to PlantDistance":
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "PlanttoPlantDistance":
       "Detail: 20 ft",
-  "Irrigation":"",
-   "Avoid irrigation":
+   "Title6":"Irrigation",
+   "Avoidirrigation":
    "Detail: At flowering stage",
-  "Irrigation system":
+  "Irrigationsystem":
    "Detail: Farow system for ur field disease spread control",
-   "Harvesting":"",
+   "Title7":"Harvesting",
+
+   "Title8":"Pruning",
    "pruning":
       "Detail: pruning",
       "Pruning":
@@ -1444,13 +1467,15 @@
     },
   "OthersMangaement":
   {
-      "Climate":"",
-      "Storage":"",
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
       "Marketing":
-     
       "Detail: nursery plant for sale",
-      "Roughing":"",
-      "InterCropping":"Mongbeen:    Detail: sowing from May to Jun"
+      "Title4":"Roughing",
+      "Title5":"InterCropping",
+      "Mongbeen":
+      "Detail: sowing from May to Jun"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1526,32 +1551,34 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":"fertilizerapp: Detail: fym 30 kg / plant urea , 1 kg. dap.500gram , sop 300gram per plants"
+       "Title":"Fertilizer",
+       "fertilizerapp":
+      "Detail: fym 30 kg / plant urea , 1 kg. dap.500gram , sop 300gram per plants"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
-   "SowingTime":"",
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
    "aug-sep":
    "Detail: di khan, jhang, khairpur",
    "feb-march":
    "Detail: multan , muzafargarh",
-   "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
    "20*20ft":
       "Detail: 109 plant/acre",
-   "Irrigation":"",
-   "Harvesting":"",
-   "Thrasing":""
+   "Title6":"Irrigation",
+   "Title7":"Harvesting",
+   "Title8":"Thrasing"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1617,75 +1644,75 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":"",
-       "1 year plant":
+       "Title":"Fertilizer",
+       "1yearplant":
       "Detail: 100 gm Nitrogen",
-       "2 year plant":
+       "2yearplant":
       "Detail: 5 kg FYM, 150 gm Nitrogen, 100 gm phosphorus, 150 gm potassium",
-      "3 or more than 3 years plant":
+      "3ormorethan3yearsplant":
       "Detail: 7 kg FYM, 200 gm Nitrogen, 150 gm phosphorous, 250 gm potassium.",
       "Fertilizers":
       "Detail: In commercial orchards of grapes 5 kg of FYM per plants for good production and Nitrogen, Phosphorous and Potassium fertilizer should be applied during winter or early spring to maintain the plants.",
        "NPK":
       "Detail: 150gm/plant (Two years old plant)",
-     "Porus ofF MC":
+     "PorusofFMC":
       "Detail: 1-1.5kg per plant."
     },
     "CropManagement":
     {
-  "Land Prparation":
-  
+  "Title1":"Land Prparation",
+  "Landpreparation":
   "Detail: Gravelly sands to heavy clays, from shallow to deep . However,poorly or light drained or highly alkaline soils should be avoided.",
-   "Sowing Method":"",
+   "Title2":"Sowing Method",
    "Holeize":
       "Detail: Length 1.5 feet to 2feet , wedth 1.5feet",
       "Planting":
       "Detail: After dig the hole left it for 4 to 6 days for the passing of sunlight After 6 days sprouting grapes can transplnt. Fill this hole 1:1:1 FYM, sand, hole soil respectvally and irrigate it",
-   "SowingTime":"",
-   "Sowing of plant with soil/mud":
+   "Title3":"SowingTime",
+   "Sowingofplantwithsoil/mud":
      "Detail: 15 January to 15 April",
-   "Sowing of plant without soil":
+   "Sowingofplantwithoutsoil":
       "Detail: January to February",
-      "sowing time":
+      "sowingtime":
       "Detail: After monsoon",
-   "Row-Row Distance":"",
+   "Title4":"Row-Row Distance",
    "R_Rdistance":
       "Detail: 9 feet",
-   "Plant-Plant-Distance":"",
+   "Title5":"Plant-Plant-Distance",
    "P-Pdistance":
    "Detail: 8 feet",
    
-   "Irrigation":"",
+   "Title6":"Irrigation",
    
-  "At fruit ripeng time":
+  "Atfruitripeningtime":
       "Detail: Stop Irrigation",
-   "In summer Irrigation":
+   "InsummerIrrigation":
       "Detail: 10 to 15 Days interval",
-   "irrigation":
+   "Irrigation":
   "Detail: Irrigation during flowering and ripening is not advised as it may delay ripening, reduces berry size and increases shedding. Recmanded water 2 time a week in summer, in winter one time a week.",
-   
+   "Title7":"Harvesting",
    "Harvesting":
       "Detail: Start fruiting in 3 to 4 years",
-   "Thrasing":"",
-   "Prunning":"",
-   "Grapes Prouning to cuttings":
+   "Title8":"Thrasing",
+   "Title9":"Prunning",
+   "GrapesProuningtocuttings":
   "Detail: In winter prouning of grapes season has staered. We can made the cutting of this grapes wain. One-year old wood should be pruned and made the cutting",
-   "Method of training,pruning given bellow":
+   "Methodoftraining,pruninggivenbellow":
    "Detail: 1.Head System(main stem is trained straight upward) this system is doing seccessfully in pakistan........2.Cane System(4-6 fruit trunks are raised).......3.Cordon System (main trunk is 2.5 – 3.5 m long and trained horizontally)",
-   "Cutting":"",
-   "Cutting stepare given bellow":
+   "Title10":"Cutting",
+   "Cuttingsteparegivenbellow":
       "Detail: First of all when cutting season has started Grapes wain remove put in water tank for 2 to 3 houres (for this purpes the skin of wine remains save otherwise wines can dry particularly damegs of node) During winter season when wines are pruned cutting size shuld be 30 -40 cm long . A cutting should be round cut at proximal end (root side) and a slanting cut at the distal end (shoot side) . vine age shuld be one year for cutting. Thickness Cuttin of grapes wine like figure to thumb 3.These cuttings are bundled. There are 50 to 70 cuttings in one bundle. These cutting bundles have put in fertile soil for 2 to 3 weaks. After that cultivate it in the black polythen bages. Others methods of propagation are layering and grafting. But cutting propegation methed is seccessfull than layering and grafting.",
-      "Sprying":"",
-      "Dormant Spray":
+      "Title11":"Sprying",
+      "DormantSpray":
       "Detail: To enhance plant growth and fruiting."
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1756,28 +1783,31 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":"FYM:  Detail: 2-3 kgs/plant"
+       "Title":"Fertilizer",
+       "FYM":
+      "Detail: 2-3 kgs/plant"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
-   "SowingTime":"",
-   "Sowingtime":"Detail: 15 Feb to 15 March",
-   "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
-   "Irrigation":"",
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Sowingtime":
+      "Detail: 15 Feb to 15 March",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
    "7-14days":
    "Detail: depending on season and soil type",
-   "Harvesting":""
+   "Title7":"Harvesting"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1840,31 +1870,31 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":"",
-       "Mango plant fertilizer App":
+       "Title":"Fertilizer",
+       "MangoplantfertilizerApp":
       "Detail: aviod fertilizerapp sown plants Ist yr",
-     "Potassium  nitrate":
+     "Potassiumnitrate":
       "Detail: 15kg/acre"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
-   "SowingTime":"",
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
    "December,feb-march":
    "Detail: feb-march",
-   "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
-   "Irrigation":"",
-   "Harvesting":""
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "cropDetail": {
     "Name": "pests, weeds, diseases,disorderd",
@@ -1965,27 +1995,28 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":
-        
-"Fertilizer is applied in two split doses. The first application during MaywillhelpintheproductionofsuckersanddevelopmentofcapsulesandthesecondapplicationduringlateSeptemberwillhelptheinitiationofpaniclesandsucker. Only half the d"
-     
+       "Title":"Fertilizer",
+       "Afertilizerdoesof75kgnitrogen(N),75kgphosphorus(P2O5)and150gpotash(K2O)perhaisrecommendedunderirrigatedconditionforhighyieldingplantationyielding100kg/haandaboveanddoseof30:60:30kg/haisrecommendedforgardensunderra":       "Detail: .",
+"Fertilizer is applied in two split doses. The first application during MaywillhelpintheproductionofsuckersanddevelopmentofcapsulesandthesecondapplicationduringlateSeptemberwillhelptheinitiationofpaniclesandsucker. Only half the d":
+      "Detail: ."
     },
     "CropManagement":
     {
-  "Land Prparation":
-  "Pits of 45x45x30cm size are dug in April-May and filled with a mixture of top soil and compost or well decomposed farm yard manure. In slopy land, contour terraces may be made and pits may be taken along the contour and a close planting (2mx1m) is advisab",
-    
-   "Sowing Method":"",
-   "Sowing Time":
-   "November-January",
-     
-   "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
-   "Irrigation":
-   "In order to overcome the dry spell during summer, it is necessary to irrigate the crop to get maximum production as it helps in initiation of panicles, flowering and fruit set. They may be irrigated at an interval of 10-15days till the onset of monsoon.",
-      "Harvesting":
-   "Cardamom plants normally start bearing two years after planting. In most of the areas the peak period of harvest is during October-November. Picking is carried out at an interval of 15-25 days. Ripe capsules are harvested in order to get maximum green col"
-   
+  "Title1":"Land Prparation",
+  "Pits of 45x45x30cm size are dug in April-May and filled with a mixture of top soil and compost or well decomposed farm yard manure. In slopy land, contour terraces may be made and pits may be taken along the contour and a close planting (2mx1m) is advisab":
+      "Detail: .",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "November-January":
+      "Detail: ..",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "In order to overcome the dry spell during summer, it is necessary to irrigate the crop to get maximum production as it helps in initiation of panicles, flowering and fruit set. They may be irrigated at an interval of 10-15days till the onset of monsoon.":
+      "Detail: .",
+   "Title7":"Harvesting",
+   "Cardamom plants normally start bearing two years after planting. In most of the areas the peak period of harvest is during October-November. Picking is carried out at an interval of 15-25 days. Ripe capsules are harvested in order to get maximum green col":
+   "Detail: ."
     }
 },
 "cropDetail": {
@@ -2053,8 +2084,8 @@
     "Managements":
     {},
     "Fennel Crop Seed Varieties":{},
-    "title1":"name",
-        "seedrate":"",
+       "title1":"name",
+       "title2": "seedrate",
        "cropDetail": {
         "Name": "pests, weeds, diseases,disorderd"
       }
@@ -2083,8 +2114,8 @@
     {},
     
     "Fenugreek Crop Seed Varieties":{},
-    "title1":"name",
-        "seedrate":"",
+       "title1":"name",
+       "title2": "seedrate",
        "cropDetail": {
         "Name": "pests, weeds, diseases,disorderd"
       }
@@ -2111,8 +2142,8 @@
     "Managements":
     {},
     "Lavender Crop Seed Varieties":{},
-    "title1":"name",
-    "seedrate":"",
+       "title1":"name",
+       "title2": "seedrate",
        "cropDetail": {
         "Name": "pests, weeds, diseases,disorderd"
       }
@@ -2139,8 +2170,8 @@
     "Managements":
     {},
     "Lemon grass Crop Seed Varieties":{},
-    "title1":"name",
-    "seedrate":"",
+       "title1":"name",
+       "title2": "seedrate",
        "cropDetail": {
         "Name": "pests, weeds, diseases,disorderd"
       }
@@ -2169,30 +2200,30 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-  "Land Prparation":"",
-   "Sowing Method":"",
-   "SowingTime":"",
-   "Row-Row Distance":"",
-   "Plant-Plant-Distance":"",
-   "Irrigation":"",
-   "Harvesting":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
    
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Storage":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Alexandra Palm Crop Seed Varieties":{},
-  "title1":"name",
-  "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2222,21 +2253,30 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Climate":"",
-      "Storage":"",
-      "Marketing":"",
-      "Roughing":"",
-      "InterCropping":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
    
-    }
-  },
+    },
+  "OthersMangaement":
+  {
+      "Title1":"Climate",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
+  }},
   "Alstonia Crop Seed Varieties":{},
-  "title1":"name",
-  "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2267,30 +2307,30 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
+   
+    },
+  "OthersMangaement":
+  {
+      "Title1":"Climate",
       
-       },
-     "OthersMangaement":
-     {
-       "Climate":"",
-       "Storage":"",
-       "Marketing":"",
-       "Roughing":"",
-       "InterCropping":""
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Amaltas Crop Seed Varieties":{},
-  "title1":"name",
-      "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2320,30 +2360,29 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
-      
-       },
-     "OthersMangaement":
-     {
-       "Climate":"",
-       "Storage":"",
-       "Marketing":"",
-       "Roughing":"",
-       "InterCropping":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
+   
+    },
+  "OthersMangaement":
+  {
+      "Title1":"Climate",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Amaranthus Crop Seed Varieties":{},
-  "title1":"name",
-      "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2372,30 +2411,29 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
-      
-       },
-     "OthersMangaement":
-     {
-       "Climate":"",
-       "Storage":"",
-       "Marketing":"",
-       "Roughing":"",
-       "InterCropping":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
+   
+    },
+  "OthersMangaement":
+  {
+      "Title1":"Climate",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Antonium Crop Seed Varieties":{},
-  "title1":"name",
-     "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2425,30 +2463,29 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
-      
-       },
-     "OthersMangaement":
-     {
-       "Climate":"",
-       
-       "Marketing":"",
-       "Roughing":"",
-       "InterCropping":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
+   
+    },
+  "OthersMangaement":
+  {
+      "Title1":"Climate",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Bougainvillea Crop Seed Varieties":{},
-  "title1":"name",
-     "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2477,30 +2514,29 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
-      
-       },
-     "OthersMangaement":
-     {
-       "Climate":"",
-      
-       "Marketing":"",
-       "Roughing":"",
-       "InterCropping":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
+   
+    },
+  "OthersMangaement":
+  {
+      "Title1":"Climate",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Cat Palm Crop Seed Varieties":{},
-  "title1":"name",
-      "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2529,31 +2565,31 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":"",
+       "Title":"Fertilizer",
        "fertilizerapp":
       "Detail: USe of FYM and confidor Against insect attack"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
    
     },
   "OthersMangaement":
-  { 
-    "Climate":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+  {
+      "Title1":"Climate",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Chrysanthemum Crop Seed Varieties":{},
-  "title1":"name",
-      "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2582,29 +2618,29 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
    
     },
   "OthersMangaement":
-  { 
-    "Climate":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+  {
+      "Title1":"Climate",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
   "Delphinium Crop Seed Varieties":{},
-  "title1":"name",
-      "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2633,30 +2669,30 @@
       "PlantNutrition":
     {
       
-       "Fertilizer":""
+       "Title":"Fertilizer"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Sowing Method":"",
-      "SowingTime":"",
-      "Row-Row Distance":"",
-      "Plant-Plant-Distance":"",
-      "Irrigation":"",
-      "Harvesting":""
+  "Title1":"Land Prparation",
+   "Title2":"Sowing Method",
+   "Title3":"SowingTime",
+   "Title4":"Row-Row Distance",
+   "Title5":"Plant-Plant-Distance",
+   "Title6":"Irrigation",
+   "Title7":"Harvesting"
    
     },
   "OthersMangaement":
   {
-    "Climate":"",
-    "Marketing":"",
-    "Roughing":"",
-    "InterCropping":""
+      "Title1":"Climate",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }},
  
   "Duranta Crop Seed Varieties":{},
-  "title1":"name",
-     "seedrate":"",
+     "title1":"name",
+     "title2": "seedrate",
      "cropDetail": {
       "Name": "pests, weeds, diseases,disorderd"
     }
@@ -2684,68 +2720,68 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
-         "How much fertilizer is needed":
+         "Title":"Fertilizer",
+         "Howmuchfertilizerisneeded":
       "Detail: 25:50:50 of N:P:K at the time of landpreparation",
-       "Which fertilizer sat the time of sowing":
+       "Whichfertilizersatthetimeofsowing":
       "Detail: 1 bag urea + 2 bag TSP + 2 bags SOP per acre",
-           "Which fertilizers to add during growtht im":
+           "Whichfertilizerstoaddduringgrowthtim":
       "Detail: 0.5 bag AS + 1 bag SOP every month till final harvest"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-     "How much fertilizer to add during landpreparation":
+      "Title1":"Land Prparation",
+     "Howmuchfertilizertoaddduringlandpreparation":
       "Detail: 25:50:50 of N:P:K at the time of landpreparation",
-        "How to prepare soil":
+        "Howtopreparesoil":
       "Detail: 2-3 cultivators after adding 10trolly FYM/acre",
-               "Which fertilizer sat the time of sowi n":
+               "Whichfertilizersatthetimeofsowin":
       "Detail: 1 bag urea + 2 bag TSP + 2 bags SOP per acre",
-                     "Which fertilizers to add during growth time":
+                     "Whichfertilizerstoaddduringgrowthtime":
       "Detail: 0.5 bag AS + 1 bag SOP every month till final harvest",
-             "Which soil isbetter":
+             "Whichsoilisbetter":
       "Detail: All soils but sandy clay is the best",
-       "Sowing Method":"",
-       "How to sow":
+       "Title2":"Sowing Method",
+       "Howtosow":
       "Detail: Mostly by direct seed but can be done by nursery growing and transplantation",
-       
+       "Title3":"SowingTime",
        "Sowingtime":
       "Detail: March and April",
           "Whentosowincolderregions_mountains":
       "Detail: June-July",
-       "When to sowin plainareas_districts":
+       "Whentosowinplainareas_districts":
        "Detail: January to March",
        
-       "Plant-Plant-Distance":"",
-       "Distance between the plant in a row":
+       "Title4":"Plant-Plant-Distance",
+       "Distancebetweentheplantsinarow":
        "Detail: 45 cm / 0.45 m / 1.5 feet",
     
-       "Row-Row Distance":"",
-       "Row to Row distance":
+       "Title5":"Row-Row Distance",
+       "RowtoRowdistance":
       "Detail: 150 cm / 1.5 meter / 5 feet",
-       "Irrigation":"",
-       "When to first irrigate in case of nursery method":
+       "Title6":"Irrigation",
+       "Whentofirstirrigateincaseofnurserymethod":
       "Detail: Irrigate the field just after transplantation",
-  "When to irrigate":
+  "Whentoirrigate":
       "Detail: 15 to 20 days interval keeping in view the climatic and soil conditions",
-       "Harvesting":"",
-       "when to harvest":
+       "Title7":"Harvesting",
+       "whentoharvest":
       "Detail: harvest when the fruit is mature. Avoid over ripening as it reduces the market value"
     },
   "OthersMangaement":
   {
-      "Climate":"",
-      "Suitable climate":
+      "Title1":"Climate",
+      "Suitableclimate":
       "Detail: Bitter gourd requires a minimum temperature of 18°C during early growth, but optimal temperatures are in the range of 24-27°C. The plant is adapted to a wide variety of rainfall conditions, but regular irrigation is needed to ensure high yield.",
-     "Storage":"",
-      "Marketing strategy":
+      "Title2":"Storage",
+      "Marketingstrategy":
      "Detail: can be marketed as fresh and dried",
-     "Storagee":
+     "Storage":
       "Detail: Can be stored in refrigerator, covered and unwashed for 4-5 days",
-    
-      
+      "Title3":"Marketing",
+      "Title4":"Roughing",
       "rouging":"Detail: Diseased plants can be rouged out to reduce the spread of the infection.",
-     
+      "Title5":"InterCropping",
       "Intercropping":
       "Detail: Can be inter cropped with tomato, cucurbits and brinjal etc"
   }
@@ -2824,59 +2860,60 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
-         "After plantation":
+         "Title":"Fertilizer",
+         "Afterplantation":
       "Detail: Remaining Nitrogen Potash should be applied in 35-70 days in 3 intervals",
-"At the time of field preparation":
+"Atthetimeoffieldpreparation":
       "Detail: 1/3 Nitrogen, phosphorus fertilizer and 1/2 Potash fertilizer are recommended to be applied at sowingtime",
-"Fertilizer application":
+"Fertilizerapplication":
       "Detail: 35 kg Nitrogen, 30 kg Phosphorus and 25 kg Potash recommended"
     },
     "CropManagement":
     {
-     "Land Prparation":"",
+      "Title1":"Land Prparation",
       "landselection":
       "Detail: land selected must have good drainage. to attain this at least 3 repeated ploughing must be done",
-      "Sowing Method":"",
-       "Raised seedbeds":
+       "Title2":"Sowing Method",
+       "Raisedseedbeds":
       "Detail: Raised seed beds made upto height of 30cm and distance between the beds upto 2 meters",
 "seedrate":
       "Detail: 1/4 kg seed per kanal",
-     
-       "sowing time":
+       "Title3":"SowingTime",
+       "sowingtime":
         "Detail: March to April",
-       "Plant-Plant-Distance":"",
-       "Row-Row Distance":"",
+       "Title4":"Plant-Plant-Distance",
+       "Title5":"Row-Row Distance",
        "3meter":
       "Detail: 3 meter",
-      "Irrigation":"",
-       "Mon soon":
+       "Title6":"Irrigation",
+       "Monsoon":
       "Detail: During monsoon irrigation is not given",
-     "Summer irrigation":
+     "Summerirrigation":
       "Dtail:  is carried out thrice a week",
-     "Harvesting":"",
-       "harvesting time":
+       "Title7":"Harvesting",
+       "harvestingtime":
       "Detail: The fruits are ready for harvest 60-120 days after sowing depending on the variety.",
       "Vines":
       "Detail: Harvest gourds when vines are dry"
     },
   "OthersMangaement":
   {
-          "climate":
+      "Title1":"Climate",
+      "climate":
       "Detail: warm season crop, grown in tropical and sub-tropical regions. In temperate regions they are grown in greenhouses.",
     "soil":
       "Detail: It requires sandy loam soil",
-     
+      "Title2":"Storage",
       "storage":
       "Detail: At home, store them in the refrigerator set at adequate humidity where they stay fresh for 3-4 days.",
 
-      
+      "Title3":"Marketing",
       "Marketing":
       "Detail: Can be marketed: as fresh in kilograms",
-      
+      "Title4":"Roughing",
       "Rouging":
       "Detail: When symptoms of disease appeared in field the infected plants may be removed or rouge out manually to stop the infection",
-     
+      "Title5":"InterCropping",
       "intercropping":
       "Detail: can be intercropped with tomatoes, brinjals and other cucurbits"
   }
@@ -2947,70 +2984,73 @@
     {
       "PlantNutrition":
     {
-        "Fertilizer":"",
-         "Growth regulators as well NAYAN PK":
+         "Title":"Fertilizer",
+         "GrowthregulatorsaswellNAYANPK":
       "Detail: As requirement",
-     "SSP+AN(at sowing),AN at every 2nd picking":
+     "SSP+AN(at sowing),ANatevery2ndpicking":
       "Detail: 4+1 at sowing and 1 AN or 0.5 bag at every 2nd picking"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "How to prepare soil":
+      "Title1":"Land Prparation",
+      "Howtopreparesoil":
       "Detail: 1 MB plough followed by 2-3 cultivator and planking",
-     "Which soil is better":
+     "Whichsoilisbetter":
       "Detail: Fertile loamy soil with good drainage",
        "Title2":"Sowing Method",
        "Howmuchnurseryforoneacre":
       "Detail: 4-5 Marla nursery for one acre is sufficient (150-200 grams seed)",
      "Isseedtreatmentrequired":
       "Detail: If not already treated, seed treatment with Topsin-M or any othher fungicide @2grams /litre water",
-      "Sowing method":
+      "Sowingmethod":
       "Detail: Sowing by Transplantation",
-       "Sowing Time":"",
+       "Title3":"SowingTime",
        "Crop1sowingtime":
       "Detail: February (nurserry) and April (transplantation)",
-    "Crop2 sowin time":
+    "Crop2sowingtime":
       "Detail: Mid May to Mid June (nursery) and July-August (transplantation)",
-   "When Golebrinjal is grown":
+   "WhenGolebrinjalisgrown":
       "Detail: Mostly the gole varieites are grown in crop-2",
-       "Plant-Plant-Distance":"",
-       "Plant to plantdistance":
+       "Title4":"Plant-Plant-Distance",
+       "Planttoplantdistance":
       "Detail: 0.5 meter or 1.7 feet",
-       "Row-Row Distance":"",
-       "Row to Rowd istance":
+       "Title5":"Row-Row Distance",
+       "RowtoRowdistance":
        "Detail: 1 meter or 3.5 feet",
-       "Irrigation":"",
-       "1st irrigationtime":
+       "Title6":"Irrigation",
+       "1stirrigationtime":
       "Detail: Immediately after transplantation",
-     "Irrigation  interval  after second irrigation":
+     "Irrigationintervalaftersecondirrigation":
       "Detail: Weekly irrigation required keeping in view the climatic and soil conditions",
-       "Second Irrigationtime":
+       "SecondIrrigationtime":
       "Detail: 3-4 days after first irrigation",
-       "Harvesting":"",
-       "Appropriate time for harvesting":
+       "Title7":"Harvesting",
+       "Appropriatetimeforharvesting":
       "Detail: When the fruit is purple and not fully mature. If harvesting is delayed the color of the fruit will turn white and its market value is reduced",
-     "When 2nd crop harvesting is done":
+     "When2ndcropharvestingisdone":
       "Detail: September to December",
-    "When Ist crop harvesting is done":
+    "WhenIstcropharvestingisdone":
       "Detail: June to September",
-   "When to go lebrinjal is grown":
+   "Whentogolebrinjalisgrown":
       "Detail: Mostly in 2nd crop gole brinjal is grown"
     },
   "OthersMangaement":
   {
-    "Climate":"",
-      "What temperature range is good for brinjal":
+      "Title1":"Climate",
+      "Whattemperaturerangeisgoodforbrinjal":
       "Detail: 18-21 degrees C for growth",
-      "Which is climate is considered good":
+      "Whichisclimateisconsideredgood":
       "Detail: Hot and humid. This crop cannot tolerate cold climate. A",
-      "Storage":"",
+      "Title2":"Storage",
 
-    "Marketing":"",
-      "Which produce is good formarket":
+      "Title3":"Marketing",
+      "Whichproduceisgoodformarket":
       "Detail: Half mature (katcha), purple color and smaller size",
+      "Title4":"Roughing",
       "Rouging":
       "Detail: Diseased plants can be rouged out to reduce the spread of the infection.",
+
+      "Title5":"InterCropping",
       "Intercropping":
       "Detail: mungbean , blackgram , garlic can be intercropped with brinjal"
   }
@@ -3094,74 +3134,75 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
-         "Chemical fertilizer":
+         "Title":"Fertilizer",
+         "Chemicalfertilizer":
       "Detail: 2 bags of DAP and 1 bag of Potash at the time of sowing. One bag of ammonium sulphate after 1-1.5 month",
-    "few weeks before sowing":
+    "fewweeksbeforesowing":
       "Detail: 16-20 tons per acre well rotten FYM application"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "field preparation":
+      "Title1":"Land Prparation",
+      "fieldpreparation":
       "Detail: 2-3 deep ploughings",
      "Soil":
       "Detail: Well drained sandy-loam soil, free from stones, clods and lumps.",
-       "Sowing Method":"",
-       "Direct method":
+       "Title2":"Sowing Method",
+       "Directmethod":
       "Detail: Sowing on both sides of bed",
-       "SowingTime" :"",
-       "Early sowing":
+       "Title3":"SowingTime",
+       "Earlysowing":
       "Detail: August",
-       "In h0illy areas":
+       "Inhillyareas":
       "Detail: march-april",
-      "Late  sowing":
+      "Latesowing":
       "Detail: November",
-      "Mid season sowing":
+      "Midseasonsowing":
       "Detail: September-October",
-       "Plant-Plant-Distance":"",
+       "Title4":"Plant-Plant-Distance",
        "P-Pdistance":
       "Detail: 2-3 inches",
-       "Row-Row Distance":"",
+       "Title5":"Row-Row Distance",
        "R-Rdistance":
       "Detail: 1.5-2 feet",
-       "Irrigation":"",
-       "1st irrigation":
+       "Title6":"Irrigation",
+       "1stirrigation":
       "Detail: Immediately after sowing",
-      "Onward irrigations":
+      "Onwardirrigations":
       "Detail: at 7-15 days interval depending upon requirement of field",
-      "Harvesting":"",
-       "Early harvesting":
+       "Title7":"Harvesting",
+       "Earlyharvesting":
       "Detail: November-december",
-      "Harvestingg":
+      "Harvesting":
       "Detail: Usually 100-120 days after planting when carrots are 2-4 cm in diameter",
-      "Harvesting in hillyareas":
+      "Harvestinginhillyareas":
       "Detail: June-July",
-      "Late crop harvesting":
+      "Latecropharvesting":
       "Detail: February",
-       "Mid season crop harvesting":
+       "Midseasoncropharvesting":
       "Detail: December-January"
     },
   "OthersMangaement":
   {
+      "Title1":"Climate",
       "Climate":
       "Detail: Cool season crop, moderately frost tolerant",
-      
+      "Title2":"Storage",
       "Storage":
       "Detail: Cold storage prolongs the life, can be kept for about 6 months at 0 degrees and 90-98% relative humidity",
-      "Marketing":"",
-      "Can also be marketed 6as":
+      "Title3":"Marketing",
+      "Canalsobemarketed6as":
       "Detail: pickles",
        "Canned":
       "Detail: in sugar syrup and in brine",
      "Dried":
       "Detail: in the form of dried packaging",
-      "Fresh marketing":
+      "Freshmarketing":
       "Detail: Thoroughly wash and wrap in bundles, 8-12 roots per bunch",
-
+      "Title4":"Roughing",
       "Rouging":
       "Detail: When symptoms of disease appeared in field the infected plants may be removed or rouge out manually to stop the infection",
-     
+      "Title5":"InterCropping",
       "Intercropping":
       "Detail: Mint and coriander can be planted as inter crops on top of ridges Brassica on side of field"
   }
@@ -3235,76 +3276,76 @@
     {
       "PlantNutrition":
     {
-        "Fertilizer":"",
-         "Chemical fertilizer":
+         "Title":"Fertilizer",
+         "Chemicalfertilizer":
       "Detail: 2 bags of DAP and 1 bag of Potash at the time of sowing. One bag of ammonium sulphate after 1-1.5 month",
-        "few weeks before sowing":
+        "fewweeksbeforesowing":
       "Detail: 16-20 tons per acre well rotten FYM application"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "field preparation":
+      "Title1":"Land Prparation",
+      "fieldpreparation":
       "Detail: 2-3 deep ploughings",
       "soil":
       "Detail: Well drained sandy-loam soil, free from stones, clods and lumps.",
-      "Sowing Method":"",
-       "Direct method":
+       "Title2":"Sowing Method",
+       "Directmethod":
       "Detail: Sowing on both sides of bed",
-       "SowingTime":"",
-       "Early sowing":
+       "Title3":"SowingTime",
+       "Earlysowing":
       "Detail: August", 
-      "I nhill yareas":
+      "Inhillyareas":
       "Detail: march-april",
-     "Late  sowing":
+     "Latesowing":
       "Detail: November",
-     "Mid season  sowing":
+     "Midseasonsowing":
       "Detail: September-October",
       
-      "Plant-Plant-Distance":"",
+       "Title4":"Plant-Plant-Distance",
        "P-Pdistance":
        "Detail: 2-3 inches",
-       "Row-Row Distance":"",
+       "Title5":"Row-Row Distance",
        "R-Rdistance":
       "Detail: 1.5-2 feet",
-      "Irrigation":"",
-       "1st irrigation":
+       "Title6":"Irrigation",
+       "1stirrigation":
       "Detail: Immediately after sowing",
      "Onward irrigations":
       "Detail: at 7-15 days interval depending upon requirement of field",
-      "Harvesting":"",
-       "Early harvesting":
+       "Title7":"Harvesting",
+       "Earlyharvesting":
       "Detail: November-december",
-     "Harvestingg":
+     "Harvesting":
       "Detail: Usually 100-120 days after planting when carrots are 2-4 cm in diameter",
-    "Harvesting in hill yareas":
+    "Harvestinginhillyareas":
       "Detail: June-July",
-       "Late crop harvesting":
+       "Latecropharvesting":
       "Detail: February",
-     "Mid season crop harvesting":
+     "Midseasoncropharvesting":
       "Detail: December-January"
     },
   "OthersMangaement":
   {
-      
+      "Title1":"Climate",
       "Climate":
       "Detail: Cool season crop, moderately frost tolerant",
-     
+      "Title2":"Storage",
       "Storage":
        "Detail: Cold storage prolongs the life, can be kept for about 6 months at 0 degrees and 90-98% relative humidity",
-     "Marketing":"",
-      "Canal so be marketed as":
+      "Title3":"Marketing",
+      "Canalsobemarketedas":
       "Detail: pickles",
       "Canned":
       "Detail: in sugar syrup and in brine",
       "Dried":
       "Detail: in the form of dried packaging",
-      "Fresh marketing":
+      "Freshmarketing":
       "Detail: Thoroughly wash and wrap in bundles, 8-12 roots per bunch",
-    
+      "Title4":"Roughing",
       "Rouging":
       "Detail: When symptoms of disease appeared in field the infected plants may be removed or rouge out manually to stop the infection",
-     
+      "Title5":"InterCropping",
       "Intercropping":
       "Detail: Mint and coriander can be planted as inter crops on top of ridges Brassica on side of field"
   }
@@ -3372,71 +3413,72 @@
       
         "PlantNutrition":
       {
-           "Fertilizer":"",
-           "Quant is Crop Enhancement":
+           "Title":"Fertilizer",
+           "QuantisCropEnhancement":
       "Detail: To enhance plant growth under stress condition.",
-             "Which fertilizers at the timeo fs owing":
+             "Whichfertilizersatthetimeofsowing":
       "Detail: 2.5 NP + 1 SOP",
-      "Which fertilizers to add during growth time":
+      "Whichfertilizerstoaddduringgrowthtime":
       "Detail: 1 AS or 0.5 Urea after one month of transplantation",
-     "Which fertilizers to use during picking":
+     "Whichfertilizerstouseduringpicking":
       "Detail: 1 AS or 0.5 Urea after every picking"
       },
       "CropManagement":
       {
-        "Land Prparation":
-
+        "Title1":"Land Prparation",
+"Landpreparation":
       "Detail: 2 cultivators followed by planking to make soil levelled and porous",
-"Which soil is good for chillies":
+"Whichsoilisgoodforchillies":
     "Detail: well drained silt or clay loam. Water logged and alkali soils are not good.",
-         "Sowing Method":"",
-         "At what time of the day to transplant":
+         "Title2":"Sowing Method",
+         "Atwhattimeofthedaytotransplant":
       "Detail: Preferably in the afternoon, irrigate field just after transplantion",
-"How much nursery for one acre":
+"Howmuchnurseryforoneacre":
       "Detail: 1-1.5 Marla nursery sufficient for one acre",
-   "How to preparebeds":
+   "Howtopreparebeds":
       "Detail: 2-2.5 feet wide beds with sowing on both sides of the bed",
-  "Method of sowing":
+  "Methodofsowing":
       "Detail: Sowing by nursery raising and transplantation",
-"Sowing time":
+"Sowingtime":
       "Detail: Kharif vegetable tomato. chili etc",
-         "SowingTime":"",
-         "Time of nursery raising":
+         "Title3":"SowingTime",
+         "Timeofnurseryraising":
       "Detail: Late October to Early November (nursery raising)",
-      "Time of transplantation":
+      "Timeoftransplantation":
       "Detail: Late February to March (when there is not frost)",
          
-         "Plant-Plant-Distance":"",
-         "Distance between the plants inarow":
+         "Title4":"Plant-Plant-Distance",
+         "Distancebetweentheplantsinarow":
       "Detail: 1-1.5 feet",
-         "Row-Row Distance":"",
-         "Distance between therows":
+         "Title5":"Row-Row Distance",
+         "Distancebetweentherows":
       "Detail: 2.5 feet",
-         "Irrigation":"",
-         "What special care during irrigation":
+         "Title6":"Irrigation",
+         "Whatspecialcareduringirrigation":
       "Detail: Water should not touch the base of the plant directly",
-      "when to first irrigate":
+      "whentofirstirrigate":
       "Detail: First irrigation is given immediately after transplantation",
-   "When to irrigate during growth stage":
+   "Whentoirrigateduringgrowthstage":
       "Detail: Weekly and depending upon the soil and climatic conditions",
-         "Harvesting":"",
-         "How to deal with harvested fruit":
+         "Title7":"Harvesting",
+         "Howtodealwithharvestedfruit":
       "Detail: Keep the chillies in shade to maintain its freshness",
-     "When to harvest":
+     "Whentoharvest":
       "Detail: Usually first picking is done in late May or early June and second picking is done in July",
-        "When to harvest in case of red chillies":
+        "Whentoharvestincaseofredchillies":
       "Detail: Picking should be done when the red color is fully developed"
       },
     "OthersMangaement":
     {
-        "Climate":
-        "in case of any stress like  Flood:Detail: Use RELY according to the instructions on label",
-     "Suitable climate for chillies":
+        "Title1":"Climate",
+        "incaseofanystresslikeFlood":
+      "Detail: Use RELY according to the instructions on label",
+     "Suitableclimateforchillies":
       "Detail: Long, dry warm growing season with no threat of frost damage.",
-        "Storage":"",
-       "Marketing":"",
-        "Roughing":"",
-       "InterCropping":""
+        "Title2":"Storage",
+        "Title3":"Marketing",
+        "Title4":"Roughing",
+        "Title5":"InterCropping"
     }
     },
     "cropDetail": {
@@ -3512,66 +3554,68 @@
     {
       "PlantNutrition":
     {
-        
+         "Title":"Fertilizer",
          "Fertilizer":
       "Detail: 1 bag DAP, 1 bag Postash, Half bag Urea.",
-"Growth Promotors":
+"GrowthPromotors":
       "Detail: Naya NPK or Quantus or Porus",
       "NPK":
         "Detail: 6 kg/kanal",
-"organic manure":
+"organicmanure":
       "Detail: 16-20 tonns per acre",
-"Soil conditioner":
+"Soilconditioner":
       "Detail: Humic acid"
 
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "suitable land for Garlic cultivation":
+      "Title1":"Land Prparation",
+      "suitablelandforGarliccultivation":
       "Detail: The filed is plowed and harrowed twice at 4-7 days interval.",
-     "suitable soil":
+     "suitablesoil":
       "Detail: fertile, well drained, loamy and airy soil is best for Garlic cultivation.",
-       "Sowing Method":"",
-       "Sowing method":
+       "Title2":"Sowing Method",
+       "Sowingmethod":
       "Detail: Single clove is used as seed. sowing is done through vegetative propagation.",
-       "SowingTime":"",
+       "Title3":"SowingTime",
        "hillyareas":
       "Detail: march-april",
       "plainareas":
       "Detail: Aug- Oct",
        
-       "Plant-Plant-Distance":"",
+       "Title4":"Plant-Plant-Distance",
        "P-Pdistance":
       "Detail: 3-4 inches",
-      "Row-Row Distance":"",
-       "row to row distance":
+       "Title5":"Row-Row Distance",
+       "rowtorowdistance":
       "Detail: 8-10 inches",
-       "Irrigation":
-       
+       "Title6":"Irrigation",
+       "irrigations":
       "Detail: Once in a week during vegetative stage. after 10-15 days near maturity",
-       "Harvesting":"",
-       "harvesting time":
+       "Title7":"Harvesting",
+       "harvestingtime":
       "Detail: when tips becomes brown and drying signs appear. total crop cycle is 4-6 months depending upon climate",
      "Sundrying":
       "Detail: after harvesting tie into small bundles and keep it in sun for 2-3 days"
     },
   "OthersMangaement":
   {
-    
+      "Title1":"Climate",
       "Climate":
       "Detail: Frost resistance, cool period during early and dry near maturity.",
-      "Storage":"",
+      "Title2":"Storage",
       "Drying":
       "Detail: initially tie the harvest into bundles and keep it in sun for 2-3 days",
-      "Marketing":"",
+           "Storage":
+      "Detail: Hang garlic tied bundles in shady, well ventilated area",
+      "Title3":"Marketing",
       "GarlicProduct":
       "Detail: Garlic can be sold as Kg in form of Bulbs, Garlic powder can be made by drying cloves also garlic paste and pickles of Garlic have a good market.",
-    
+      "Title4":"Roughing",
       "Rouging":
       "Detail: Diseased plants can be rouged out to reduce the spread of the infection.",
-      "InterCropping":
-      
+      "Title5":"InterCropping",
+      "Intercropping":
       "Detail: Mint or coriander can be grown on ridges with Garlic. In some areas Brassica plants are grown on sides. Garlic can be intercropped with cucrbits depending upon the temperature and climatic conditions of the area"
   }
    },
@@ -3639,7 +3683,7 @@
      {
        "PlantNutrition":
      {
-          "Fertilizer":"",
+          "Title":"Fertilizer",
           "FYM":
              "Detail: 15 tonnes/acre (before and at the time of sowing)",
 "Nitrogen":
@@ -3651,45 +3695,48 @@
      },
      "CropManagement":
      {
-       "Land Prparation":"",
-       "Bed Preparation":
+       "Title1":"Land Prparation",
+       "BedPreparation":
       "Detail: 1 meter width and 15 cm height of desire length",
-    "Beds spacing":
+    "Bedsspacing":
       "Detail: 50 cm apart from each other",
      "Ploughing":
       "Detail: 3-4 times before sowing to get fine tilt and conserve the rain water.",
-        "Sowing Method":"",
-        "Depth of seed Rhizome":
+        "Title2":"Sowing Method",
+        "DepthofseedRhizome":
       "Detail: 5 cm depth is required",
-    "Method of sowing":
+    "Methodofsowing":
       "Detail: Placing healthy rhizomes with 2-3 eye buds and 2.5 cm length of seed rhizome.",
-        "SowingTime":
+        "Title3":"SowingTime",
+        "Sowingtime":
       "Detail: May -June",
      
-          "Plant-Plant-Distance":"",
+              "Title4":"Plant-Plant-Distance",
         "6-8 inch":
          "Detail: .",
          "P-Pdistance":
       "Detail: 2-3 cm",
-        "Row-Row Distance":"",
+        "Title5":"Row-Row Distance",
         "R-Rdistance":
       "Detail: 50 cm",
+        "Title6":"Irrigation",
         "Irrigation":
-        
       "Detail: 1stirrigation soon after sowing, Irrigation after every 10 days intervals will be required in case of no rain. Total 20 irrigation is required for optimum yield.",
-        
+        "Title7":"Harvesting",
         "Harvesting":
       "Detail: For green Ginger Rhizome purpose harvesting shall be started 215 to 220 days after sowing. while for curing purpose harvesting will be started after 250 days of sowing. harvesting shall be done when the leaves turn yellow."
      },
    "OthersMangaement":
    {
+       "Title1":"Climate",
        "Climate":
       "Detail: Warm and Humid climatic conditions are required",
+       "Title2":"Storage",
        "Storage":
       "Detail: storage shall be in shade places",
-       "Marketing":"",
-      "Roughing":"",
-       "InterCropping":""
+       "Title3":"Marketing",
+       "Title4":"Roughing",
+       "Title5":"InterCropping"
    }
   },
   "cropDetail": {
@@ -3766,81 +3813,82 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
-         "After one month of transplantation":
+         "Title":"Fertilizer",
+         "Afteronemonthoftransplantation":
       "Detail: one bag urea per acre",
-     "Before transplantation":
+     "Beforetransplantation":
       "Detail: one bag urea, 2 bag DAP and one bag potassium sulphate per acre",
-      "Bumper Cotton":
+      "BumperCotton":
       "Detail: 1000ml/acre (2nd spray after 15 days)",
-      "Fertilizer after two month of sowing of onion":
+      "Fertilizeraftertwomonthofsowingofonion":
       "Detail: Urea 1 bag + ammonium sulfate 2 bags per acre",
        "Foliargold":
       "Detail: 1 liter per acre"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Further ploughing":
+      "Title1":"Land Prparation",
+      "Furtherploughing":
       "Detail: 2 times after FYM application",
 "M.Bplough":
       "Detail: for softening of soil",
-"Organic fertilizer(FYM)":
+"Organicfertilizer(FYM)":
       "Detail: 2 trollies per acre",
-       "Sowing Method":"",
-       "Bed spreparation for nursery raising":
+       "Title2":"Sowing Method",
+       "Bedspreparationfornurseryraising":
       "Detail: one meter wide and 10 meter long beds with 4 inch height from the soil, and 3 inches apart lines are drawn for seed sowing and covered with FYM.",
-"Lines owing after transplantation":
+"Linesowingaftertransplantation":
       "Detail: Nursery plants should be sown in lines when transplanted to the field",
-"Seed treatment for nursery raising":
+"Seedtreatmentfornurseryraising":
       "Detail: For nursery raising treat the seeds with Topsin-M (5 gm per kg of seed)",
-"Treatment of nursery pnts before transplantation":
+"Treatmentofnurseryplantsbeforetransplantation":
       "Detail: Treat the roots of plants with Diathen-M 45 or Intracol for 5 minutes",
-       "SowingTime":"",
-       "Time for nursery  raising":
+       "Title3":"SowingTime",
+       "Timefornurseryraising":
       "Detail: September to November depending upon climate",
-       "Transplantation time":
+       "Transplantationtime":
       "Detail: December to February",
-       "Plant-Plant-Distance":"",
+       "Title4":"Plant-Plant-Distance",
        "P-P":
       "Detail: 3-4 inch",
-       "Row-Row Distance":"",
+       "Title5":"Row-Row Distance",
        "R-R":
       "Detail: 8-10 inch",
-       "Irrigation":"",
+       "Title6":"Irrigation",
        "1stirrigation":
       "Detail: Immediately after nursery transplantation",
-                  "Onward irrigations":
+                  "Onwardirrigations":
       "Detail: at 7-15 days interval depending upon requirement of field",
-       "Harvesting":"",
-       "After harvesting they are kept in field for2-3day store moveex cessive moisture from bulb.":
+       "Title7":"Harvesting",
+       "Afterharvestingtheyarekeptinfieldfor2-3daystoremoveexcessivemoisturefrombulb.":
       "Detail: .",
-"Cureat the time for harvesting":
+"Cureatthetimeforharvesting":
       "Detail: Stop irrigating the field 10 days before harvesting",
-"Maturity time/Time forharvesting":
+"Maturitytime/Timeforharvesting":
       "Detail: When maturity signs occur like bending of plant at the neck point",
-    "When to harvest":
+    "Whentoharvest":
       "Detail: When plants get 50 % dry"
     },
   "OthersMangaement":
   {
-      
+      "Title1":"Climate",
       "Climate":
       "Detail: It is a mild season crop, it needs 12-15 degree centigrade before bulbing and 15 -21 degree centigrade for bulb formation",
-    "Storage":"",
-      "Proper storage":
+      "Title2":"Storage",
+      "Properstorage":
       "Detail: Should be stored in cold storage with temperature of 2-4 degree centigrade, 65% humidity upto 6 months",
-"Soon after harvesting":
+"Soonafterharvesting":
       "Detail: Move to a shady place soon after harvesting",
-      "Marketing":"",
-      "Marketing strategy":
+      "Title3":"Marketing",
+      "Marketingstrategy":
       "Detail: Onions are marketed in kilograms in the form of bulbs",
-"Other marketing options":
+"Othermarketingoptions":
       "Detail: Can be marketed as dried onion, fried onion, onion powder and onion pickles",
-      "Roughing":
+      "Title4":"Roughing",
+      "Rouging":
       "Detail: When symptoms of disease appeared in field the infected plants may be removed or rouge out manually to stop the infection",
-      "InterCropping":"",
-      "Can be intercropped with":
+      "Title5":"InterCropping",
+      "Canbeintercroppedwith":
       "Detail: Cabbage, onion and potato"
   }
    },
@@ -3911,75 +3959,75 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
-         "After 1st picking":
+         "Title":"Fertilizer",
+         "After1stpicking":
       "Detail: 1/2 bag urea",
-       "At flowering stage":
+       "Atfloweringstage":
       "Detail: 1/2 bag urea",
-          "At pod formation":
+          "Atpodformation":
       "Detail: 1/2 bag read",
       "":
       "Detail: 1/2 bag urea, 2 bags DAP and 1& 1/2 bag SOP"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "FYM application":
+      "Title1":"Land Prparation",
+      "FYMapplication":
       "Detail: 16-20 tons FYM application per acre before ploughing",
    "Ploughing":
       "Detail: 2-3 times deep ploughing",
-           "Suitable soil":
+           "Suitablesoil":
       "Detail: Peas prefer a fertile, sandy loam that drains well, but will tolerate most soils except heavy, impermeable clay. Work in plenty of compost to keep the soil friable. A pH level of 6 - 7.5 is preferred where soil is very acidic, apply dolomite or agricultural lime.",
-       "Sowing Method":"",
+       "Title2":"Sowing Method",
        "Average ":
       "Detail: 25-50 seeds kg per acre",
       "Method":
       "Detail: On one meter wide bed seeds should be sown on both sides",
-       "SowingTime":"",
+       "Title3":"SowingTime",
        "sep-oct":
       "Detail: 3kg per kanal",
-         "Suitable time depending upon variety and climate":
+         "Suitabletimedependinguponvarietyandclimate":
       "Detail: 15 september-15 december",
 
-      "Plant-Plant-Distance":"",
-       "P-P istance":
+       "Title4":"Plant-Plant-Distance",
+       "P-Pdistance":
       "Detail: 2-4 inch",
-       "Row-Row Distance":"",
+       "Title5":"Row-Row Distance",
        "R-Rdistance":
       "Detail: 2-3 feet",
-       "Irrigation":"",
-      "1st irrigation":
+       "Title6":"Irrigation",
+      "1stirrigation":
       "Detail: Immediately after sowing",
-      "After fruit bearing":
+      "Afterfruitbearing":
       "Detail: 3-4 irrigations per month",
-      "Before fruit bearing":
-       "Detail: one irrigation per month",
-       "Harvesting":"",
-       "Suitable time for harvesting":
+      "Beforefruitbearing":
+      "Detail: one irrigation per month",
+       "Title7":"Harvesting",
+       "Suitabletimeforharvesting":
       "Detail: Fully formed pods should be harvested"
     },
   "OthersMangaement":
   {
-      
+      "Title1":"Climate",
       "Climate":
       "Detail: Cool season crop",
-      "Storage":"",
-      "Commercial storage":
+      "Title2":"Storage",
+      "Commercialstorage":
       "Detail: Peas should be stored at 37 to 45°F and 95 percent relative humidity.",
-      "Freezing temperature":
+      "Freezingtemperature":
       "Detail: 31 degree Fahrenheit",
-   "Optimum temperature":
+   "Optimumtemperature":
       "Detail: 37 to 45 degree Fahrenheit",
     "Storagelife":
       "Detail: 5 to 10 days",
-      "Marketing":"",
-      "Can be marketed as":
+      "Title3":"Marketing",
+      "Canbemarketedas":
       "Detail: Fresh, fresh peeled, canned, dried, frozen etc",
-      "Roughing":"",
+      "Title4":"Roughing",
       "Rouging":
       "Detail: When symptoms of disease appeared in field the infected plants may be removed or rouge out manually to stop the infection",
-      "InterCropping":"",
-      "Can be inter cropped with":
+      "Title5":"InterCropping",
+      "Canbeintercroppedwith":
       "Detail: Radish, canola, wheat, oat, mustard, barley and corn"
   }
    },
@@ -4055,49 +4103,53 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
-         "Chemical fertilizers":
+         "Title":"Fertilizer",
+         "Chemicalfertilizers":
       "Detail: Urea 1.5 bags+ DAP 1 bag+ Potassium sulfate 1 bag at time of landpreparation.",
-    "Crop Enhancements_Supplements":
+    "CropEnhancements_Supplements":
       "Detail: Naya NPK, Quantus, Porus, Foliar gold",
 "N:P:K":
     "Detail: 23:23:25 kg"
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-"Sowing Method":"",
-       "tuber pieces wihbud":
+      "Title1":"Land Prparation",
+      "Seedtreatment":
+      "Detail: Topsin M according to the label instructions.",
+"WellpreparedSandytoLoamsoil":
+      "Detail: Ploughed 3-4 times followed by Planking and weed free land",
+       "Title2":"Sowing Method",
+       "tuberpieceswihbud":
       "Detail: especially for spring crop",
- "Tuber sorvine cuttings":
+ "Tubersorvinecuttings":
       "Detail: Tubers are taken from old vines, terminal cuttings give better result",
-       "SowingTime":"",
+       "Title3":"SowingTime",
        "AutumnCrop":
       "Detail: Mid September to October",
 "      jan-feb":
       "Detail: .",
-    "Spring Crop":
+    "SpringCrop":
       "Detail: February",
-  "Summer Crop(Mountainous areas)":
+  "SummerCrop(Mountainous areas)":
       "Detail: April to May",
-      "Plant-Plant-Distance":"",
+       "Title4":"Plant-Plant-Distance",
        "P-Pdistance":
       "Detail: 1 ft",
-       "Row-Row Distance":"",
+       "Title5":"Row-Row Distance",
        "R_R distance":
        "Detail: 2 ft",
-      "Irrigation":"",
-       "2nd and onward Irrigation":
+       "Title6":"Irrigation",
+       "2ndandonwardIrrigation":
       "Detail: 7-10 days interval",
   "IstIrrigation":
       "Detail: Just after sowing",
-"Last irrigation":
+"Lastirrigation":
       "Detail: before 2 days of harvesting",
-"Stop Irrigation":
+"StopIrrigation":
       "Detail: Before 3 weeks of harvesting",
-"Total irrigation":
+"Totalirrigation":
       "Detail: 6-8",
-      
+       "Title7":"Harvesting",
        "Harvesting":
       "Detail: Dec to Jan"
     }
@@ -4170,14 +4222,14 @@
     {
       "PlantNutrition":
     {
-         "Fertilizer":"",
+         "Title":"Fertilizer",
          "BASFOLIAR":
       "Detail: RECOVERY OF CROP FROM FLOOD & SNOW STRESS",
 "BumperCotton":
       "Detail: 1000ml/acre (2nd spray after 15 days)",
 "Epsomsalt(Magnesium sulfate)":
       "Detail: One Tablespoon in Two liter of water spray on plants leaves as well as soil",
-"Fertilizer application":
+"Fertilizerapplication":
       "Detail: 46 kg N, 60 kg P, 25 kg K per acre. full P and half N, K before transplanting while half N, K should applied 6-8 weeks after transplanting.",
 "FoliarGold":
       "Detail: Nutrient source",
@@ -4187,61 +4239,65 @@
       "Detail: To enhance plant growth under stress condition.",
 "NPK":
       "Detail: 1 bag/acre",
-"Quant is Crop Enhancement":
+"QuantisCropEnhancement":
       "Detail: To enhance plant growth under stress condition."
     },
     "CropManagement":
     {
-      "Land Prparation":"",
-      "Field preparation":
+      "Title1":"Land Prparation",
+      "Fieldpreparation":
       "Detail: 3-4 ploughings for good seed bed, Raise beds of 1.5 m breadth should be made.",
    "Landpreparation":
       "Detail: Well rotten FYM 10-12tons/acre one month before sowing.",
-       "Sowing Method":"",
-       "Nusery Preparation in November":
+       "Title2":"Sowing Method",
+       "NuseryPreparationinNovember":
       "Detail: 25 to 30 g/ Kanal",
      "Transplanting":
       "Detail: Seedlings of 15-25 cm tall with 3-5 true leaves. transplanting at late afternoon.",
-      "SowingTime":"",
-       "Nursery raisingtime":
+       "Title3":"SowingTime",
+       "Nurseryraisingtime":
       "Detail: Nursery should be raised in November",
-"Nursery transplantation":
+"Nurserytransplantation":
       "Detail: February and March are best time for sowing of nursery",
-"Sowing Time":
+"SowingTime":
       "Detail: November",
+       
+       "Title4":"Plant-Plant-Distance",
        "Plant-Plantdistance":
       "Detail: 2-2.5 ft",
-       
+       "Title5":"Row-Row Distance",
        "Row-Rowdistance":
       "Detail: 2.5-3.5 ft",
-       "Irrigation":"",
-       "1st irrigation":
+       "Title6":"Irrigation",
+       "1stirrigation":
       "Detail: Immediately after nursery transplantation",
- "Onward irrigations":
+ "Onwardirrigations":
       "Detail: At 7 days interval",
-       "Harvesting":"",
-       "Best time for harvesting":
+       "Title7":"Harvesting",
+       "Besttimeforharvesting":
       "Detail: Early morning or evening",
-  "Cure after harvesting":
+  "Cureafterharvesting":
       "Detail: Immediately move the fruit to a shady place",
  "Grading":
       "Detail: on the basis of size of fruit",
 "     Packing":
       "Detail: For transportation safe packing is necessary to avoid bruises or damage to the fruit. Normally one wooden crate contain 8-15 kg fruit",
-"Post harvest treatment":
+"Postharvesttreatment":
       "Detail: washing of fruit with chlorinated water (100-150 ml per litre of water) soon after harvesting",
 "Waxing":
       "Detail: Fruit may be treated with harmless chemicals before packing to stop the respiratory mechanism",
-"When to harvest":
+"Whentoharvest":
       "Detail: When fruit gets fully mature with bright red color"
     },
   "OthersMangaement":
   {
-      "Climate":"Heavy storm stress the crop:  Detail: Basfoliar 400 ml / acre",
-      "Storage":"",
-      "Marketing":"",
-      "Roughing":"",
-     "InterCropping":""
+      "Title1":"Climate",
+      "Heavystormstressthecrop":
+      "Detail: Basfoliar 400 ml / acre",
+      "Title2":"Storage",
+      "Title3":"Marketing",
+      "Title4":"Roughing",
+      "Title5":"InterCropping"
   }
    },
    "cropDetail": {

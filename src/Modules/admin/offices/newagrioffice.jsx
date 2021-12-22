@@ -87,33 +87,30 @@ const Newagrioffice = () => {
               })
   }
   return (
-    <div className="container">
-      <div className="child">
-      <TextField
-          label="Name"
-          fullWidth
+    <div  style={{marginTop:"1rem"}}>
+      <div style={{marginLeft:"25%",marginRight:"25%"}}>
+      <h4 style={{textAlign:"left"}}>Name</h4>
+        <input
+         style={{width:"100%",padding:"10px"}}
           value={name}
           onChange={(e) => {
             setname(e.target.value);
           }}
         />
         {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
-        {" "}
-        <TextField
-          label="Phone"
+        <h4 style={{textAlign:"left"}}>Phone</h4>
+        <input
+          style={{width:"100%",padding:"10px"}}
           type="number"
-          fullWidth
           value={phone}
           onChange={(e) => {
             setphone(e.target.value);
           }}
         />
         {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
-        {" "}
-        <br />
-        <TextField
-          label="address"
-          fullWidth
+        <h4 style={{textAlign:"left"}}>Address</h4>
+        <input
+         style={{width:"100%",padding:"10px"}}
           value={address}
           onChange={(e) => {
             setaddress(e.target.value);
@@ -121,10 +118,9 @@ const Newagrioffice = () => {
         />
         {aderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{aderr}</p>:<></>}
         {" "}
-        <br />
-        <TextField
-          label="city"
-          fullWidth
+        <h4 style={{textAlign:"left"}}>City</h4>
+        <input
+          style={{width:"100%",padding:"10px"}}
           value={city}
           onChange={(e) => {
             setcity(e.target.value);
