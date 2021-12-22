@@ -7,6 +7,16 @@ import Showcomments from "./comments";
 import moment from "moment";
 const Showpost = ({ helpost, getposts }) => {
   const [text, settext] = React.useState("");
+  const [err, seterr] = React.useState("");
+  const check=()=>{
+    if(text.length==0){
+      seterr("required")
+    }
+    else {
+      seterr("")
+      addcomment();
+    }
+  }
   const postid = helpost._id;
   const addcomment = () => {
     helpService
@@ -31,6 +41,7 @@ const Showpost = ({ helpost, getposts }) => {
       .catch((err) => {
         console.log(err);
       });
+  
   };
   React.useEffect(getimg, []);
 
@@ -77,12 +88,13 @@ const Showpost = ({ helpost, getposts }) => {
         style={{background:"green",color:"white"}}
           size="40px"
           onClick={() => {
-            addcomment();
-            getposts();
+            check();
+            getposts()
           }}
         />
+        
       </div>
-      
+      {err.length!=0?<p style={{textAlign:"left",color:"red"}}>{err}</p>:<></>}
       </>:
       <></>}
      

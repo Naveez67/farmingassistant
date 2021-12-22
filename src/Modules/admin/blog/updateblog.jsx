@@ -23,6 +23,7 @@ const Updateblog = (props) => {
   const[pterr,setpterr]=useState("");
   const[tterr,settterr]=useState("");
   const[bderr,setbderr]=useState("");
+  const[dis,setdis]=useState("none");
   const check=()=>{
       if(url.length==0){
         setpterr("please upload photo")
@@ -73,8 +74,7 @@ const Updateblog = (props) => {
       .updateblog(id, { title, body, url })
       .then((data) => {
         // console.log(data);
-        //console.log(history);
-        history.push("/showblog")
+        setdis("block")
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -199,6 +199,34 @@ const Updateblog = (props) => {
           </Form.Group>
         </Form>
       </div>
+      <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setdis("none")
+  history.push("/news");
+  }} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+    <h2>update</h2>
+  </div>
+  <div className="modal-footer">
+    <h3 style={{textAlign:"center",cursor:"pointer",alignContent:"center"}}
+    onClick={()=>{setdis("none")
+    history.push("/showblog");}}
+    >OK</h3>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
     </div>
   );
 };

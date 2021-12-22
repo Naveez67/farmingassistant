@@ -98,7 +98,7 @@ React.useEffect(get,[]);
                    <td>{productname}</td>
                    <td>{quantity}Kg</td>
                    <td>{productprice}</td>
-                   <td>{moment(date).format("MMM Do YY")}</td>
+                   <td>{moment(date).format("MMM Do")}</td>
                    <td>{city}</td>
                    <td>{distric}</td>
                    {userService.isAdmin()?<>

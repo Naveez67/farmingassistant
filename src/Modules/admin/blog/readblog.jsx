@@ -13,6 +13,7 @@ import userService from "../../../services/UserService";
 const Readblog = () => {
   const [text, settext] = useState(""); 
   const [comments, setcomments] = useState([]);
+  const [err, seterr] = useState("");
   const [{ alt, src }, setImg] = useState({
     src: "",
     alt: "Upload an Image",
@@ -36,12 +37,27 @@ const Readblog = () => {
     console.log(err)
   })
 }
-
+ const check=()=>{
+   if(text.length==0){
+     seterr("please write somthing first")
+   }
+   else {
+     seterr("")
+     addcomment()
+   }
+ }
+ const addcomment=()=>{
+  blogService.addcomment(id, { text }).then((data) => {
+    console.log(data);
+    setcomments(data.comments);
+    settext("");
+  });
+ }
   React.useEffect(getblog, []);
   return (
-    <div> 
+    <div  className="readblog"> 
     
-    <div style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto"}}>
+    <div style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto",backgroundColor:"white",padding:"10px"}}>
       <div>
         {src === "" ? (
           <div className="divimg"></div>
@@ -67,13 +83,10 @@ const Readblog = () => {
           style={{ borderRadius: "5%" }}
         />
         <FaArrowCircleRight style={{marginTop:".3rem"}} size="35px" onClick={() => {
-            blogService.addcomment(id, { text }).then((data) => {
-              console.log(data);
-              setcomments(data.comments);
-              settext("");
-            });
+            check()
           }}/>
       </div>
+      {err.length!=0?<p style={{textAlign:"left",color:"red"}}>{err}</p>:<></>}
       </>:
       <></>}
       

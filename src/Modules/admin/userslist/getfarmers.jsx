@@ -8,6 +8,7 @@ const Farmers = () => {
   const [data, setdata] = React.useState([]);
   const [islod, setislod] = React.useState(false);
   const getdata = () => {
+    console.log("get farmers")
     userService
       .getfarmer()
       .then((data) => {

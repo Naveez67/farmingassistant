@@ -4,6 +4,7 @@ import userService from "../../../services/UserService";
 import { useHistory } from "react-router-dom";
 import {FaPhoneSquareAlt} from 'react-icons/fa';
 import {GiCharacter} from 'react-icons/gi';
+import './style/style.css'
 //import moment from "moment";
 import { toast } from "react-toastify";
 import {
@@ -16,21 +17,21 @@ import {
   Avatar,
 } from "@mui/material";
 //import { CardActionArea } from "@material-ui/core";
-const Singleuser = ({ user, onDelete }) => {
+const Singleuser = ({ user, onDelete,setval }) => {
   const history=useHistory();
   const [image, setimage] = useState("");
   const [phone, setphone] = useState("");
   const [usedata,setuserdata]=useState();
   const [username, setusername]=useState(user.username);
   const [img, setimg]=useState("");
- 
-
+  const [dis, setdis]=useState("none");
+  const [ds, setds]=useState("none");
   const handledeleteuser = () => {
     userService
       .deleteuser(user._id)
       .then((data) => {
         // alert("user deleted")
-
+        setds("block")
         //console.log(users.length);
       })
       .catch((err) => {
@@ -111,8 +112,9 @@ React.useEffect(getdata,[setuserdata]);
           size="small"
           onClick={(e) => {
             
-              handledeleteuser();
-              onDelete();
+              // handledeleteuser();
+              setdis("block")
+              // onDelete();
             // window.location.reload();
           }}
         >
@@ -124,6 +126,85 @@ React.useEffect(getdata,[setuserdata]);
         
       </CardActionArea>
     </Card>
+    <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setdis("none")}} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+     <div style={{display:"flex",flexDirection:"column"}}>
+       <h1>Are you sure you want to delete user</h1>
+       <div style={{display:"flex",marginRight:"30%",marginLeft:"40%"}}>
+         <button style={{width:"30%",padding:"8px",color:"white",fontWeight:"bold",background:"green"}}
+         onClick={()=>{setdis("none")}}
+         >CANCEL</button>
+         <button style={{width:"30%",padding:"8px",color:"white",fontWeight:"bold",background:"red",marginLeft:"1rem"}}
+         onClick={()=>{
+          handledeleteuser();
+           setdis("none")
+         }}
+         
+         >DELETE</button>
+       </div>
+     </div>
+
+  </div>
+  <div className="modal-footer">
+    <h3></h3>
+  </div>
+</div>
+
+</div>
+
+<div id="myModal" className="modal" style={{display:ds}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setds("none")}} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+       <h1> deleted</h1>
+  </div>
+  <div className="modal-footer">
+    <h3 style={{textAlign:"center",cursor:"pointer"}}
+    onClick={()=>{
+      setds("none")
+      window.location.reload(true)
+    }}
+    
+    >
+     OK
+    </h3>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </Grid>
   );
 };

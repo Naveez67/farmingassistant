@@ -113,7 +113,12 @@ const Complain = () => {
   <h1>complaint submitted successfully </h1>
   </div>
   <div className="modal-footer">
-    <h3></h3>
+    <h3 style={{cursor:"pointer",textAlign:"center",color:"white"}} 
+    onClick={()=>{
+        setdis("none")
+    }}
+    
+    >Ok</h3>
   </div>
 </div>
 

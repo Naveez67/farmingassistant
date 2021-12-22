@@ -8,6 +8,7 @@ const Suppliers = () => {
   const [data, setdata] = React.useState([]);
   const [islod, setislod] = React.useState(false);
   const getdata = () => {
+    console.log("get suppliers")
     userService
       .getsupplier()
       .then((data) => {

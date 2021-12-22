@@ -5,6 +5,7 @@ import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Form } from "react-bootstrap";
 import { CircularProgress } from "@mui/material";
+import '../../../components/all/mangaement/style.css'
 const News = () => {
   const [{ alt, src }, setImg] = useState({
     src: "",
@@ -14,6 +15,7 @@ const News = () => {
   const [title, settitle] = useState("");
   const [body, setbody] = useState("");
   const [imege, setImege] = useState("");
+  const [dis, setdis] = useState("none");
   const[imgupload,setimgupload]=useState(false);
   const[showanimation,setshowanimation]=useState(false);
   const[showbtn,setshowbtn]=useState(false);
@@ -61,7 +63,8 @@ const checkbody=()=>{
       .then((data) => {
         console.log(data);
         //console.log(history);
-        history.push("/news");
+        setdis("block")
+        
       })
       .catch((err) => {
         console.log(err.response.data);
@@ -103,7 +106,7 @@ const checkbody=()=>{
       });
   };
   return (
-    <div  style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto"}}>
+    <div  style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto",marginTop:"1rem"}}>
       <div >
         {src === "" ? (
           <div className="divimg">
@@ -186,31 +189,39 @@ const checkbody=()=>{
           </Form.Group>
         </Form>
       </div>
+     <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setdis("none")
+  history.push("/news");
+  }} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+    <h2>News Added</h2>
+  </div>
+  <div className="modal-footer">
+    <h3 style={{textAlign:"center",cursor:"pointer",alignContent:"center"}}
+    onClick={()=>{setdis("none")
+    history.push("/news");}}
+    >OK</h3>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
     </div>
   );
 };
 
 export default News;
 
-// const useStyles = makeStyles((theme) => ({
-//     container:{
-//      display: "block",
-//      marginLeft: "auto",
-//      marginRight: "auto",
-//      width: "50%",
-//      marginTop:"1.5rem"
-//     },
-//     divimg:{
-//      width:"100%" ,
-//      height:300,
-//      border:"2px solid black"
-//     },
-//     icon:{
-//       height:200,
-//       width:300,
-//       display: "block",
-//      marginLeft: "auto",
-//      marginRight: "auto",
-//     }
-
-// }))

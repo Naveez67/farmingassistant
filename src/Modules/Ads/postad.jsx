@@ -18,7 +18,7 @@ const Postad = () => {
       const [photo, setphoto] = useState("");
       const [title, settitle] = useState("");
       const [body, setbody] = useState("");
-      const [type, settype] = useState("for all");
+      // const [type, settype] = useState("for all");
       const [price, setprice] = useState(0);
       const [category, setcategory] = useState("Seed");
       const [photoerr, setphotoerr] = useState("");
@@ -79,7 +79,7 @@ const Postad = () => {
       const[showbtn,setshowbtn]=useState(false);
       const handleclick = () => {
         adsService
-          .postad({title, body, photo,type,category,price})
+          .postad({title, body, photo,category,price})
           .then((data) => {
             // console.log(data);
             //console.log(history);
@@ -172,7 +172,7 @@ const Postad = () => {
             {titleerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{titleerr}</p>}
             {" "}
              <div style={{display:"flex",marginTop:"1rem"}}>
-            <Typeofad setype={settype}/>
+            {/* <Typeofad setype={settype}/> */}
             <Categoryofad secat={setcategory}/>
             <TextField
               label="Price"

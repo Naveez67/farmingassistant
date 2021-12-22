@@ -70,7 +70,7 @@ const MyNavbar = () => {
         <div className="dropdown">
                 Users
   <div className="dropdown-content">
-  <Link to="/showusers">All</Link>
+  {/* <Link to="/showusers">All</Link> */}
   <Link to="/showfarmers">Farmers</Link>
   <Link to="/showcustomers">Customers</Link>
   <Link to="/showsuppliers">Suppliers</Link>

@@ -40,7 +40,7 @@ const Accounts = () => {
                   <td>{accountverfied?"verfied":"not verfied"}</td>
                   <td>{role}</td>
                   <td><button onClick={()=>{
-                     history.push("/notification/account/"+item._id)
+                     history.push("/account/"+item._id)
                   }}>View profile</button></td>
                </tr>
                    

@@ -5,6 +5,7 @@ import TextField from "@mui/material/TextField";
 import TextareaAutosize from "@mui/material/TextareaAutosize";
 import { useHistory } from "react-router";
 import { toast } from "react-toastify";
+import { CircularProgress } from "@mui/material";
 const Helppost = () => {
   const [{ alt, src }, setImg] = useState({
     src: "",
@@ -15,6 +16,46 @@ const Helppost = () => {
   const [title, settitle] = useState("");
   const [body, setbody] = useState("");
   const [imege, setImege] = useState("");
+  const[imgupload,setimgupload]=useState(false);
+  const[showanimation,setshowanimation]=useState(false);
+  const[showbtn,setshowbtn]=useState(false);
+  const [photoerr,setphotoerr]=useState("");
+  const [tterr,settterr]=useState("");
+  const [bderr,setbderr]=useState("");
+  const check=()=>{
+    if(photo.length==0){
+      setphotoerr("please upload photo")
+    }
+    else{
+      setphotoerr("");
+      checktitle()
+    }
+  }
+  const checktitle=()=>{
+    if(title.length==0){
+      settterr("title is required")
+    }
+    else if(title.length<3){
+      settterr("title length must be greater then 3 ")
+    }
+    else{
+      settterr("")
+      checkbody()
+      
+    }
+  }
+  const checkbody=()=>{
+    if(body.length==0){
+      setbderr("required")
+    }
+    else if(body.length<15){
+      setbderr("description must be 20 characters or more")
+    }
+    else {
+      setbderr("")
+      handleclick();
+    }
+  }
   const handleclick = () => {
     helpService
       .Addpost(title, body, photo)
@@ -33,6 +74,7 @@ const Helppost = () => {
   };
   const handleImg = (e) => {
     setImege(e.target.files[0]);
+    setshowbtn(true)
     if (e.target.files[0]) {
       setImg({
         src: URL.createObjectURL(e.target.files[0]),
@@ -52,9 +94,10 @@ const Helppost = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.url);
+        // console.log(data.url);
+        setimgupload(true)
+        setshowanimation(false)
         setphoto(data.url);
-        //console.log(url);
       })
       .catch((err) => {
         console.log(err);
@@ -73,16 +116,28 @@ const Helppost = () => {
           <img src={src} alt={alt} style={{ width: "100%", height: 300 }} />
         )}
       </div>
-      <div>
-        <input
-          type="file"
-          accept=".png, .jpg, .jpeg"
-          id="photo"
-          onChange={handleImg}
-          
-        />
-        <button onClick={() => postdetials()}>upload</button>
-      </div>
+      <div style={{marginTop:"1.5rem"}}>
+          {showanimation?<><CircularProgress />uploading....</>:<></>}
+                    {imgupload?<><h4 style={{color:"green"}}>Uploaded</h4></>:<>
+                    {showbtn?<><button  style={{fontWeight:"bolder",fontSize:"20px",border:"1px solid black"}} 
+                    onClick={()=>{
+                        setshowanimation(true);
+                        postdetials()
+                    }}
+                    >
+                        Upload photo
+                        </button></>:
+                    <>
+                     <input type="file" className="inputform"
+                     required
+                      onChange={handleImg}
+                    />
+                    {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>}
+                    </>}
+                    
+                    </>
+                    }
+          </div>
       <div>
         <TextField
           label="Title"
@@ -93,9 +148,11 @@ const Helppost = () => {
           onChange={(e) => {
             settitle(e.target.value);
           }}
-        />{" "}
+        />
+        {tterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
+        {" "}
         <TextareaAutosize
-          aria-label="Enter Problem body here"
+          aria-label="Enter Problem description here"
           minRows={8}
           style={{ width: "100%", marginTop: "1rem" }}
           placeholder="Enter problem body here"
@@ -104,13 +161,15 @@ const Helppost = () => {
             setbody(e.target.value);
           }}
         />
+        {bderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
         {""}
         <Button
-          
+          size="larage"
           variant="contained"
-          color="secondary"
+          style={{background:"green",color:"white"}}
           onClick={(e) => {
-            handleclick();
+            check()
+            // handleclick();
             //console.log(title, body, url);
           }}
         >

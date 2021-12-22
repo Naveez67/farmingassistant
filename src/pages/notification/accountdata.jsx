@@ -10,6 +10,8 @@ const Acountdata = () => {
     const [name,setname]=useState("");
     const [address,setaddress]=useState("");
     const [phone,setphone]=useState("");
+    const [photo,setphoto]=useState("");
+    const [regno,setregno]=useState("");
     const [user,setuser]=useState();
     const getuser=()=>{
         userService.getsingleuser(id).then((data)=>{setuser(data)}).catch((err)=>{console.log(err.response.data)})
@@ -17,42 +19,45 @@ const Acountdata = () => {
     const getuserdata=()=>{
         userService.getuserdata(id).then((data)=>
         {
+            // console.log(data)
             setuserdata(data);
             setname(data.name);
-            setaddress(data.address);
+            setregno(data.regno)
             setphone(data.phone)
-        
+            setphoto(data.photo)
         }).catch((err)=>{console.log(err.response.data)})
     }
     React.useEffect(getuser,[]);
     React.useEffect(getuserdata,[]);
-    console.log(name+address+phone);
+    // console.log(name+address+phone);
     return ( <Grid container>
         <Grid item xs={12} className="head">
             <h3 className="profile">Profile</h3>
         </Grid>
         <Grid item xs={6} sm={6}> 
-        <div >
+        <div  style={{textAlign:"left"}}>
                   <h3>Name</h3>
                   {name} 
                   <h4>Phone</h4>
                   {phone}
-                  <h4>Address</h4>
-                  {address}
+                  <h4>Company Registration number</h4>
+                  {regno}
                   
 
               </div>
         </Grid>
         <Grid item xs={6} sm={6} >
             <div className="image" >
-                {/* <img src={userdata.photo} alt={userdata.name} /> */}
+                <img src={photo} alt={name} />
             </div>
         </Grid>  
         <Grid item xs={12} >
-              <button className="btn" onClick={()=>{
-                  console.log("clicked")
+            <div style={{display:"flex",flexWrap:"wrap",marginTop:"2rem"}}>
+              <button  style={{width:"10%",padding:"10px",background:"green",color:"white",marginRight:"1rem"}}
+               onClick={()=>{
+                //   console.log("clicked")
                   userService.approve(id).then((data)=>{
-                      console.log(data);
+                    //   console.log(data);
                       history.push("/notification");
                   }).catch((err)=>{
                       console.log(err.response.data);
@@ -61,10 +66,11 @@ const Acountdata = () => {
               }}>
                     Approve
               </button>
-              <button className="btn" onClick={()=>{
-                  console.log("clicked")
+              <button  style={{width:"10%",padding:"10px",background:"green",color:"white"}}
+              onClick={()=>{
+                //   console.log("clicked")
                     userService.deleteuser(id).then((data)=>{
-                    console.log(data);
+                    // console.log(data);
                     history.push("/notification");
                 }).catch((err)=>{
                     console.log(err.response.data);
@@ -72,6 +78,7 @@ const Acountdata = () => {
               }}>
                     Reject
               </button>
+              </div>
         </Grid>
         </Grid> );
 }

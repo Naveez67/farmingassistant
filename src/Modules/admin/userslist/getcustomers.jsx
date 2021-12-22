@@ -7,6 +7,7 @@ import Animationcard from "./skeltoncard";
 const Customers = () => {
   const [data, setdata] = React.useState([]);
   const [islod, setislod] = React.useState(false);
+  const [isdelete, setisdelete] = React.useState(false);
   const getdata = () => {
     userService
       .getcustomer()
@@ -69,7 +70,7 @@ const Customers = () => {
             sx={{ marginLeft: "auto", marginRight: "auto" }}
           >
             {data.map((user, index) => (
-              <Singleuser key={index} user={user} onDelete={getdata} />
+              <Singleuser key={index} user={user} onDelete={getdata} setval={setisdelete} />
             ))}
           </Grid>
         </>

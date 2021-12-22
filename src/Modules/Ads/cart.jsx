@@ -40,6 +40,13 @@ const Mycart = () => {
             spacing={3}
             // sx={{ marginLeft: "auto", marginRight: "auto" }}
           >
+          <div style={{display:"flex",marginLeft:"auto",marginRight:"10%",marginTop:"2rem"}}>
+            <button style={{color:"white",background:"green",padding:"5px",fontSize:"24px",fontWeight:"bold"}}
+            onClick={()=>{
+              history.push("/ads")
+            }}
+            >Add more items</button>
+          </div>  
           {myoder.map((item,index) => (
             <Grid item xs={12} sm={12}>
             <div key={item.id}
@@ -74,7 +81,7 @@ const Mycart = () => {
                     />
                     <b style={{background:"green",color:"white",paddingTop:".8rem",paddingBottom:"1.2rem"}}>Quantity</b> 
                   <br />
-                  <button  onClick={() => removeItem(item.id)}style={{width:"100%",padding:"10px",backgroundColor:"red",fontSize:"30px",color:"white"}}>Remove Item</button>
+                  <button  onClick={() => removeItem(item.id)}style={{width:"100%",padding:"5px",backgroundColor:"red",fontSize:"18px",color:"white"}}>Remove Item</button>
                   <br />
               </div>
               

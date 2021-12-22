@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import marketrates from "../../../services/admin/marketrates";
@@ -14,10 +14,7 @@ const Marketrates = () => {
     marketrates
     .Addrates(productname,quantity, productprice,city,distric)
     .then((data) => {
-      //console.log(data);
-      //console.log(history);
-      setisloading(true); 
-      history.push("/showrates")
+      setdis("block")
     })
     .catch((err) => {
       console.log(err.response.data);
@@ -32,7 +29,64 @@ const Marketrates = () => {
   const [quantity, setquantity] = React.useState(1);
   const [city, setcity] = React.useState("");
   const [distric, setdistric] = React.useState("");
-  
+  const [pnerr,setpnerr]=useState("");
+  const [prerr,setprerr]=useState("");
+  const [diserr,setdiserr]=useState("");
+  const [cityerr,setcityerr]=useState("");
+  const [dis,setdis]=useState("");
+  const check=()=>{
+    if(productname.length==0){
+      setpnerr("product name is required")
+    }
+    else if(productname.length<3)
+    {
+      setpnerr("product name length must be greater then or equal to 3");
+    }
+    else {
+      setpnerr("")
+      checkprice()
+    }
+  }
+  const checkprice=()=>{
+    if(productprice==0){
+      setprerr(" price is required")
+    }
+    else if(productprice<0){
+      setprerr("price must be greater then 0 ")
+    }
+    else{
+      setprerr("")
+      checkcity()
+      
+    }
+  }
+  const checkcity=()=>{
+    if(city.length==0){
+      setcityerr("required")
+    }
+    else if(city.length<5){
+      setcityerr("city name length must be greater then or equal to 5")
+    }
+    else {
+      setcityerr("")
+      checkdis();
+    }
+  }
+  const checkdis=()=>{
+    if(distric.length==0){
+      setdiserr("required")
+    }
+    else if(distric.length<5){
+      setdiserr("distric name length must be greater then or equal to 5")
+    }
+    else {
+      setdiserr("")
+      handleclick();
+    }
+  }
+
+
+
   return (
     <div className="container" >
       <div className="child" style={{marginTop:"2rem"}}>
@@ -42,9 +96,12 @@ const Marketrates = () => {
           fullWidth
           value={productname}
           onChange={(e) => {
-            setproductname(e.target.value.toLowerCase());
+            let val=e.target.value
+            setproductname(val.toLowerCase());
           }}
-        />{" "}
+        />
+        {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
+        {" "}
         <TextField
           style={{marginTop:"1rem"}}
           label="productprice"
@@ -54,7 +111,9 @@ const Marketrates = () => {
           onChange={(e) => {
             setproductprice(e.target.value);
           }}
-        />{" "}
+        />
+        {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
+        {" "}
         <br />
         <TextField
           style={{marginTop:"1rem"}}
@@ -71,7 +130,9 @@ const Marketrates = () => {
           onChange={(e) => {
             setcity(e.target.value);
           }}
-        />{" "}
+        />
+        {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
+        {" "}
         <br />
         <TextField
           style={{marginTop:"1rem"}}
@@ -81,20 +142,47 @@ const Marketrates = () => {
           onChange={(e) => {
             setdistric(e.target.value);
           }}
-        />{" "}
+        />
+        {diserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
+        {" "}
         <br />
        
 
           <Button
-          style={{marginTop:"1rem"}}
+          style={{marginTop:"1rem",background:"green"}}
           variant="contained"
-          color="primary"
-          onClick={(e) => {handleclick()}}
+          onClick={(e) => {check()}}
         >
           Add rates
         </Button>
         
       </div>
+      <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setdis("none")}} >&times;</span>
+    
+  </div>
+  <div className="modal-body">
+       <h1>reate is added</h1>
+     </div>
+
+  </div>
+  <div className="modal-footer">
+    <h3  style={{cursor:"pointer",textAlign:"center",color:"white"}}
+    onClick={()=>{
+      setdis("none")
+      history.push("/showrates")
+    }}
+    > Ok</h3>
+  </div>
+</div>
+
+
+
     </div>
  );
 }

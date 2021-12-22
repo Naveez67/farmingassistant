@@ -33,6 +33,19 @@ const Showblog = () => {
     <div style={{backgroundColor:"green",height:"100%"}}>
       <div style={{marginRight:"10%",marginLeft:"10%",}}>
            <h3 style={{textAlign:"center",paddingTop:"2rem",color:"white"}}>_____Latest blogs________</h3>
+           {userService.isAdmin() ? (
+           <div style={{ marginLeft: "80%", marginRight: "5%" }}>
+          <button style={{padding:"12px",fontSize:"32px",fontWeight:"bold"}}
+            onClick={() => {
+              history.push("/addblog");
+            }}
+          >
+            Add blog
+          </button>
+        </div>
+      ) : (
+        <></>
+      )}
            <br /> 
       {isloaded ? (
         <></>
@@ -71,19 +84,7 @@ const Showblog = () => {
         show()
       )}
 
-      {userService.isAdmin() ? (
-        <div style={{ marginLeft: "auto", marginRight: "auto" }}>
-          <button style={{padding:"12px",fontSize:"32px",fontWeight:"bold"}}
-            onClick={() => {
-              history.push("/addblog");
-            }}
-          >
-            Add blog
-          </button>
-        </div>
-      ) : (
-        <></>
-      )}
+      
       </div>
     </div>
   );

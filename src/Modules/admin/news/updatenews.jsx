@@ -117,7 +117,7 @@ const checkbody=()=>{
       });
   };
   return (
-    <div style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto"}}>
+    <div style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto",marginTop:"1rem"}}>
       <div>
         {src === "" ? (
           <div className="divimg"></div>
