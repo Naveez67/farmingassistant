@@ -18,6 +18,7 @@ const Cardd = ({ad}) => {
   const islogin=userService.isLoggedIn();
   
   const [pid, setpid] = React.useState("00");
+  const [dis, setdis] = React.useState("none");
 
  const getid=()=>{
        if(islogin){
@@ -42,6 +43,11 @@ const Cardd = ({ad}) => {
        <div> 
      
      <Card sx={{ maxWidth: 345 }}>
+     <div
+      style={{cursor:"pointer"}}
+     onClick={()=>{
+       setdis("block")
+     }}> 
      <CardContent sx={{display:"flex",justifyContent:"space-between"}}>
      <Typography gutterBottom variant="h5" component="div" >
           {ad.price+" Rs"}
@@ -64,6 +70,7 @@ const Cardd = ({ad}) => {
           {get(ad.body)}...
         </Typography>
       </CardContent>
+      </div> 
       {userService.isnotadmin()?<>
         <CardActions>
         <Button size="medium" variant="contained" color="success"
@@ -83,6 +90,37 @@ const Cardd = ({ad}) => {
       </>:<></>}
       
      </Card>
+     <div id="myModal" className="modal" style={{display:dis}} >
+
+{/* <!-- Modal content --> */}
+<div className="modal-content" >
+  <div className="modal-header">
+  <h2></h2>
+    <span className="close" onClick={()=>{setdis("none")
+  }} >&times;</span>
+    
+  </div>
+  <div className="modal-body" style={{textAlign:"left"}}>
+    <img src={ad.photo} alt={ad.title}  height="200px" width="200"/>
+    <h4>{ad.title}</h4>
+    <p>{ad.body}</p>
+    <h4>Price</h4>
+    <p>{ad.price}</p>
+    <h4>Type</h4>
+    <p>{ad.type}</p>
+  </div>
+  <div className="modal-footer">
+    <h3 style={{textAlign:"center",cursor:"pointer",alignContent:"center"}}
+    ></h3>
+  </div>
+</div>
+
+</div>
+
+
+
+
+
 
       </div>
      );
