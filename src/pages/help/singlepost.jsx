@@ -46,7 +46,8 @@ const Showpost = ({ helpost, getposts }) => {
   React.useEffect(getimg, []);
 
   return (
-    <div style={{ width: "50%" }}>
+    
+    <div style={{ width: "50%",backgroundColor:"white",padding:"10px" }}>
       <div>
         <div style={{ display: "flex" }}>
           <Avatar alt="Remy Sharp" src="" />

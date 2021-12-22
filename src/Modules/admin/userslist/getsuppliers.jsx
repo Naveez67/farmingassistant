@@ -2,6 +2,7 @@ import React from "react";
 import userService from "../../../services/UserService";
 import { toast } from "react-toastify";
 import Singleuser from "./singleuser";
+import './style/style.css'
 import { Grid } from "@mui/material";
 import Animationcard from "./skeltoncard";
 const Suppliers = () => {
@@ -26,8 +27,8 @@ const Suppliers = () => {
   };
   React.useEffect(getdata, []);
   return (
-    <div style={{ marginTop: "4rem" }}>
-      <h1>Showing all the Suppliers</h1>
+    <div  className="userbackground">
+      <div style={{marginLeft:"10%",marginRight:"10%"}}> 
       {islod ? (
         <></>
       ) : (
@@ -75,6 +76,7 @@ const Suppliers = () => {
           </Grid>
         </>
       )}
+      </div>
     </div>
   );
 };

@@ -88,64 +88,52 @@ const Marketrates = () => {
 
 
   return (
-    <div className="container" >
-      <div className="child" style={{marginTop:"2rem"}}>
-      <TextField
-          style={{marginTop:"1rem"}}
-          label="ProductName"
-          fullWidth
-          value={productname}
-          onChange={(e) => {
-            let val=e.target.value
-            setproductname(val.toLowerCase());
-          }}
+    <div  style={{marginTop:"1rem"}}>
+      <div className="child" style={{marginRight:"auto",marginLeft:"auto"}}>
+        <h4 style={{textAlign:"left"}}>Product Name</h4> 
+        <input 
+        style={{width:"100%",padding:"10px"}}
+        value={productname}
+        onChange={(e)=>{
+          setproductname(e.target.value)
+        }}
         />
         {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
-        {" "}
-        <TextField
-          style={{marginTop:"1rem"}}
-          label="productprice"
-          fullWidth
-          type="Number"
+        <h4 style={{textAlign:"left"}}>Product Price</h4> 
+        <input 
+        style={{width:"100%",padding:"10px"}}
+        type="Number"
           value={productprice}
           onChange={(e) => {
             setproductprice(e.target.value);
           }}
         />
         {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
-        {" "}
-        <br />
-        <TextField
-          style={{marginTop:"1rem"}}
-          label="quantity"
-          fullWidth
+        <h4 style={{textAlign:"left"}}>Product Quantity</h4> 
+        <input 
+         style={{width:"100%",padding:"10px"}}
           value={quantity}
-        />{" "}
-        <br />
-        <TextField
-          style={{marginTop:"1rem"}}
-          label="city"
-          fullWidth
-          value={city}
-          onChange={(e) => {
-            setcity(e.target.value);
-          }}
+        />
+        <h4 style={{textAlign:"left"}}>City</h4> 
+        <input 
+        style={{width:"100%",padding:"10px"}}
+        type="text"
+        value={city}
+        onChange={(e) => {
+          setcity(e.target.value);
+        }}
         />
         {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
-        {" "}
-        <br />
-        <TextField
-          style={{marginTop:"1rem"}}
-          label="Distric"
-          fullWidth
-          value={distric}
-          onChange={(e) => {
-            setdistric(e.target.value);
-          }}
+        <h4 style={{textAlign:"left"}}>Distric</h4> 
+        <input 
+        style={{width:"100%",padding:"10px"}}
+        type="text"
+        value={distric}
+        onChange={(e) => {
+          setdistric(e.target.value);
+        }}
         />
         {diserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
-        {" "}
-        <br />
        
 
           <Button

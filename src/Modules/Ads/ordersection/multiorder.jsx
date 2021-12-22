@@ -30,7 +30,7 @@ const Multiorder=()=>{
         for (let i = 0; i < myoder.length; i++) {
             
                postorder(
-                  myoder[i].quantity,myoder[i].itemTotal,myoder[i].adid,myoder[i].postedby
+                  myoder[i].quantity,myoder[i].itemTotal,myoder[i].adid,myoder[i].postedby,myoder[i].image
 
                )
                 removeItem(myoder[i].id)
@@ -40,11 +40,11 @@ const Multiorder=()=>{
       setdis("block")
     }
 
-    const postorder=(quantity,totalamount,adid,adpostedby)=>{
-     order(adpostedby,quantity,totalamount,adid)
+    const postorder=(quantity,totalamount,adid,adpostedby,photo)=>{
+     order(adpostedby,quantity,totalamount,adid,photo)
     }
-   const order=(adposter,quantity,totalamount,adid)=>{
-        orderService.placeorder(buyername,address,adposter,adid,totalamount,phone,quantity).then((data)=>{
+   const order=(adposter,quantity,totalamount,adid,photo)=>{
+        orderService.placeorder(buyername,address,adposter,adid,totalamount,phone,quantity,photo).then((data)=>{
           console.log(data)
       }).catch((err)=>{
         toast.error(err.response.data, {
@@ -58,7 +58,7 @@ const Multiorder=()=>{
        else if(address.length<6){
         seterr("address length must be greater then 6")
        }
-       else if(address.length>6){
+       else if(address.length>=6){
            seterr("")
            checkandcal()
        }

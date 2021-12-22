@@ -102,58 +102,52 @@ const UpdateMarketrates = () => {
 
 React.useEffect(get,[])  
   return (
-    <div className="container">
-      <div className="child">
-      <TextField
-          label="ProductName"
-          fullWidth
-          value={productname}
-          onChange={(e) => {
-            setproductname(e.target.value);
-          }}
-        />
-        {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
-        {" "}
-        <TextField
-          label="productprice"
-          fullWidth
-          type="Number"
-          value={productprice}
-          onChange={(e) => {
-            setproductprice(e.target.value);
-          }}
-        />
-        {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
-        {" "}
-        <br />
-        <TextField
-          label="quantity"
-          fullWidth
-          value={quantity}
-        />{" "}
-        <br />
-        <TextField
-          label="city"
-          fullWidth
-          value={city}
-          onChange={(e) => {
-            setcity(e.target.value);
-          }}
-        />
-        {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
-        {" "}
-        <br />
-        <TextField
-          label="Distric"
-          fullWidth
-          value={distric}
-          onChange={(e) => {
-            setdistric(e.target.value);
-          }}
-        />
-        {diserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
-        {" "}
-        <br />
+    <div  style={{marginTop:"1rem"}}>
+    <div className="child" style={{marginRight:"auto",marginLeft:"auto"}}>
+      <h4 style={{textAlign:"left"}}>Product Name</h4> 
+      <input 
+      style={{width:"100%",padding:"10px"}}
+      value={productname}
+      onChange={(e)=>{
+        setproductname(e.target.value)
+      }}
+      />
+      {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
+      <h4 style={{textAlign:"left"}}>Product Price</h4> 
+      <input 
+      style={{width:"100%",padding:"10px"}}
+      type="Number"
+        value={productprice}
+        onChange={(e) => {
+          setproductprice(e.target.value);
+        }}
+      />
+      {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
+      <h4 style={{textAlign:"left"}}>Product Quantity</h4> 
+      <input 
+       style={{width:"100%",padding:"10px"}}
+        value={quantity}
+      />
+      <h4 style={{textAlign:"left"}}>City</h4> 
+      <input 
+      style={{width:"100%",padding:"10px"}}
+      type="text"
+      value={city}
+      onChange={(e) => {
+        setcity(e.target.value);
+      }}
+      />
+      {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
+      <h4 style={{textAlign:"left"}}>Distric</h4> 
+      <input 
+      style={{width:"100%",padding:"10px"}}
+      type="text"
+      value={distric}
+      onChange={(e) => {
+        setdistric(e.target.value);
+      }}
+      />
+      {diserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
        
 
           <Button

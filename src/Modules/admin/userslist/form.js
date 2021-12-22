@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import TextField from "@mui/material/TextField";
-//import axios from "axios";
-import Grid from "@mui/material/Grid";
-import Button from "@mui/material/Button";
 import userService from "../../../services/UserService";
 import farmerService from "../../../services/farmerservice";
 //import getadmin from '../../../services/admin/getadmin';
@@ -10,8 +6,6 @@ import supplierService from "../../../services/supplierservice";
 import customerService from "../../../services/customerservice";
 import { toast } from "react-toastify";
 import { useHistory} from "react-router-dom";
-
-//import NativeSelectDemo from "./roledropdown";
 const Formdata = ({id,photo}) => {
   const [role, setRole] = useState("");
   const [user,setuser]=useState("");
@@ -104,65 +98,95 @@ const getuserdata=()=>{
 React.useEffect(getuser,[]);
 React.useEffect(getuserdata,[]);
   return (
-    <Grid container spacing={2}>
-      <Grid item xs={12} sm={6}>
-        <TextField
-          id="filled-basic"
-          label="Name"
-          variant="standard"
-          value={name}
-          onChange={(e) => {
-            setname(e.target.value);
-          }}
-          fullWidth
-        />
-      </Grid>
-      <Grid item xs={12} sm={6}>
-        <TextField
-          id="filled-basic"
-          label="UserName"
-          variant="standard"
-          value={username}
-          onChange={(e) => {
-            setusername(e.target.value);
-          }}
-          fullWidth
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <TextField
-          id="filled-basic"
-          label="Address"
-          variant="standard"
-          value={address}
-          onChange={(e) => {
-            setaddress(e.target.value);
-          }}
-          fullWidth
-        />
-      </Grid>
-      <Grid item xs={12} >
-        <TextField
-          id="filled-basic"
-          label="Phone"
-          variant="standard"
-          value={phone}
-          onChange={(e) => {
-            setphone(e.target.value);
-          }}
-          fullWidth
-        />
-      </Grid>
-      <Grid item xs={12}>
-        <Button variant="contained"
-        onClick={()=>{
-            //console.log(name,username,phone,address,photo);
-            gett();
-        }}
+
+   <div style={{display:"flex",marginLeft:"8%",flexDirection:"column"}}>
+     <h5 style={{textAlign:"left"}}>Name</h5>
+     <input
+      style={{width:"100%",padding:"8px"}}
+     value={name}
+      onChange={(e)=>{
+        setname(e.target.value)
+      }}
+     />
+     <h5 style={{textAlign:"left"}}>Phone</h5>
+     <input
+      style={{width:"100%",padding:"8px"}}
+     value={phone}
+      onChange={(e)=>{
+        setphone(e.target.value)
+      }}
+     />
+     <button
+     onClick={()=>{
+       gett()
+     }}
+       style={{padding:"10px",background:"green",color:"white",marginTop:"1rem"}}
+     >
+       Update
+     </button>
+
+   </div>
+
+
+    // <Grid container spacing={2}>
+    //   <Grid item xs={12} sm={6}>
+    //     <TextField
+    //       id="filled-basic"
+    //       label="Name"
+    //       variant="standard"
+    //       value={name}
+    //       onChange={(e) => {
+    //         setname(e.target.value);
+    //       }}
+    //       fullWidth
+    //     />
+    //   </Grid>
+    //   <Grid item xs={12} sm={6}>
+    //     <TextField
+    //       id="filled-basic"
+    //       label="UserName"
+    //       variant="standard"
+    //       value={username}
+    //       onChange={(e) => {
+    //         setusername(e.target.value);
+    //       }}
+    //       fullWidth
+    //     />
+    //   </Grid>
+    //   <Grid item xs={12}>
+    //     <TextField
+    //       id="filled-basic"
+    //       label="Address"
+    //       variant="standard"
+    //       value={address}
+    //       onChange={(e) => {
+    //         setaddress(e.target.value);
+    //       }}
+    //       fullWidth
+    //     />
+    //   </Grid>
+    //   <Grid item xs={12} >
+    //     <TextField
+    //       id="filled-basic"
+    //       label="Phone"
+    //       variant="standard"
+    //       value={phone}
+    //       onChange={(e) => {
+    //         setphone(e.target.value);
+    //       }}
+    //       fullWidth
+    //     />
+    //   </Grid>
+    //   <Grid item xs={12}>
+    //     <Button variant="contained"
+    //     onClick={()=>{
+    //         //console.log(name,username,phone,address,photo);
+    //         gett();
+    //     }}
         
-        >Update</Button>
-      </Grid>
-    </Grid>
+    //     >Update</Button>
+    //   </Grid>
+    // </Grid>
   );
 };
 export default Formdata;

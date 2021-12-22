@@ -8,6 +8,7 @@ const Showcard = ({ today, Forecast }) => {
   newdate.setTime(weekday);
   const dayname = moment(newdate).format("dddd");
   return (
+   <div>
     <div style={{ width: "70%", marginLeft: "auto", marginRight: "auto",background:"#6DDD00",color:"white" }}>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         <div style={{ display: "flex" ,marginTop:"1rem"}}>
@@ -74,6 +75,7 @@ const Showcard = ({ today, Forecast }) => {
         )}
       </div>
     </div>
+    </div> 
   );
 };
 

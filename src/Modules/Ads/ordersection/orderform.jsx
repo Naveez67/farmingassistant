@@ -13,6 +13,7 @@ const Orderform = () => {
   const [address, setaddress] = useState("");
   const [quantity, setquantity] = useState(param.q);
   const [phone, setphone] = useState("");
+  const [photo, setphoto] = useState("");
   const [err, seterr] = useState("");
   const [adid, setadid] = useState(param.id);
   const [adpostedby, setadpostedby] = useState("");
@@ -24,6 +25,7 @@ const Orderform = () => {
       .then((data) => {
         settotalamount(data.price);
         setadpostedby(data.postedby);
+        setphoto(data.photo)
       })
       .catch((err) => {
         toast.error(err.response.data, {
@@ -48,13 +50,14 @@ const Orderform = () => {
     else if(address.length<6){
      seterr("address length must be greater then 6")
     }
-    else if(address.length>6){
+    else if(address.length>=6){
         seterr("")
         handleclick()
     }
  }
   const handleclick=()=>{
-    orderService.placeorder(buyername,address,adpostedby,adid,totalamount*quantity,phone,quantity).then((data)=>{
+    alert("here we are")
+    orderService.placeorder(buyername,address,adpostedby,adid,totalamount*quantity,phone,quantity,photo).then((data)=>{
       setdis("block")
     }).catch((err)=>{
       toast.error(err.response.data, {
@@ -135,7 +138,7 @@ const Orderform = () => {
             />
           </div>
           <div>
-            <p className="label">Payement on delver</p>
+            <p className="label">cash on delivery</p>
           </div>
           <div>
             <button

@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import Showpost from "./singlepost";
 import { toast } from "react-toastify";
 import Skelton from "./skelton"; 
+import './help.css'
 import userService from '../../services/UserService'
 const Showallpost = () => {
   const [post, setposts] =useState([]);
@@ -25,7 +26,7 @@ const Showallpost = () => {
   };
   React.useEffect(getposts, []);
   return (
-    <div>
+    <div className="helpposts">
       {userService.isFarmer()?
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <button

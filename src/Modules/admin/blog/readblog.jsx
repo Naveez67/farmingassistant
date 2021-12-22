@@ -65,7 +65,7 @@ const Readblog = () => {
           <img src={src} alt={alt} style={{ width: "100%", height: 300 }} />
         )}
       </div>
-      <div style={{textAlign:"left"}}>
+      <div style={{textAlign:"left",marginTop:"1.5rem"}}>
         <h1>{title}</h1>
         <p style={{textAlign:"justify",textJustify:"interword"}}>{body}</p>
         {""}

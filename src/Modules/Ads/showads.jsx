@@ -2,7 +2,7 @@ import React from "react";
 import adsService from "../../services/adsservice";
 import Singlead from "./singlead";
 
-import { Grid } from "@mui/material";
+import { Grid, rgbToHex } from "@mui/material";
 const Showads = ({type}) => {
 
   const [data, setdata] = React.useState([]);
@@ -18,7 +18,7 @@ const Showads = ({type}) => {
   };
   React.useEffect(getads, []);
   return (
-    <div style={{marginLeft:"5%"}}>
+    <div style={{marginLeft:"5%",backgroundColor:"transparent"}}>
       {data.length > 0 ? (
         <>
           <Grid

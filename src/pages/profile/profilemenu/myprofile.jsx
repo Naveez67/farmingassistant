@@ -6,6 +6,7 @@ import helpService from "../../../services/helpservice";
 import complain from "../../../services/admin/complain";
 import admin from './photo/admin.png'
 import { useHistory } from "react-router-dom";
+import './photo/profile.css'
 import "../profile.css";
 import moment from "moment";
 import Myposts from "./mypost";
@@ -112,7 +113,7 @@ const Myprofile = () => {
   useEffect(getposts, []);
   useEffect(getcomplains, []);
   return (
-    <div>
+    <div  className="profile">
       {/* profile section */}
       <div
         style={{
@@ -121,7 +122,7 @@ const Myprofile = () => {
           marginRight: "20%",
           marginLeft: "20%",
           justifyContent: "flex-end",
-          marginTop:"2rem"
+          padding:"10px"
         }}
       >
         <div

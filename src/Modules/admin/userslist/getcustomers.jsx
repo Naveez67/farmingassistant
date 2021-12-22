@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import Singleuser from "./singleuser";
 import { Grid } from "@mui/material";
 import Animationcard from "./skeltoncard";
+import './style/style.css'
 const Customers = () => {
   const [data, setdata] = React.useState([]);
   const [islod, setislod] = React.useState(false);
@@ -26,8 +27,8 @@ const Customers = () => {
   };
   React.useEffect(getdata, []);
   return (
-    <div style={{ marginTop: "4rem" }}>
-      <h1>Showing all the Customers</h1>
+    <div  className="userbackground">
+     <div style={{marginLeft:"10%",marginRight:"10%"}}> 
       {islod ? (
         <></>
       ) : (
@@ -64,6 +65,7 @@ const Customers = () => {
         </>
       ) : (
         <>
+        <div>
           <Grid
             container
             spacing={3}
@@ -73,8 +75,10 @@ const Customers = () => {
               <Singleuser key={index} user={user} onDelete={getdata} setval={setisdelete} />
             ))}
           </Grid>
+          </div> 
         </>
       )}
+      </div>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Uploadphoto = ({ photo, name, setphoto }) => {
   //console.log(id);
   const handleImg = (e) => {
     setImege(e.target.files[0]);
-    //setImegechanged(true);
+    setImegechanged(true);
     if (e.target.files[0]) {
       setImg({
         src: URL.createObjectURL(e.target.files[0]),
@@ -51,7 +51,7 @@ const Uploadphoto = ({ photo, name, setphoto }) => {
             <p>Upload Photo</p>
           </div>
         ) : (
-          <img src={photo} alt={alt} style={{ width: "100%", height: 300 }} />
+          <img src={src} alt={alt} style={{ width: "50%", height: 200 }} />
         )}
       </div>
       <div>

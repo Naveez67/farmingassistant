@@ -1,18 +1,15 @@
 import moment from 'moment';
 import React,{useState} from 'react';
 import { Table } from 'react-bootstrap';
-import adsService from "../../../services/adsservice";
 import "../../../components/all/mangaement/style.css"
 const Myorders = ({orders}) => {
   const [adid, setadid] = useState(""); 
-  const [img, setimg] = useState(""); 
   const [title, settitle] = useState(""); 
   const [dis, setdis] = useState(""); 
   const getorders=(item,index)=>{
      if(item._id===adid){
        return <div key={index} style={{textAlign:"left"}}>
-            {singleads(item.adid)}
-            <img src={img} alt="img" width="200px" height="200px" />
+            <img src={item.photo} alt="img" width="200px" height="200px" />
             <h2>Product name:{" "+title}</h2>
            <h2>Buyer Name:{" "+item.buyername}</h2>
            <h2>Delivery address:{" "+item.address}</h2>
@@ -22,13 +19,6 @@ const Myorders = ({orders}) => {
 
      }
   }
-  const singleads=(adid)=>{
-        adsService.getsingleads(adid).then((data)=>{
-           setimg(data.photo)
-           settitle(data.title)
-        })
-  }
-
 
 
     return ( <div style={{width:"100%"}}>
