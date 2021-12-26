@@ -152,11 +152,11 @@ const Postad = () => {
                      required
                       onChange={handleImg}
                     />
-                    {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>}
                     </>}
                     
                     </>
                     }
+             {photoerr===""?<></>:<p style={{color:"red",textAlign:"left"}}>{photoerr}</p>}
           </div>
           <div>
             <TextField

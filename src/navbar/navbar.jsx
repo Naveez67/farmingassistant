@@ -126,12 +126,8 @@ const MyNavbar = () => {
         </>:<></>}
         
         <li className="list-item">
-        <div className="dropdown">
-        <MdAccountCircle size="35px" />
-  <div className="dropdown-content">
-  <Link to="/showprofile">Profile</Link>
-  </div>
-</div>
+        
+          <Link to="/showprofile" style={{textDecoration:"none",color:"white"}}><MdAccountCircle size="35px" /></Link>   
         </li>
         
         </>

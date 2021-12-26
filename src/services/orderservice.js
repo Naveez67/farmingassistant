@@ -6,7 +6,7 @@ class OrderService extends GenericService {
     placeorder = (buyername,address,adpostedby,adid,totalamount,phone,quantity,photo) =>
     this.post("order", { buyername,address,adpostedby,adid,totalamount,phone,quantity,photo});
    
-    myorders=()=>this.get("order/myorders");
+    myorders=()=>this.put("order/myorders");
     getsingleorder=(id)=>this.get("order/"+id);
     
 }      

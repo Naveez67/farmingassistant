@@ -56,7 +56,6 @@ const Orderform = () => {
     }
  }
   const handleclick=()=>{
-    alert("here we are")
     orderService.placeorder(buyername,address,adpostedby,adid,totalamount*quantity,phone,quantity,photo).then((data)=>{
       setdis("block")
     }).catch((err)=>{
@@ -79,10 +78,8 @@ const Orderform = () => {
               type="text"
               className="inputform"
               required
-              value={buyername}
-              onChange={(e) => {
-                setbuyername(e.target.value);
-              }}
+              defaultValue={buyername}
+             
             />
           </div>
           <div>
@@ -91,10 +88,7 @@ const Orderform = () => {
               type="number"
               className="inputform"
               required
-              value={phone}
-              onChange={(e) => {
-                setphone(e.target.value);
-              }}
+              defaultValue={phone}
             />
           </div>
           <div>
@@ -133,7 +127,7 @@ const Orderform = () => {
               type="text"
               className="inputform"
               required
-              value={totalamount*quantity}
+              defaultValue={totalamount*quantity}
               
             />
           </div>

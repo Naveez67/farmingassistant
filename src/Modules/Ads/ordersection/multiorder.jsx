@@ -86,7 +86,7 @@ const Multiorder=()=>{
               type="text"
               className="inputform"
               required
-              value={buyername}
+              defaultValue={buyername}
             //   onChange={(e) => {
             //     setbuyername(e.target.value);
             //   }}
@@ -98,7 +98,7 @@ const Multiorder=()=>{
               type="number"
               className="inputform"
               required
-              value={phone}
+              defaultValue={phone}
             //   onChange={(e) => {
             //     setphone(e.target.value);
             //   }}
@@ -123,7 +123,7 @@ const Multiorder=()=>{
               type="text"
               className="inputform"
               required
-              value={cartTotal+"  Rs"}
+              defaultValue={cartTotal+"  Rs"}
               
             />
           </div>

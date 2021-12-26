@@ -144,11 +144,12 @@ const Updateblog = (props) => {
                        id="photo"
                        onChange={handleImg}
                       />
-                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
+                    
                     </>}
                     
                     </>
                     }
+                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
       </div>
       <div>
         <Form>
