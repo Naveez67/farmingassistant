@@ -216,7 +216,7 @@ const reg = () => {
                     onChange={(e)=>{
                       let value = e.target.value;
 
-                      // value = value.replace(/[^A-Za-z]/gi, "");
+                      value = value.replace(/[^A-Za-z ]/gi, "");
                         setfname(value)
                        
                     }}
@@ -229,7 +229,10 @@ const reg = () => {
                     required
                     value={lname}
                     onChange={(e)=>{
-                        setlname(e.target.value)
+                      let value = e.target.value;
+
+                      value = value.replace(/[^A-Za-z ]/gi, "");
+                        setlname(value)
                         setname( fname.concat(" "+lname))
                     }}
                     />
