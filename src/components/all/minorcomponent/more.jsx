@@ -10,7 +10,7 @@ const More = ({more}) => {
 
    }
     return ( <div>
-        <Table  style={{width:"33%"}}>
+        <Table  style={{width:"33%",textAlign:"left"}}>
          <tbody> 
         {array.length>0?<>
         {array.map((item,index) => {

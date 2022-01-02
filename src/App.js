@@ -60,6 +60,7 @@ import Orderform from "./Modules/Ads/ordersection/orderform";
 // import Demo from "./navbar/demo/demo";
 import Multiorder from "./Modules/Ads/ordersection/multiorder";
 import Aboutus from "./AboutUs/about";
+import NewNavbar from "./ContactFrom/newnavbar/NewNavbar";
 function App() {
   return ( 
     <div className="App">  
@@ -95,7 +96,7 @@ const LoginContainer = () => (
 );
 const DefaultContainer = () => (
 <div>
-     {window.location.pathname === '/login'  ? null : <MyNavbar />}
+     {window.location.pathname === '/login'  ? null : <NewNavbar />}
      <Switch>
      <Route path="/crops">
               <Crops />
