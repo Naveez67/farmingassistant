@@ -17,13 +17,14 @@ import Mycomplains from "./Mycomplains";
 import { IoIosLogOut } from "react-icons/io";
 const Myprofile = () => {
   const history=useHistory()
-  const [data, setdata] = useState(userService.getLoggedInUser());
+  // const [data, setdata] = useState();
+  const data=userService.getLoggedInUser();
   const [userdata, setuserdata] = useState([]);
   const [user, setuser] = useState([]);
   const cart=useCart()
   const [name, setname] = useState("");
   const [username, setusername] = useState("");
-  const [address, setaddress] = useState("");
+  // const [address, setaddress] = useState("");
   const [photo, setphoto] = useState("");
   const [myorder, setmyorder] = useState(false);
   const [mycom, setmycom] = useState(false);
@@ -83,7 +84,7 @@ const Myprofile = () => {
     userService
       .getsingleuser(data._id)
       .then((data) => {
-        console.log(data);
+       // console.log(data);
         setuser(data);
         setusername(data.username);
       })
@@ -95,9 +96,9 @@ const Myprofile = () => {
     userService
       .getuserdata(data._id)
       .then((data) => {
-        console.log(data);
+       // console.log(data);
         setname(data.name);
-        setaddress(data.address);
+        // setaddress(data.address);
         setphone(data.phone);
         setphoto(data.photo);
         setuserdata(data);
@@ -106,8 +107,8 @@ const Myprofile = () => {
         console.log(err.response.data);
       });
   };
-  useEffect(getuser, []);
-  useEffect(getuserdata, []);
+  useEffect(getuser, [getuser]);
+  useEffect(getuserdata, [getuserdata]);
   useEffect(getads, []);
   useEffect(getorders, []); 
   useEffect(getposts, []);
@@ -187,7 +188,7 @@ const Myprofile = () => {
           marginRight: "20%",
           marginLeft: "20%",
           marginTop: "2rem",
-          marginTop:"0",
+          // marginTop:"0",
           justifyContent: "space-between",
           background:"green",
           color:"white"

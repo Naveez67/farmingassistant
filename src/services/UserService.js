@@ -20,6 +20,8 @@ class UserService extends GenericService {
   deleteuser=(id)=>this.delete("users/"+id);
   getsingleuser=(id)=>this.get("users/"+id);
   getuserdata=(id)=>this.get("users/userdata/"+id);
+  getuserphone=(username)=>this.get("users/userphone/"+username);
+  updatepassword=(username,data)=>this.put("users/updatepassword/"+username,data);
   // getuserdata=(id)=>console.log("ID FOR SERVER > ", id);
   getuserprofile=(id)=>this.get("users/usernames/"+id);
   approve=(id)=>this.put("users/aprove/"+id);

@@ -1,9 +1,9 @@
 .title{
   position: absolute;
   width: 100%;
-  top: 33rem;
+  top: 27rem;
   z-index: 1;
-  margin-top: -195px;
+  margin-top: -185px;
   text-align: center;
 }
 .heading{
@@ -25,4 +25,45 @@
     font-size: 20px;
     color:white;
     background-color: #38B000;
+}
+@media screen and (min-width: 800px) {
+    .heading{
+        font-size: 58px;
+        color: #38B000;
+        
+    }
+    .sub{
+        font-size: 38px;
+        color:white;
+        background-color: #38B000;
+    }
+    .title{
+        position: absolute;
+        width: 100%;
+        top: 33rem;
+        z-index: 1;
+        margin-top: -195px;
+        text-align: center;
+      }
+
+}
+@media screen and (max-width: 799px) {
+    .heading{
+        font-size: 24px;
+        color: #54C800
+        
+    }
+    .sub{
+        font-size: 20px;
+        color:white;
+        background-color: #38B000;
+    }
+    .title{
+        position: absolute;
+        width: 100%;
+        top: 25rem;
+        z-index: 1;
+        margin-top: -175px;
+        text-align: center;
+      }
 }

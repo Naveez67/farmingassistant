@@ -1,20 +1,13 @@
 import React, { useState } from "react";
-import { FaArrowRight, FaRegAddressBook } from "react-icons/fa";
+import { FaRegAddressBook } from "react-icons/fa";
 import { BiLogIn } from "react-icons/bi";
 import { GrSystem } from "react-icons/gr";
-import Spin from 'react-reveal/Spin';
+// import Spin from 'react-reveal/Spin';
 import Rotate from 'react-reveal/Rotate';
 import "./howworks.css";
-import back2 from "../Carousel/images/back2.jpg";
-import Demo from "./demo";
+// import back2 from "../Carousel/images/back2.jpg";
+// import Demo from "./demo";
 const Works = () => {
-  const [ismobile, setismobile] = useState(false);
-  const check = () => {
-    if (window.innerWidth > 600) {
-      setismobile(false);
-    } else setismobile(true);
-  };
-  window.addEventListener("resize", check);
   return (
     <div
       className="mainsec"
@@ -38,15 +31,6 @@ const Works = () => {
         </span>
         </Rotate>
         
-        {ismobile ? (
-          <></>
-        ) : (
-          <Rotate top left>
-          <div>
-            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"white" }} />
-          </div>
-          </Rotate>
-        )}
         <Rotate top left>
         <span>
           <div className="simplecard">
@@ -56,15 +40,6 @@ const Works = () => {
           <h1 className="subtitle">Step2</h1>
         </span>
         </Rotate>
-        {ismobile ? (
-          <></>
-        ) : (
-          <Rotate top left>
-          <div>
-            <FaArrowRight size="50px" style={{ marginTop: "1.5rem",color:"white" }} />
-          </div>
-          </Rotate>
-        )}
         <Rotate top left>
         <span>
           <div className="simplecard">
@@ -76,7 +51,7 @@ const Works = () => {
         </Rotate>
         <br />
       </div>
-      <Demo />
+      {/* <Demo /> */}
 
       {/* <div class="box" id="box1"></div>
 <div class="box" id="box2"></div>

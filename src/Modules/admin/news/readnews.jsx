@@ -28,7 +28,7 @@ const Readnews = () => {
     }, []);
   return ( 
     <div className="readblog">
-  <div style={{display:"flex",flexDirection:"column",width:"50%",marginLeft:"auto",marginRight:"auto",backgroundColor:"white",padding:"10px"}} >
+  <div className='readblogclass' >
              <div  >
                {src===""?<div className="divimg">
                </div>:

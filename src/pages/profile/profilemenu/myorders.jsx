@@ -66,7 +66,7 @@ const Myorders = ({orders}) => {
 {/* <!-- Modal content --> */}
 <div className="modal-content" >
   <div className="modal-header">
-  <h2></h2>
+  {/* <h2></h2> */}
     <span className="close" onClick={()=>{setdis("none")}} >&times;</span>
     
   </div>
@@ -88,7 +88,7 @@ const Myorders = ({orders}) => {
      </div>
   </div>
   <div className="modal-footer">
-    <h3></h3>
+    {/* <h3></h3> */}
   </div>
 </div>
 

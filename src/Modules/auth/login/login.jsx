@@ -119,6 +119,14 @@ const Login = () => {
               }}
               >Not registed! register</p>
           </div>
+          <div>
+              <p
+              style={{cursor:"pointer",color:"blue",textDecoration:"underline",textAlign:"left"}}
+              onClick={()=>{
+                history.push("/forgetpassword")
+              }}
+              >Forget password</p>
+          </div>
 
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React  from 'react';
 const Adcard = ({ad}) => {
     return ( 
     <div style={{display:"flex",flexDirection:"column",width:"100%"}}>

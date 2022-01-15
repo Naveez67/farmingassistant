@@ -5,15 +5,15 @@ import { useHistory } from 'react-router';
 import './style.css'
 const Showcomplains = ({com}) => {
     const history=useHistory();
-    const [title,settitle]=useState(com.title);
-    const [body,setbody]=useState(com.body);
-    const [complainby,setcomplainby]=useState(com.complainby);
-    const [Status,setStatus]=useState(com.Status);
+    const title=com.title;
+    const body=com.body;
+    const complainby=com.complainby;
+    const Status=com.Status;
     const [name,setname]=useState("");
     const [role,setrole]=useState("");
     const getuser=()=>{
         userService.getsingleuser(complainby).then((data)=>{
-           console.log(data);
+         //   console.log(data);
            setname(data.username);
            setrole(data.role);
         })
@@ -29,7 +29,7 @@ const Showcomplains = ({com}) => {
         })
         
    }
-    React.useEffect(getuser,[]);
+    React.useEffect(getuser,[getuser]);
     return ( 
     <div style={{display:"flex",flexDirection:"column",background:"#6DDD00",color:"white"}}>
        

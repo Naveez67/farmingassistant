@@ -61,6 +61,9 @@ import Orderform from "./Modules/Ads/ordersection/orderform";
 import Multiorder from "./Modules/Ads/ordersection/multiorder";
 import Aboutus from "./AboutUs/about";
 import NewNavbar from "./ContactFrom/newnavbar/NewNavbar";
+import Forgetpassword from './Modules/auth/forgetpassword/forgetpas'
+import Newpasswordscreen from "./Modules/auth/forgetpassword/newpassword";
+import Navbar from "./ContactFrom/newnavbar/NewNavbar";
 function App() {
   return ( 
     <div className="App">  
@@ -71,6 +74,12 @@ function App() {
 
         <Switch>
                    <Route exact path="/login" component={LoginContainer}/>
+                   <Route exact path="/forgetpassword" >
+                     <Forgetpassword />
+                   </Route>
+                   <Route exact path="/newpassword/:username" >
+                     <Newpasswordscreen />
+                   </Route>
                    {/* <Route exact path="/showprofile">
                             <Myprofile />
                    </Route> */}
@@ -96,7 +105,7 @@ const LoginContainer = () => (
 );
 const DefaultContainer = () => (
 <div>
-     {window.location.pathname === '/login'  ? null : <NewNavbar />}
+     {window.location.pathname === '/login'  ? null : <Navbar />}
      <Switch>
      <Route path="/crops">
               <Crops />

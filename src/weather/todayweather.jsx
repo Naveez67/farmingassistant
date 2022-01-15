@@ -4,7 +4,8 @@ import weather from '../services/admin/weather';
 import Showcard from './card';
 import './weather.css'
 const Todayweather = () => {
-    const [nam,setnam]=useState("Lahore");
+    // const [nam,setnam]=useState("Lahore");
+    const nam="Lahore"
     const [city,setcity]=useState("");
     const [today,settoday]=useState([]);
     const [Forecast,setfor]=useState([]);

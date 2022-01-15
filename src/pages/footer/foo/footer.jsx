@@ -55,8 +55,8 @@ const Footer = () => {
                     <ul  style={{textAlign: "left"}}>
                         <li><a href=""><FaMapMarkerAlt className="fas"/> Lahore, Pakistan</a></li>
                         <li><a href=""><FaMobileAlt className="fas"/> 03314924054</a></li>
-                        <li><a href=""><FaEnvelope className="fas"/> Farmingassistant@gmail.com</a></li>
-                        <li><a href=""><FaGlobeEurope className="fas"/> www.Farming.com</a></li>
+                        <li><a href=""><FaEnvelope className="fas"/>farmingassistant@gmail.com</a></li>
+                        {/* <li><a href=""><FaGlobeEurope className="fas"/> www.Farming.com</a></li> */}
                     </ul>
                 </div>
             </div> 
