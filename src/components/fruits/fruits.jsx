@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import React from "react";
 import Singlecrop from "../all/singlecrop";
-import Catagree from "../categriees/catgree";
+// import Catagree from "../categriees/catgree";
 import data from "../data/data.json";
 const Fruits = () => {
   function filterItems(arr, query) {

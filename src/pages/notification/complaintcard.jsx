@@ -1,13 +1,13 @@
 import React,{useState} from 'react';
 import notification from '../../services/notification';
-import userService from '../../services/UserService';
-import complain from '../../services/admin/complain'
+// import userService from '../../services/UserService';
+// import complain from '../../services/admin/complain'
 import './style.css'
 import Showcomplains from './showcomplain';
 const Cardnotification = ({com}) => {
     const [noti,setnoti]=useState([]);
     
-    const [id,setid]=useState("");
+    // const [id,setid]=useState("");
     
     const check=()=>{
         notification.getcomplain().

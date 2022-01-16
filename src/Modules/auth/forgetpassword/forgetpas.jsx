@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import { BiUserCircle } from "react-icons/bi";
+// import { BiUserCircle } from "react-icons/bi";
 import "../login/style.css";
 import { useHistory } from "react-router";
 import userService from "../../../services/UserService"
@@ -22,7 +22,7 @@ const Forgetpassword = () => {
       }
   }
   const check=()=>{
-    if(username.length==0){
+    if(username.length===0){
       setunerr("required")
     }
     else {
@@ -79,7 +79,7 @@ const Forgetpassword = () => {
               setusername(e.target.value)
             }}
             /> 
-            {unerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
+            {unerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
           </div>
           <div style={{display:"flex",justifyContent:"center"}}>
               <button 

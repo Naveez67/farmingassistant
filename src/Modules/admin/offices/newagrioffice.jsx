@@ -16,10 +16,10 @@ const Newagrioffice = () => {
   const [pnerr,setpnerr]=useState("");
   const [prerr,setprerr]=useState("");
   const [aderr,setaderr]=useState("");
-  const [diserr,setdiserr]=useState("");
+  // const [diserr,setdiserr]=useState("");
   const [cityerr,setcityerr]=useState("");
   const check=()=>{
-    if(name.length==0){
+    if(name.length===0){
       setpnerr("name is required")
     }
     else if(name.length<3)
@@ -32,7 +32,7 @@ const Newagrioffice = () => {
     }
   }
   const checkphone=()=>{
-    if(phone.length==0){
+    if(phone.length===0){
       setprerr("phone number  is required")
     }
     else if(phone.length<11){
@@ -48,7 +48,7 @@ const Newagrioffice = () => {
     }
   }
   const checkaddress=()=>{
-    if(address.length==0){
+    if(address.length===0){
       setaderr("address is required")
     }
     else if(address.length<5){
@@ -60,7 +60,7 @@ const Newagrioffice = () => {
     }
   }
   const checkcity=()=>{
-    if(city.length==0){
+    if(city.length===0){
       setcityerr("required")
     }
     else if(city.length<5){
@@ -97,7 +97,7 @@ const Newagrioffice = () => {
             setname(e.target.value);
           }}
         />
-        {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
+        {pnerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
         <h4 style={{textAlign:"left"}}>Phone</h4>
         <input
           style={{width:"100%",padding:"10px"}}
@@ -107,7 +107,7 @@ const Newagrioffice = () => {
             setphone(e.target.value);
           }}
         />
-        {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
+        {prerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
         <h4 style={{textAlign:"left"}}>Address</h4>
         <input
          style={{width:"100%",padding:"10px"}}
@@ -116,7 +116,7 @@ const Newagrioffice = () => {
             setaddress(e.target.value);
           }}
         />
-        {aderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{aderr}</p>:<></>}
+        {aderr.length!==0?<p style={{textAlign:"left",color:"red"}}>{aderr}</p>:<></>}
         {" "}
         <h4 style={{textAlign:"left"}}>City</h4>
         <input
@@ -126,7 +126,7 @@ const Newagrioffice = () => {
             setcity(e.target.value);
           }}
         />
-        {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
+        {cityerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
         {" "}
         <br />
        

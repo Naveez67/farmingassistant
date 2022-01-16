@@ -5,13 +5,13 @@ import { useHistory } from 'react-router-dom';
 import { useCart } from "react-use-cart";
 import userService from '../../services/UserService';
 const Mycart = () => {
-    const { isEmpty, totalUniqueItems, items, updateItemQuantity, removeItem,cartTotal ,totalItems} =
+    const { items, updateItemQuantity, removeItem,cartTotal } =
     useCart();
-    const test=useCart();
-   const [sum,setsum]=React.useState(0)
+    // const test=useCart();
+  //  const [sum,setsum]=React.useState(0)
    const history=useHistory()
-   console.log(test)
-    const [show,setshow]=React.useState(false);
+  //  console.log(test)
+    // const [show,setshow]=React.useState(false);
     const id=userService.getLoggedInUser()._id;
     function filterItems(arr, query) {
         return arr.filter(function(el) {
@@ -59,7 +59,7 @@ const Mycart = () => {
                marginRight:"10%",
                }}>
               <div>
-              <img src={item.image} width="300" height="300" style={{borderRadius:"50%"}}/>
+              <img src={item.image} width="300" height="300" alt="" style={{borderRadius:"50%"}}/>
               </div> 
                <div style={{textAlign:"left",color:"white"}}>
                   <h3>Name:{get(item.title)}</h3>

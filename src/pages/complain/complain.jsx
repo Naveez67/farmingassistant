@@ -1,10 +1,10 @@
 import React,{useState} from 'react';
 import complain from '../../services/admin/complain';
-import { useHistory } from 'react-router';
+// import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
 import "../../components/all/mangaement/style.css"
 const Complain = () => {
-    const history=useHistory();
+    // const history=useHistory();
     const [title,settitle]=useState("");
     const [titleerr,settitleerr]=useState("");
     const [body,setbody]=useState("");

@@ -1,9 +1,9 @@
 //import logo from './logo.svg';
 import "./App.css";
 import '../node_modules/react-vis/dist/style.css';
-import MyNavbar from "./navbar/navbar";
+// import MyNavbar from "./navbar/navbar";
 import Showblog from "./Modules/admin/blog/showblog";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch,Redirect } from "react-router-dom";
 import Crops from "./components/crops/crops";
 import Detials from "./components/all/detialpage";
 import Vegitables from "./components/vegitables/vegetables";
@@ -60,10 +60,12 @@ import Orderform from "./Modules/Ads/ordersection/orderform";
 // import Demo from "./navbar/demo/demo";
 import Multiorder from "./Modules/Ads/ordersection/multiorder";
 import Aboutus from "./AboutUs/about";
-import NewNavbar from "./ContactFrom/newnavbar/NewNavbar";
+// import NewNavbar from "./ContactFrom/newnavbar/NewNavbar";
 import Forgetpassword from './Modules/auth/forgetpassword/forgetpas'
 import Newpasswordscreen from "./Modules/auth/forgetpassword/newpassword";
 import Navbar from "./ContactFrom/newnavbar/NewNavbar";
+import NotFound from './pages/notfound'
+import Profileupdate from "./pages/profile/updateprofile";
 function App() {
   return ( 
     <div className="App">  
@@ -79,6 +81,9 @@ function App() {
                    </Route>
                    <Route exact path="/newpassword/:username" >
                      <Newpasswordscreen />
+                   </Route>
+                   <Route path="/not-found"  >
+                     <NotFound />
                    </Route>
                    {/* <Route exact path="/showprofile">
                             <Myprofile />
@@ -162,12 +167,15 @@ const DefaultContainer = () => (
             <Updateuser />
           </Route>
           <Route path="/showfarmers">
+            <br />
             <Farmers />
           </Route>
           <Route path="/showcustomers">
+            <br />
             <Customers />
           </Route>
           <Route path="/showsuppliers">
+            <br />
             <Suppliers />
           </Route>
           <Route path="/ads">
@@ -243,9 +251,13 @@ const DefaultContainer = () => (
       <Route exact path="/showprofile">
             <Myprofile />
       </Route>
+      <Route exact path="/editprofile">
+            <Profileupdate />
+      </Route>
       <Route exact path="/aboutus">
             <Aboutus />
       </Route>
+      <Redirect to="/not-found" />
      </Switch>
 </div>
 

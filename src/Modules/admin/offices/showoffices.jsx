@@ -1,7 +1,7 @@
 import React from 'react';
 import agriofficeService from '../../../services/admin/Agrioffices';
 import userService from '../../../services/UserService';
-import {AiFillPlusCircle,AiTwotoneDelete,AiFillEdit} from 'react-icons/ai'
+import {AiTwotoneDelete,AiFillEdit} from 'react-icons/ai'
 import { Table } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify"; 

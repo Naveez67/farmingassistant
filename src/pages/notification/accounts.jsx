@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Table } from 'react-bootstrap';
 import notification from '../../services/notification';
-import userService from '../../services/UserService';
+// import userService from '../../services/UserService';
 import { useHistory } from 'react-router';
 import './style.css'
 const Accounts = () => {
@@ -10,7 +10,7 @@ const Accounts = () => {
     const check=()=>{
         notification.getaccounts().
         then((data)=>{
-              console.log(data);
+              // console.log(data);
               setnoti(data);
         })
         .catch((err)=>{console.log(err.response.data)});
@@ -23,7 +23,7 @@ const Accounts = () => {
               <h1>Showing Unverfied Accounts</h1>
          </div>
 
-         {noti.length!=0?<>
+         {noti.length!==0?<>
          <Table>
              <thead>
                  <th>Username</th>

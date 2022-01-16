@@ -15,7 +15,7 @@ const More = ({more}) => {
         {array.length>0?<>
         {array.map((item,index) => {
                return (
-                <tr style={{display:"flex"}} key={index} style={{listStyle:"none"}}>
+                <tr style={{display:"flex",listStyle:"none"}} key={index} >
                     <td >{item}:</td>
                     <td>{getval(item)}</td>
                 </tr>

@@ -23,7 +23,7 @@ const Helppost = () => {
   const [tterr,settterr]=useState("");
   const [bderr,setbderr]=useState("");
   const check=()=>{
-    if(photo.length==0){
+    if(photo.length===0){
       setphotoerr("please upload photo")
     }
     else{
@@ -32,7 +32,7 @@ const Helppost = () => {
     }
   }
   const checktitle=()=>{
-    if(title.length==0){
+    if(title.length===0){
       settterr("title is required")
     }
     else if(title.length<3){
@@ -45,7 +45,7 @@ const Helppost = () => {
     }
   }
   const checkbody=()=>{
-    if(body.length==0){
+    if(body.length===0){
       setbderr("required")
     }
     else if(body.length<15){
@@ -150,7 +150,7 @@ const Helppost = () => {
             settitle(e.target.value);
           }}
         />
-        {tterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
+        {tterr.length!==0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
         {" "}
         <TextareaAutosize
           aria-label="Enter Problem description here"
@@ -162,7 +162,7 @@ const Helppost = () => {
             setbody(e.target.value);
           }}
         />
-        {bderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
+        {bderr.length!==0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
         {""}
         <Button
           size="larage"

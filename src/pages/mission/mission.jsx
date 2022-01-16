@@ -7,14 +7,12 @@ const Missionstatement = () => {
 
          <div style={{display:"flex",flexWrap:"wrap",justifyContent:"center"}}>
         <span style={{width:"50%"}}>     
-        <h1 style={{textAlign:"right",fontWeight:"bolder",fontSize:"26px"}}>
-        ہمارا مقصد
+        <h1 style={{textAlign:"left",fontWeight:"bolder",fontSize:"26px"}}>
+        Our Mission
         </h1>
         <p style={{textAlign:"justify",textJustify:"interword",fontSize:"22px"}}>
-         پاکستان کی جی ڈی پی کے لیے زراعت اہم ہے اور زراعت کی ریڑھ کی ہڈی کسان ہیں۔ جیسا کہ ایک کسان محنت کرکے پورے ملک کا پیٹ پالتا ہے اور بدلے میں اسے وہ منافع نہیں ملتا جس کا وہ حقدار تھا۔ جیسا کہ بیچوان ہوتے ہیں جب کسان کوئی پروڈکٹ خریدتا ہے تو درمیانی آدمی کو کمیشن ملتا ہے اور جب کسان دوبارہ پروڈکٹ بیچتا ہے تو درمیانی آدمی کو منافع ملتا ہے۔ ہماری
-مقصد آن لائن فراہم کرکے بیچوان کو ہٹا کر کسانوں کے منافع میں اضافہ کرنا ہے۔
-کسان، گاہک اور سپلائر کے لیے پلیٹ فارم
-        </p>
+        <b>"</b> Agriculture is important for Pakistan's GDP and farmers are the backbone of agriculture. As a farmer works hard to feed the whole country and in return he does not get the profit he was entitled to. As there are intermediaries, when the farmer buys a product, the middle man gets commission and when the farmer sells the product again, the middle man gets profit. Our goal is to increase farmers' profits by removing middlemen by providing them online platform. Platform for farmers, customers and suppliers
+        <b> "</b></p>
         </span>
     </div>
     </div> );

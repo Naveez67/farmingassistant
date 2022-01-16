@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import TextField from '@mui/material/TextField';
+// import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import marketrates from "../../../services/admin/marketrates";
 import { useHistory } from "react-router-dom";
@@ -8,7 +8,7 @@ import './style.css';
 const Marketrates = () => {
   // const classes = useStyles();
   const history = useHistory();
-  const [isloading,setisloading]=React.useState(false);
+  // const [isloading,setisloading]=React.useState(false);
   const handleclick=()=>{
     
     marketrates
@@ -17,7 +17,7 @@ const Marketrates = () => {
       setdis("block")
     })
     .catch((err) => {
-      console.log(err.response.data);
+      // console.log(err.response.data);
       toast.error(err.response.data, {
         position: toast.POSITION.TOP_LEFT,
       });
@@ -26,16 +26,16 @@ const Marketrates = () => {
   }
   const [productname, setproductname] = React.useState("");
   const [productprice, setproductprice] = React.useState("");
-  const [quantity, setquantity] = React.useState(1);
+  const quantity= 1;
   const [city, setcity] = React.useState("");
   const [distric, setdistric] = React.useState("");
   const [pnerr,setpnerr]=useState("");
   const [prerr,setprerr]=useState("");
   const [diserr,setdiserr]=useState("");
   const [cityerr,setcityerr]=useState("");
-  const [dis,setdis]=useState("");
+  const [dis,setdis]=useState("none");
   const check=()=>{
-    if(productname.length==0){
+    if(productname.length===0){
       setpnerr("product name is required")
     }
     else if(productname.length<3)
@@ -48,7 +48,7 @@ const Marketrates = () => {
     }
   }
   const checkprice=()=>{
-    if(productprice==0){
+    if(productprice===0){
       setprerr(" price is required")
     }
     else if(productprice<0){
@@ -61,7 +61,7 @@ const Marketrates = () => {
     }
   }
   const checkcity=()=>{
-    if(city.length==0){
+    if(city.length===0){
       setcityerr("required")
     }
     else if(city.length<5){
@@ -73,7 +73,7 @@ const Marketrates = () => {
     }
   }
   const checkdis=()=>{
-    if(distric.length==0){
+    if(distric.length===0){
       setdiserr("required")
     }
     else if(distric.length<5){
@@ -98,7 +98,7 @@ const Marketrates = () => {
           setproductname(e.target.value)
         }}
         />
-        {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
+        {pnerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
         <h4 style={{textAlign:"left"}}>Product Price</h4> 
         <input 
         style={{width:"100%",padding:"10px"}}
@@ -108,7 +108,7 @@ const Marketrates = () => {
             setproductprice(e.target.value);
           }}
         />
-        {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
+        {prerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
         <h4 style={{textAlign:"left"}}>Product Quantity</h4> 
         <input 
          style={{width:"100%",padding:"10px"}}
@@ -123,8 +123,8 @@ const Marketrates = () => {
           setcity(e.target.value);
         }}
         />
-        {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
-        <h4 style={{textAlign:"left"}}>Distric</h4> 
+        {cityerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
+        <h4 style={{textAlign:"left"}}>District</h4> 
         <input 
         style={{width:"100%",padding:"10px"}}
         type="text"
@@ -133,7 +133,7 @@ const Marketrates = () => {
           setdistric(e.target.value);
         }}
         />
-        {diserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
+        {diserr.length!==0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
        
 
           <Button
@@ -150,7 +150,7 @@ const Marketrates = () => {
 {/* <!-- Modal content --> */}
 <div className="modal-content" >
   <div className="modal-header">
-  <h2></h2>
+  <h2>{" "} </h2>
     <span className="close" onClick={()=>{setdis("none")}} >&times;</span>
     
   </div>

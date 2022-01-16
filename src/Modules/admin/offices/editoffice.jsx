@@ -27,10 +27,10 @@ const Editagrioffice = () => {
   const [pnerr,setpnerr]=useState("");
   const [prerr,setprerr]=useState("");
   const [aderr,setaderr]=useState("");
-  const [diserr,setdiserr]=useState("");
+  // const [diserr,setdiserr]=useState("");
   const [cityerr,setcityerr]=useState("");
   const check=()=>{
-    if(name.length==0){
+    if(name.length===0){
       setpnerr("name is required")
     }
     else if(name.length<3)
@@ -43,7 +43,7 @@ const Editagrioffice = () => {
     }
   }
   const checkphone=()=>{
-    if(phone.length==0){
+    if(phone.length===0){
       setprerr("phone number  is required")
     }
     else if(phone.length<11){
@@ -59,7 +59,7 @@ const Editagrioffice = () => {
     }
   }
   const checkaddress=()=>{
-    if(Address.length==0){
+    if(Address.length===0){
       setaderr("address is required")
     }
     else if(Address.length<5){
@@ -71,7 +71,7 @@ const Editagrioffice = () => {
     }
   }
   const checkcity=()=>{
-    if(city.length==0){
+    if(city.length===0){
       setcityerr("required")
     }
     else if(city.length<5){
@@ -89,7 +89,7 @@ const Editagrioffice = () => {
                 setdis("block")
               })
               .catch((err) => {
-                console.log(err.response.data);
+                // console.log(err.response.data);
                 toast.error(err.response.data, {
                   position: toast.POSITION.TOP_LEFT,
                 });
@@ -107,7 +107,7 @@ const Editagrioffice = () => {
             setname(e.target.value);
           }}
         />
-        {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
+        {pnerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
         <h4 style={{textAlign:"left"}}>Phone</h4>
         <input
           style={{width:"100%",padding:"10px"}}
@@ -117,7 +117,7 @@ const Editagrioffice = () => {
             setphone(e.target.value);
           }}
         />
-        {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
+        {prerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
         <h4 style={{textAlign:"left"}}>Address</h4>
         <input
          style={{width:"100%",padding:"10px"}}
@@ -126,7 +126,7 @@ const Editagrioffice = () => {
             setaddress(e.target.value);
           }}
         />
-        {aderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{aderr}</p>:<></>}
+        {aderr.length!==0?<p style={{textAlign:"left",color:"red"}}>{aderr}</p>:<></>}
         <h4 style={{textAlign:"left"}}>City</h4>
         <input
           style={{width:"100%",padding:"10px"}}
@@ -135,7 +135,7 @@ const Editagrioffice = () => {
             setcity(e.target.value);
           }}
         />
-        {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
+        {cityerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
        
 
           <Button

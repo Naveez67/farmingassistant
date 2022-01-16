@@ -3,7 +3,7 @@ import marketrates from "../../../services/admin/marketrates";
 import { Table } from "react-bootstrap";
 const Showgraphs = ({dis}) => {
   const [distincvalues, setdist] = useState([]);
-  const [dist, setdis] = useState(dis);
+  // const [dist, setdis] = useState(dis);
   const get = () => {
     marketrates
       .getdistinctval()

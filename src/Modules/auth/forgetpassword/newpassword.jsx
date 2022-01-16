@@ -28,7 +28,7 @@ const name=param.username;
       }
   }
   const checkpassword=()=>{
-    if(password.length==0){
+    if(password.length===0){
        setpserr("password is required")
    }
    else if(password.length<6){
@@ -55,7 +55,7 @@ const name=param.username;
   const getphone=()=>{
     userService.getuserphone(name)
     .then((data) => {
-         console.log(data)
+        // console.log(data)
          setphone(data)
         //  console.log(typeof(phone))
     })
@@ -69,7 +69,7 @@ const name=param.username;
 
 
   React.useEffect(getsize,[])
-  React.useEffect(getphone,[])
+  React.useEffect(getphone,[getphone])
   return (
       <div
       className="bgimg"
@@ -106,7 +106,7 @@ const name=param.username;
               setpassword(e.target.value)
             }}
             /> 
-            {pserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
+            {pserr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
           </div>
           <div style={{display:"flex",justifyContent:"center"}}>
               <button 

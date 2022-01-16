@@ -15,7 +15,7 @@ const Updateblog = (props) => {
   const [title, settitle] = useState("");
   const [body, setbody] = useState("");
   const [imege, setImege] = useState("");
-  const [imegechanged, setImegechanged] = useState(false);
+  // const [imegechanged, setImegechanged] = useState(false);
   const id = param.id;
   const[imgupload,setimgupload]=useState(false);
   const[showanimation,setshowanimation]=useState(false);
@@ -25,7 +25,7 @@ const Updateblog = (props) => {
   const[bderr,setbderr]=useState("");
   const[dis,setdis]=useState("none");
   const check=()=>{
-      if(url.length==0){
+      if(url.length===0){
         setpterr("please upload photo")
       }
       else {
@@ -34,7 +34,7 @@ const Updateblog = (props) => {
       }
   }
   const checktitle=()=>{
-    if(title.length==0){
+    if(title.length===0){
       settterr("required")
     }
     else if(title.length<4){
@@ -46,7 +46,7 @@ const Updateblog = (props) => {
     }
   }
   const checkbody=()=>{
-    if(body.length==0){
+    if(body.length===0){
       setbderr("required")
     }
     else if(body.length<10){
@@ -77,7 +77,7 @@ const Updateblog = (props) => {
         setdis("block")
       })
       .catch((err) => {
-        console.log(err.response.data);
+        // console.log(err.response.data);
         toast.error(err.response.data, {
           position: toast.POSITION.TOP_LEFT,
         });

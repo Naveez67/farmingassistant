@@ -1,5 +1,5 @@
 import React,{useState} from "react";
-import TextField from '@mui/material/TextField';
+// import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import marketrates from "../../../services/admin/marketrates";
 import { useHistory ,useParams} from "react-router-dom";
@@ -10,7 +10,7 @@ const UpdateMarketrates = () => {
   const history = useHistory();
   const param = useParams();
   const id=param.id;
-  const [isloading,setisloading]=useState(false);
+  // const [isloading,setisloading]=useState(false);
   
   const [productname, setproductname] = useState("");
   const [productprice, setproductprice] = useState("");
@@ -23,7 +23,7 @@ const UpdateMarketrates = () => {
   const [cityerr,setcityerr]=useState("");
   const [dis,setdis]=useState("none");
   const check=()=>{
-    if(productname.length==0){
+    if(productname.length===0){
       setpnerr("product name is required")
     }
     else if(productname.length<3)
@@ -36,7 +36,7 @@ const UpdateMarketrates = () => {
     }
   }
   const checkprice=()=>{
-    if(productprice==0){
+    if(productprice===0){
       setprerr("required and price must be greater then 0")
     }
     else if(productprice<0){
@@ -49,7 +49,7 @@ const UpdateMarketrates = () => {
     }
   }
   const checkcity=()=>{
-    if(city.length==0){
+    if(city.length===0){
       setcityerr("required")
     }
     else if(city.length<5){
@@ -61,7 +61,7 @@ const UpdateMarketrates = () => {
     }
   }
   const checkdis=()=>{
-    if(distric.length==0){
+    if(distric.length===0){
       setdiserr("required")
     }
     else if(distric.length<5){
@@ -112,7 +112,7 @@ React.useEffect(get,[])
         setproductname(e.target.value)
       }}
       />
-      {pnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
+      {pnerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pnerr}</p>:<></>}
       <h4 style={{textAlign:"left"}}>Product Price</h4> 
       <input 
       style={{width:"100%",padding:"10px"}}
@@ -122,7 +122,7 @@ React.useEffect(get,[])
           setproductprice(e.target.value);
         }}
       />
-      {prerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
+      {prerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{prerr}</p>:<></>}
       <h4 style={{textAlign:"left"}}>Product Quantity</h4> 
       <input 
        style={{width:"100%",padding:"10px"}}
@@ -137,8 +137,8 @@ React.useEffect(get,[])
         setcity(e.target.value);
       }}
       />
-      {cityerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
-      <h4 style={{textAlign:"left"}}>Distric</h4> 
+      {cityerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{cityerr}</p>:<></>}
+      <h4 style={{textAlign:"left"}}>District</h4> 
       <input 
       style={{width:"100%",padding:"10px"}}
       type="text"
@@ -147,7 +147,7 @@ React.useEffect(get,[])
         setdistric(e.target.value);
       }}
       />
-      {diserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
+      {diserr.length!==0?<p style={{textAlign:"left",color:"red"}}>{diserr}</p>:<></>}
        
 
           <Button

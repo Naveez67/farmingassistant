@@ -70,10 +70,10 @@
   }
 
   .userbackground{
-    background-image: url("https://images.unsplash.com/photo-1487700160041-babef9c3cb55?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1452&q=80");
+    background-image: url("https://images.unsplash.com/photo-1496661415325-ef852f9e8e7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=927&q=80");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     background-position: center;
-    height: 100%;
+    min-height: 88vh;
   }

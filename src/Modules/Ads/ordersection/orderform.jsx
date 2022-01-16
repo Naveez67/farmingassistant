@@ -127,7 +127,7 @@ const Orderform = () => {
               type="text"
               className="inputform"
               required
-              defaultValue={totalamount*quantity}
+              Value={totalamount*quantity}
               
             />
           </div>

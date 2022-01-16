@@ -89,7 +89,7 @@ const Login = () => {
               setusername(e.target.value)
             }}
             /> 
-            {unerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
+            {unerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
             <p style={{textAlign:"left",fontSize:"20px",fontWeight:"bold"}}>Password</p>
             <input
             className="inputform"
@@ -100,7 +100,7 @@ const Login = () => {
               setpassword(e.target.value)
             }}
             /> 
-            {pserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
+            {pserr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
           </div>
           <div style={{display:"flex",justifyContent:"center"}}>
               <button 
@@ -132,44 +132,6 @@ const Login = () => {
       </div>
   )
 }
-{/* <div>
-<h2>Modal Login Form</h2>
-
-<button onClick={()=>{setdis("block")}} style={{width:"auto"}}>Login</button>
-
-<div id="id01" className="modal" style={{display:dis}}>
-  
-  <form className="modal-content animate">
-  <span onClick={()=>{setdis("none")}} class="close" title="Close Modal">&times;</span>
-  <div style={{display:"flex",justifyContent:"center"}}>
-               <BiUserCircle size="120px "/>
-           </div>
-           <div>
-             <p style={{textAlign:"left"}}>Username</p>
-             <input
-             type="text"
-             className="inputform"
-             placeholder="username"
-             /> 
-             <p style={{textAlign:"left"}}>Password</p>
-             <input
-             className="inputform"
-             type="password"
-             placeholder="username"
-            
-             /> 
-           </div>
-           <div style={{display:"flex",justifyContent:"center"}}>
-               <button className="btn">Login</button>
-           </div>
-           <div>
-               <p>Not registed! register</p>
-           </div>
-  </form>
-</div>
-
-
-</div> */}
 
 
 export default Login;

@@ -1,5 +1,5 @@
 import React ,{useState} from 'react';
-import {  Table, Offcanvas } from 'react-bootstrap';
+import {  Table } from 'react-bootstrap';
 import './style.css'
 const Showmodel = ({val,obj}) => {
   const array=Object.getOwnPropertyNames(obj)
@@ -31,7 +31,7 @@ const Showmodel = ({val,obj}) => {
         {array.length>0?<>
         {array.map((item,index) => {
                return (
-                <tr style={{display:"flex"}} key={index} style={{listStyle:"none"}}>
+                <tr style={{display:"flex",listStyle:"none"}} key={index} >
                     <td><h5>{item}</h5><p>{getval(item)}</p></td>
                     
                 </tr>

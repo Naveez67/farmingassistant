@@ -51,7 +51,7 @@ const Myprofile = () => {
     complain
       .getmycomplains()
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setcomplain(data);
       })
       .catch((err) => {
@@ -73,7 +73,7 @@ const Myprofile = () => {
     orderService
       .myorders()
       .then((data) => {
-        console.log(data)
+        // console.log(data)
         setorders(data);
       })
       .catch((err) => {
@@ -177,7 +177,15 @@ const Myprofile = () => {
           <h1>{username}</h1>
           <h2>{phone}</h2>
           <h3>Joined:{moment(userdata.accountcreated).format("MMM Do YY")}</h3>
-          {/* <p style={{color:"blue",textDecoration:"underline"}}>Edit profile</p> */}
+          {userService.isAdmin()?<>
+          </>:<>
+          <p style={{color:"blue",textDecoration:"underline",cursor:"pointer"}} 
+          onClick={()=>{
+            history.push("/editprofile")
+          }}
+          >Edit profile</p>
+          </>}
+          
         </div>
       </div>
       {/* profile section end */}

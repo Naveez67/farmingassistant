@@ -7,7 +7,7 @@ import {MdDoubleArrow } from 'react-icons/md'
 //import Cardnotification from './complaintcard';
 import { useHistory } from 'react-router';
 import './style.css'
-import Showmycom from './mycom';
+// import Showmycom from './mycom';
 import moment from 'moment';
 const Notification = () => {
     const history=useHistory();
@@ -16,7 +16,7 @@ const Notification = () => {
     const [users,setusers]=useState([]);//unverfied users 
     const getmycom=()=>{
               complain.getmycomplains().then((data)=>{
-                  console.log(data)
+                //   console.log(data)
                   setmycomp(data);
               })
               .catch((err)=>{
@@ -26,7 +26,7 @@ const Notification = () => {
     
     const get=()=>{
         if(userService.isAdmin()){
-            console.log("not admin")
+            // console.log("not admin")
         notification.getsolved().then((data)=>{
             setcomp(data)})
         .catch((err)=>{console.log(err.response.data)});
@@ -73,24 +73,6 @@ const Notification = () => {
                            Unverfied accounts 
                        </h1>
                    </div>
-                     {/* <div className="main">
-                     <h1>Showing notification</h1>
-                     </div>
-                     <div className="show">
-                         <div className="complain" onClick={()=>{
-                            //  console.log("complaints");
-                             history.push("/complaints")
-                         }}>
-                                <span className="text"> Complaints</span>
-                         </div>
-                         <div className="complain" onClick={()=>{
-                            //  console.log("Accounts")
-                             history.push("/accounts")
-                            }}
-                             >
-                                <span className="text"> Accounts</span>
-                         </div>
-                     </div> */}
                      
                        
                    

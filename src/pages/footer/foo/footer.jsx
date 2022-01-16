@@ -1,13 +1,13 @@
 import React from 'react';
 import "./foo/style.css";
 import {FaFacebook} from "react-icons/fa";
-import {FiTwitter} from "react-icons/fi";
+// import {FiTwitter} from "react-icons/fi";
 import {FaInstagram} from "react-icons/fa";
 import {HiChevronRight} from "react-icons/hi";
 import {FaMapMarkerAlt} from "react-icons/fa";
 import {FaMobileAlt} from "react-icons/fa";
 import {FaEnvelope} from "react-icons/fa";
-import {FaGlobeEurope} from "react-icons/fa";
+// import {FaGlobeEurope} from "react-icons/fa";
 import {Link} from 'react-router-dom'
 //import footer from '../Carousel/images/footer.jpg'
 const Footer = () => {
@@ -19,17 +19,18 @@ const Footer = () => {
         <div >
             <div className="footer">
                 <div className="single-footer">
-                    <h4>about us</h4>
-                    <p>We are providing a best platform to farmers for their great profitablly.</p>
+                    <h4>About us</h4>
+                    <p>We are providing the best platform to farmers for their great profitablly.</p>
                     <Link to="/aboutus" style={{textDecoration:"none",color:"white",fontSize:"22px"}}> Our Team</Link>
                     <div className="footer-social">
-                        <a href=""><FaFacebook  size="40px" className="fab "/></a>
-                        <a href=""><FiTwitter  size="40px" className="fab "/></a>
-                        <a href=""><FaInstagram  size="40px" className="fab "/></a>
+                        <a href="https://www.facebook.com/Farming-Assistant-Web-Service-109485314912109/?ref=pages_you_manage
+"><FaFacebook  size="40px" className="fab "/></a>
+                        {/* <a href=""><FiTwitter  size="40px" className="fab "/></a> */}
+                        <a href="https://www.instagram.com/farmer.3332/"><FaInstagram  size="40px" className="fab "/></a>
                         
                         
                     </div>
-
+   
                 </div>
                 <div className="single-footer">
                     <h4>main menu</h4>
@@ -53,9 +54,9 @@ const Footer = () => {
                 <div className="single-footer">
                     <h4>contact us</h4>
                     <ul  style={{textAlign: "left"}}>
-                        <li><a href=""><FaMapMarkerAlt className="fas"/> Lahore, Pakistan</a></li>
-                        <li><a href=""><FaMobileAlt className="fas"/> 03314924054</a></li>
-                        <li><a href=""><FaEnvelope className="fas"/>farmingassistant@gmail.com</a></li>
+                        <li><p><FaMapMarkerAlt className="fas"/> Lahore, Pakistan</p></li>
+                        <li><p><FaMobileAlt className="fas"/> 03314924054</p></li>
+                        <li><p><FaEnvelope className="fas"/>farmingassistant@gmail.com</p></li>
                         {/* <li><a href=""><FaGlobeEurope className="fas"/> www.Farming.com</a></li> */}
                     </ul>
                 </div>

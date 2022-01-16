@@ -35,7 +35,7 @@ const Register = () => {
    const[regnoerr,setregnoerr]=useState("");
 
    const check=()=>{
-     if(fname.length==0){
+     if(fname.length===0){
          setfnerr("first name is required")
      }
      else if(fname.length<3){
@@ -48,7 +48,7 @@ const Register = () => {
      }
    }
    const checklname=()=>{
-      if(lname.length==0){
+      if(lname.length===0){
          setlnerr("lastname is required")
      }
      else if(lname.length<3){
@@ -61,7 +61,7 @@ const Register = () => {
      }
    }
    const checkuname=()=>{
-      if(username.length==0){
+      if(username.length===0){
          setunerr("username is required")
      }
      else if(username.length<3){
@@ -74,7 +74,7 @@ const Register = () => {
      }
    }
    const checkphone=()=>{
-      if(phone.length==0){
+      if(phone.length===0){
          setpherr("phone number is required")
      }
      else if(phone.length<11){
@@ -90,7 +90,7 @@ const Register = () => {
      }
    }
    const checkphoto=()=>{
-      if(photo.length==0){
+      if(photo.length===0){
          setpterr("please upload photo")
      }
      else 
@@ -104,7 +104,7 @@ const Register = () => {
      }
    }
    const checkregno=()=>{
-     if(regno.length==0){
+     if(regno.length===0){
        setregnoerr("required")
      }
      else{
@@ -113,7 +113,7 @@ const Register = () => {
      }
    }
    const checkpassword=()=>{
-      if(password.length==0){
+      if(password.length===0){
          setpserr("password is required")
      }
      else if(password.length<6){
@@ -221,7 +221,7 @@ const reg = () => {
                        
                     }}
                     />
-                    {fnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{fnerr}</p>:<></>}
+                    {fnerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{fnerr}</p>:<></>}
                     </div> 
                     <div style={{width:"50%"}}>
                     <p className="label">Last name*</p>
@@ -236,7 +236,7 @@ const reg = () => {
                         setname( fname.concat(" "+lname))
                     }}
                     />
-                     {lnerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{lnerr}</p>:<></>}
+                     {lnerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{lnerr}</p>:<></>}
                     </div> 
                    
                    </div>
@@ -251,7 +251,7 @@ const reg = () => {
                       }}
                     />
                     </div> 
-                    {unerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
+                    {unerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{unerr}</p>:<></>}
                     <div>
                     <p className="label">Phone*</p>
                     <input type="text" className="inputform" 
@@ -265,7 +265,7 @@ const reg = () => {
                       }}
                     />
                     </div> 
-                    {pherr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pherr}</p>:<></>}
+                    {pherr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pherr}</p>:<></>}
                     <div>
                     <p className="label">Upload photo*</p>
                     {showanimation?<><CircularProgress />uploading....</>:<></>}
@@ -283,7 +283,7 @@ const reg = () => {
                      required
                       onChange={handleImg}
                     />
-                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
+                    {pterr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
                     </>}
                     
                     </>
@@ -313,7 +313,7 @@ const reg = () => {
                         setregno(e.target.value)
                     }}
                     />
-                    {regnoerr.length!=0?<p style={{textAlign:"left",color:"red"}}>{regnoerr}</p>:<></>}
+                    {regnoerr.length!==0?<p style={{textAlign:"left",color:"red"}}>{regnoerr}</p>:<></>}
                     </div> :<></>}
                     <div>
                     <p className="label">Password*</p>
@@ -323,7 +323,7 @@ const reg = () => {
                           setpassword(e.target.value)
                       }}
                     />
-                    {pserr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
+                    {pserr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pserr}</p>:<></>}
                   
                     </div> 
                     <div>

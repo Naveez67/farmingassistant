@@ -38,7 +38,7 @@ const name=param.username;
   const getphone=()=>{
     userService.getuserphone(name)
     .then((data) => {
-         console.log(data)
+        //  console.log(data)
          setphone(data)
         //  console.log(typeof(phone))
     })

@@ -8,7 +8,7 @@ const Acountdata = () => {
     const id =param.id;
     const [userdata,setuserdata]=useState();
     const [name,setname]=useState("");
-    const [address,setaddress]=useState("");
+    // const [address,setaddress]=useState("");
     const [phone,setphone]=useState("");
     const [photo,setphoto]=useState("");
     const [regno,setregno]=useState("");
@@ -27,12 +27,12 @@ const Acountdata = () => {
             setphoto(data.photo)
         }).catch((err)=>{console.log(err.response.data)})
     }
-    React.useEffect(getuser,[]);
-    React.useEffect(getuserdata,[]);
+    React.useEffect(getuser,[getuser]);
+    React.useEffect(getuserdata,[getuserdata]);
     // console.log(name+address+phone);
     return ( <Grid container>
         <Grid item xs={12} className="head">
-            <h3 className="profile">Profile</h3>
+            <h3>Profile</h3>
         </Grid>
         <Grid item xs={6} sm={6}> 
         <div  style={{textAlign:"left"}}>
@@ -48,7 +48,7 @@ const Acountdata = () => {
         </Grid>
         <Grid item xs={6} sm={6} >
             <div className="image" >
-                <img src={photo} alt={name}  height="250" width="250"/>
+                <img src={photo} alt={name}  height="150" width="150"/>
             </div>
         </Grid>  
         <Grid item xs={12} >
@@ -58,6 +58,7 @@ const Acountdata = () => {
                 //   console.log("clicked")
                   userService.approve(id).then((data)=>{
                     //   console.log(data);
+                    alert("you have aproved the account")
                       history.push("/notification");
                   }).catch((err)=>{
                       console.log(err.response.data);
@@ -71,6 +72,7 @@ const Acountdata = () => {
                 //   console.log("clicked")
                     userService.deleteuser(id).then((data)=>{
                     // console.log(data);
+                    alert("you have rejected the user")
                     history.push("/notification");
                 }).catch((err)=>{
                     console.log(err.response.data);

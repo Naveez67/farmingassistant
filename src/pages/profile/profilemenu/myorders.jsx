@@ -5,7 +5,7 @@ import "../../../components/all/mangaement/style.css"
 const Myorders = ({orders}) => {
   const [adid, setadid] = useState(""); 
   const [title, settitle] = useState(""); 
-  const [dis, setdis] = useState(""); 
+  const [dis, setdis] = useState("none"); 
   const getorders=(item,index)=>{
      if(item._id===adid){
        return <div key={index} style={{textAlign:"left"}}>

@@ -2,7 +2,7 @@ import React from "react";
 import data from "../data/data.json";
 import Singlecrop from "../all/singlecrop";
 import { Grid } from "@mui/material";
-import Catagree from "../categriees/catgree";
+// import Catagree from "../categriees/catgree";
 const Ornamentals = () => {
   function filterItems(arr, query) {
     return arr.filter(function (el) {

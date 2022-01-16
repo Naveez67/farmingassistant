@@ -26,7 +26,7 @@ const Blog = () => {
   const[tterr,settterr]=useState("");
   const[bderr,setbderr]=useState("");
   const check=()=>{
-      if(url.length==0){
+      if(url.length===0){
         setpterr("please upload photo")
       }
       else {
@@ -35,7 +35,7 @@ const Blog = () => {
       }
   }
   const checktitle=()=>{
-    if(title.length==0){
+    if(title.length===0){
       settterr("required")
     }
     else if(title.length<4){
@@ -47,7 +47,7 @@ const Blog = () => {
     }
   }
   const checkbody=()=>{
-    if(body.length==0){
+    if(body.length===0){
       setbderr("required")
     }
     else if(body.length<10){
@@ -139,7 +139,7 @@ const Blog = () => {
                     
                     </>
                     }
-                    {pterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
+                    {pterr.length!==0?<p style={{textAlign:"left",color:"red"}}>{pterr}</p>:<></>}
       </div>
       <div>
         <Form>
@@ -153,7 +153,7 @@ const Blog = () => {
                 settitle(e.target.value);
               }}
             />
-            {tterr.length!=0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
+            {tterr.length!==0?<p style={{textAlign:"left",color:"red"}}>{tterr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label>Description</Form.Label>
@@ -165,7 +165,7 @@ const Blog = () => {
                 setbody(e.target.value);
               }}
             />
-            {bderr.length!=0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
+            {bderr.length!==0?<p style={{textAlign:"left",color:"red"}}>{bderr}</p>:<></>}
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
             <Form.Label
