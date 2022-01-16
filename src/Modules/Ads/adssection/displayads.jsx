@@ -3,6 +3,7 @@ import Showads from '../showads';
 import userService from '../../../services/UserService';
 import {Button} from "@mui/material";
 import { useHistory } from 'react-router-dom';
+import './main.css'
 const Displayads = () => {
     const [type,setype]=React.useState("");
      const history=useHistory();

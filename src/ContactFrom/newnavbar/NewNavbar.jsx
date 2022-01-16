@@ -28,8 +28,8 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="logo">
-      <img src={Logo} alt="logo" width="300px" height="50px" />
+      <div >
+      <img src={Logo} alt="logo" className="logo" />
       </div>
       <div className="menu-icon" onClick={handleClick}>
         {clicked ?<FaTimes className="fas" />:<FaBars  className="fas"/>}

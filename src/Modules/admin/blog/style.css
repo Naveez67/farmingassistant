@@ -65,11 +65,12 @@ height: 30%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  min-height: 90vh;
   /* position: relative; */
-  background-attachment: fixed; 
-  /* height: 100%; 
+  /* background-attachment: fixed; 
+ 
   background-repeat: no-repeat;
-  background-attachment: fixed; */
+  background-attachment: fixed;  */
 }
 
 .readblogclass{
