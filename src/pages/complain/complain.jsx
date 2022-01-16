@@ -10,7 +10,7 @@ const Complain = () => {
     const [body,setbody]=useState("");
     const [bodyerr,setbodyerr]=useState("");
     const [wid,setwid]=useState("15%");
-    const [dis,setdis]=useState("15%");
+    const [dis,setdis]=useState("none");
 
 
 
@@ -116,6 +116,8 @@ const Complain = () => {
     <h3 style={{cursor:"pointer",textAlign:"center",color:"white"}} 
     onClick={()=>{
         setdis("none")
+        settitle("");
+       setbody("");
     }}
     
     >Ok</h3>
