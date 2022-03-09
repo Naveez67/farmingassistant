@@ -9,7 +9,6 @@ import Works from '../works/howitworks';
 const Home = () => {
     return ( <div>
         <MyCarousel />
-        <Titletext />
         <br />
         
         <Works />
